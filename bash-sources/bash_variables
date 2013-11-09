@@ -1,12 +1,10 @@
 #!/bin/bash
-export PATH=~/bin:~/bin/tmux_repos:${PATH}
-export PATH=~/bin/tmux_projects:${PATH}
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/pgms/erlang/elixir/bin # Add elixir to PATH
-export RBGP=/usr/lib/ruby/gems/1.9.1/gems	# RubyGemsPath
-export EP=${RBGP}/ruby-ensembl-api-1.0.1/lib	# EnsemblPath
-export RUBYLIB=${RBGP}:${RBGP}/bio-1.4.3/lib
-export BIORUBYPATH=$RUBYLIB
+# Add paths to PATH
+export PATH=~/.bin:~/.bin/tmux-sessions:${PATH} # Add ~/.bin
+export PATH=${PATH}:$HOME/.rvm/bin # Add RVM 
+
+# For tmux
 export TERM=xterm-256color
+
 export LC_CTYPE=en_US.UTF-8
 
