@@ -1,4 +1,7 @@
 #!/bin/bash
+
+export PS1='\[\033[01;34m\]\W\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '
+
 # Add paths to PATH
 export PATH=~/.bin:~/.bin/tmux-sessions:${PATH} # Add ~/.bin
 export PATH=${PATH}:$HOME/.rvm/bin # Add RVM 
