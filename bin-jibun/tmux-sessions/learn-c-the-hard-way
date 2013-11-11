@@ -1,0 +1,5 @@
+#!/bin/bash 
+S=CHard
+cd ~/pgms/c/lcthw/
+tmux-session new $S.run $S.code $S.test 
+tmux new -t $S

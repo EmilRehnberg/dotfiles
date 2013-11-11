@@ -1,0 +1,2 @@
+tmux-session new Sanpo.git Sanpo.code Sanpo.spec Sanpo.cons Sanpo.serv Sanpo.rspec Sanpo.ff
+tmux attach -t Sanpo

@@ -1,0 +1,2 @@
+tmux-session new Reek.git Reek.code Reek.spec Reek.rspec
+tmux attach -t Reek

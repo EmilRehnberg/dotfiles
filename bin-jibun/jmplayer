@@ -1,0 +1,3 @@
+#!/bin/bash
+#mplayer  -subcp shift-jis  $1
+mplayer -utf8 -font 'Kochi Mincho' $* # requires ttf-kochi-mincho package. Should be installed with the new-install script.

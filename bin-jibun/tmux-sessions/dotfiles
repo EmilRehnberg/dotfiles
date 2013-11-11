@@ -1,0 +1,13 @@
+#!/bin/bash 
+
+T=dotfiles
+dir="~/dotfiles"
+bs="; bash -i"
+
+tmux new-session -s $T   -n tmp -d "cd /tmp   ${bs}"
+tmux new-window  -t $T:1 -n vim    "cd ${dir} ${bs}"
+tmux new-window  -t $T:2 -n bash   "cd ${dir} ${bs}"
+tmux new-window  -t $T:3 -n git    "cd ${dir} ${bs}"
+
+tmux select-window -t $T:1
+tmux -2 attach-session -t $T

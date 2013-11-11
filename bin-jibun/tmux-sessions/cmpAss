@@ -1,0 +1,5 @@
+#!/bin/bash 
+S=cmpAss
+cd ~/bunsho/shigoto-仕事/campanja/assignment
+tmux-session new $S.run $S.code $S.test
+tmux new -t $S

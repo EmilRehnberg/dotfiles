@@ -1,0 +1,18 @@
+#!/bin/bash
+# 作者：Emil Rehnberg
+# 日付：2013-11-11
+# 目的：aliasを検索する
+aliasfile=~/dotfiles/bash-sources/bash_aliases
+cmd=${0##*/}
+
+function usage {
+  if [ $1 == 0 ] ; then
+   echo "${cmd} requires an argument to search for among extra aliases, _exiting_"
+   exit 2
+  elif [ $1 -gt 1 ] ; then
+    echo "${cmd} will only use the first argument."
+  fi
+}
+
+usage $#
+grep $1 ${aliasfile}

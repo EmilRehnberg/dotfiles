@@ -1,0 +1,3 @@
+T=ongaku
+tmux-session new $T.ongaku $T.tmp
+tmux attach -t $T

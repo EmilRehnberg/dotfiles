@@ -1,0 +1,5 @@
+#!/bin/bash 
+S=pkoans
+cd ~/pgms/py/python_koans/
+tmux-session new $S.i $S.p2 $S.p3 $S.run
+tmux new -t $S
