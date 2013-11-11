@@ -1,8 +1,27 @@
 
-filetype plugin on
+set nocompatible
+filetype off " required for vundle
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-surround'
+Bundle 'kien/ctrlp.vim'
+Bundle 'msanders/snipmate.vim'
+"Bundle 'mileszs/ack.vim'
+"Bundle 'Townk/vim-autoclose'
+
+
+filetype plugin indent on
 set t_Co=256
 set number
-set nocompatible
 set autoindent
 set cindent
 set list!
