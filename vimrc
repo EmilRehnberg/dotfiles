@@ -30,6 +30,7 @@ set hlsearch   " highlight all search results
 "set incsearch  " increment search
 set ignorecase " case-insensitive search
 set smartcase  " upper-case sensitive search
+syntax on
 
 let g:SuperTabDefaultCompletionType = "context" "Adds file system path completion
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"

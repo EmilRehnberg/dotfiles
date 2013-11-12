@@ -5,5 +5,7 @@ source ${BASH_DIR}/bash_variables
 source ${BASH_DIR}/bash_functions
 
 # Added for chruby config.
-chruby ruby
+if hash chruby > /dev/null 2&>1 ; then 
+  chruby ruby
+fi
 
