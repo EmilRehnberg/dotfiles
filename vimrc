@@ -15,6 +15,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
 Bundle 'msanders/snipmate.vim'
+Bundle 'kchmck/vim-coffee-script'
 "Bundle 'mileszs/ack.vim'
 "Bundle 'Townk/vim-autoclose'
 

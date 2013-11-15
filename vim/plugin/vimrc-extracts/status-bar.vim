@@ -1,9 +1,9 @@
 set ls=2 "adds the status bar
-hi User1 ctermbg=black    ctermfg=red  
-hi User2 ctermbg=black   ctermfg=blue    
-hi User3 ctermbg=black   ctermfg=green
-hi User4 ctermbg=black   ctermfg=yellow
-hi User5 ctermbg=black   ctermfg=white
+hi User1 ctermbg=darkgrey    ctermfg=red  
+hi User2 ctermbg=darkgrey   ctermfg=blue    
+hi User3 ctermbg=darkgrey   ctermfg=green
+hi User4 ctermbg=darkgrey   ctermfg=yellow
+hi User5 ctermbg=darkgrey   ctermfg=white
 set statusline=
 set statusline +=%1*\ %n\ %*            "buffer number
 set statusline +=%5*%{&ff}%*            "file format
