@@ -19,6 +19,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'AutoTag'
 Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
+Bundle 'jcfaria/Vim-R-plugin'
 "Bundle 'mileszs/ack.vim'
 "Bundle 'Townk/vim-autoclose'
 
