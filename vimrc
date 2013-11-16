@@ -31,6 +31,8 @@ set hlsearch   " highlight all search results
 "set incsearch  " increment search
 set ignorecase " case-insensitive search
 set smartcase  " upper-case sensitive search
+set omnifunc=syntaxcomplete#Complete
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 syntax on
 
 let g:SuperTabDefaultCompletionType = "context" "Adds file system path completion
