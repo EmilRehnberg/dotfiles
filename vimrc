@@ -57,3 +57,6 @@ execute pathogen#infect()
 " CTRLP set up
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" Do not use AutoComplPop on start-up. Use :AcpEnable / :AcpDisable to toggle
+let g:acp_enableAtStartup = 0
+
