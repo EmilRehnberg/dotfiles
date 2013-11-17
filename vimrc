@@ -7,36 +7,39 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
-
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-surround'
-Bundle 'kien/ctrlp.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'AutoTag'
 Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'jcfaria/Vim-R-plugin'
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kchmck/vim-coffee-script'
 "Bundle 'mileszs/ack.vim'
+Bundle 'msanders/snipmate.vim'
 "Bundle 'Townk/vim-autoclose'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-repeat'
+Bundle 'vim-ruby/vim-ruby'
 
 
 filetype plugin indent on
-set t_Co=256
-set number
 set autoindent
 set cindent
-set list!
+set cursorline
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+"set list!
 set listchars=tab:▸\ ,eol:¬
 set hlsearch   " highlight all search results
 "set incsearch  " increment search
 set ignorecase " case-insensitive search
-set smartcase  " upper-case sensitive search
+set number
 set omnifunc=syntaxcomplete#Complete
-set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+set smartcase  " upper-case sensitive search
+set t_Co=256
 syntax on
 
 let g:SuperTabDefaultCompletionType = "context" "Adds file system path completion
@@ -59,4 +62,10 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Do not use AutoComplPop on start-up. Use :AcpEnable / :AcpDisable to toggle
 let g:acp_enableAtStartup = 0
+
+" Setup for color-solarized
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
 
