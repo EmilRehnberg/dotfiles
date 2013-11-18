@@ -3,7 +3,7 @@
 
 dotfiles_dir=~/dotfiles
 old_dotfiles_dir=~/.dotfiles_old
-dotfiles="bashrc bash_profile bin mplayer tmux.conf vim vimrc"
+dotfiles="bashrc bash_profile bin inputrc mplayer tmux.conf vim vimrc"
 
 echo "Creating ${old_dotfiles_dir} for backup of any existing dotfiles in ~"
 mkdir -p ${old_dotfiles_dir}

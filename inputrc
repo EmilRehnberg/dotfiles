@@ -1,0 +1,6 @@
+# Ctrl-j,k
+"\C-k": previous-history
+"\C-j": next-history
+# Alt-j,k
+#"\ek": previous-history
+#"\ej": next-history
