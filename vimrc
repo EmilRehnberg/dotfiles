@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'AutoTag'
 Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
@@ -24,7 +24,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'vim-ruby/vim-ruby'
-
 
 filetype plugin indent on
 set autoindent
@@ -46,11 +45,13 @@ let g:SuperTabDefaultCompletionType = "context" "Adds file system path completio
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
+" trimming all trailing whitespace on save!
+autocmd BufWritePre * :%s/\s\+$//e
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
 
 " darker gray decrease number / lighter gray increase
-highlight NonText ctermfg=239 
+highlight NonText ctermfg=239
 highlight SpecialKey ctermfg=239
 highlight LineNr ctermfg=241
 
