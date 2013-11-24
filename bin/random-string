@@ -1,0 +1,3 @@
+#!/bin/bash
+PW_LENGTH=${1:-16}
+LANG=c < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${PW_LENGTH};echo;
