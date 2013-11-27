@@ -3,13 +3,13 @@
 
 dotfiles_dir=~/dotfiles
 old_dotfiles_dir=~/.dotfiles_old
-dotfiles="bashrc bash_profile bin inputrc mplayer tmux.conf vim vimrc"
+dotfiles="bashrc bash_profile bin git inputrc mplayer tmux.conf vim vimrc"
 
 echo "Creating ${old_dotfiles_dir} for backup of any existing dotfiles in ~"
 mkdir -p ${old_dotfiles_dir}
 
 mkdir -p ${dotfiles_dir}
-cd 
+cd
 
 echo "Moving any existing dotfiles from ~ to ${old_dotfiles_dir}"
 for dotfile in ${dotfiles}; do
@@ -18,7 +18,7 @@ for dotfile in ${dotfiles}; do
     if [ -h ${dotfile_path} ] ; then
       echo "Deleting symbolic link ${dotfile_path}"
       rm ${dotfile_path}
-    else 
+    else
       echo "Moving ${dotfile_path} to ${old_dotfiles_dir}"
       mv ${dotfile_path} ${old_dotfiles_dir}
     fi
