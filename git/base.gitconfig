@@ -1,0 +1,11 @@
+[user]
+  name = Emil Rehnberg
+[core]
+  editor = vim
+[push]
+  default = current
+[alias]
+  gc = checkout
+; [include]
+;   path = ~/dotfiles/git/gitconfig
+
