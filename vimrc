@@ -23,6 +23,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
+Bundle 'yegappan/grep'
 Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
