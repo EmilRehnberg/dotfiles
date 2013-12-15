@@ -16,3 +16,12 @@ fi
 # For git-completion of commands and branch names
 . ~/.git/git-completion.bash
 
+
+##
+# Your previous /Users/emilapoex/.bash_profile file was backed up as /Users/emilapoex/.bash_profile.macports-saved_2013-12-09_at_13:48:49
+##
+
+# MacPorts Installer addition on 2013-12-09_at_13:48:49: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
