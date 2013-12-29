@@ -1,0 +1,16 @@
+#!/bin/bash
+# 作者：Emil Rehnberg
+# 日付：Sun Dec 22 10:46:05 CET 2013
+# 目的：音楽を刻む
+# 注釈：Readlineのみ
+# Full file name is required if there is a colon in the output file (http://b17s.wordpress.com/2013/12/14/ffmpeg-colon-in-outfile-output-filename/)
+
+IN=$1 # e.g. ./Project_Pat_Freestyles_on_Sway_in_the_Morning-FrgDF7cXjPE.mp3
+SS=$2 # e.g. 80
+ T=$3 # e.g. 40.600
+NAME=${IN%.*}
+EXT=${IN##*.}
+
+OUT=./${NAME}-${SS}.${EXT}
+
+ffmpeg -ss $SS -t $T -i ${IN} -acodec copy ${OUT}
