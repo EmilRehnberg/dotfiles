@@ -26,6 +26,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'yegappan/grep'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'kakkyz81/evervim'
 
 filetype plugin indent on
 set autoindent
