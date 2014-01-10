@@ -12,6 +12,7 @@ Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'elzr/vim-json'
+Bundle 'itchyny/calendar.vim'
 Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
@@ -73,4 +74,10 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 set switchbuf+=usetab,newtab
+
+let g:evervim_devtoken='S=s368:U=3aca972:E=14a9d02db4a:C=1434551af4d:P=1cd:A=en-devtoken:V=2:H=cf0e2781fc1ff74f629fe0f690835e2a'
+
+" calendar.vim settings
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
 
