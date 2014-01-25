@@ -9,7 +9,7 @@ IN=$1 # e.g. ./Project_Pat_Freestyles_on_Sway_in_the_Morning-FrgDF7cXjPE.mp3
 SS=$2 # e.g. 80
  T=$3 # e.g. 40.600
 NAME=${IN%.*}
-EXT=${IN##*.}
+EXT=${4:-${IN##*.}}
 
 OUT=./${NAME}-${SS}.${EXT}
 

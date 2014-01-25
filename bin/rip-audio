@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# 作者：Emil Rehnberg
+# 日付：2012年 10月 1日 月曜日 09:12:46 JST +0900
+# 目的：Rip audio from flv/mp4 file.
+# 注釈：無
+
+if [ $# -lt 1 ] ; then
+  echo 'ファイル名前で下さい'
+  exit 1
+fi
+
+IN_FILE=$1
+IN_FILE_NAME=${IN_FILE%.*}
+IN_FILE_EXT=${IN_FILE##*.}
+OUT_FILE_EXT=mp3
+OUT_FILE=${IN_FILE_NAME}.${OUT_FILE_EXT}
+
+if [ $IN_FILE_EXT = flv] ; then
+  EXTRA_PARAMETERS='-acodec copy'
+fi
+
+ffmpeg -i $IN_FILE $EXTRA_PARAMETERS -y -vn $OUT_FILE
+echo ""
+echo "${OUT_FILE}を作成しました。"
+
