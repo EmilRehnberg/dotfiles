@@ -11,6 +11,6 @@ SS=$2 # e.g. 80
 NAME=${IN%.*}
 EXT=${4:-${IN##*.}}
 
-OUT=./${NAME}-${SS}.${EXT}
+OUT=./${NAME}-${SS//:/}.${EXT}
 
 ffmpeg -ss $SS -t $T -i ${IN} -acodec copy ${OUT}
