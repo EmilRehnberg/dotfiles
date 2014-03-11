@@ -92,5 +92,5 @@ if [ ! -z "$PS1" ]; then
 fi
 
 # Added for chruby config.
-# source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/chruby.sh
 
