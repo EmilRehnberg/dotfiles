@@ -7,6 +7,7 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
+" Use :BundleClean to clean
 Bundle 'AutoTag'
 Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
@@ -15,11 +16,13 @@ Bundle 'elzr/vim-json'
 Bundle 'itchyny/calendar.vim'
 Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'gmarik/vundle'
+Bundle 'kakkyz81/evervim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
 "Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
 "Bundle 'Townk/vim-autoclose'
+Bundle "roman/golden-ratio"
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-surround'
@@ -27,7 +30,6 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'yegappan/grep'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'kakkyz81/evervim'
 
 filetype plugin indent on
 set autoindent

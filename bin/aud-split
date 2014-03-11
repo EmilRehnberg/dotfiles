@@ -8,9 +8,14 @@
 IN=$1 # e.g. ./Project_Pat_Freestyles_on_Sway_in_the_Morning-FrgDF7cXjPE.mp3
 SS=$2 # e.g. 80
  T=$3 # e.g. 40.600
-NAME=${IN%.*}
 EXT=${4:-${IN##*.}}
+VOL_AMP=$5
 
-OUT=./${NAME}-${SS}.${EXT}
+NAME=${IN%.*}
+OUT=./${NAME}-${SS//:/}.${EXT}
 
-ffmpeg -ss $SS -t $T -i ${IN} -acodec copy ${OUT}
+if [ $# -lt 5 ]; then
+  ffmpeg -ss $SS -t $T -i ${IN} -acodec copy ${OUT}
+else
+  ffmpeg -ss $SS -t $T -i ${IN} -vol $[256*$VOL_AMP] ${OUT}
+fi
