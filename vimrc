@@ -83,3 +83,14 @@ let g:evervim_devtoken='S=s368:U=3aca972:E=14a9d02db4a:C=1434551af4d:P=1cd:A=en-
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
