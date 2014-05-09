@@ -25,9 +25,10 @@ Bundle 'msanders/snipmate.vim'
 Bundle "roman/golden-ratio"
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
 Bundle 'yegappan/grep'
 Bundle 'vim-ruby/vim-ruby'
 
