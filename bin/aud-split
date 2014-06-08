@@ -15,7 +15,7 @@ NAME=${IN%.*}
 OUT=./${NAME}-${SS//:/}.${EXT}
 
 if [ $# -lt 5 ]; then
-  ffmpeg -ss $SS -t $T -i ${IN} -acodec copy ${OUT}
+  avconv -i ${IN} -acodec copy -ss $SS -t $T ${OUT}
 else
-  ffmpeg -ss $SS -t $T -i ${IN} -vol $[256*$VOL_AMP] ${OUT}
+  avconv -i ${IN} ss $SS -t $T -vol $[256*$VOL_AMP] ${OUT}
 fi

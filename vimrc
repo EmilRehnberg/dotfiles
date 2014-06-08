@@ -72,7 +72,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:acp_enableAtStartup = 0
 
 " Setup for color-solarized
-set background=dark
+" set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
