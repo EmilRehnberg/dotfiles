@@ -1,10 +1,10 @@
-#!/bin/bash 
+#!/bin/zsh
 T=douga
-bs="; bash -i"
-tmux new-session -s $T   -n tmp   -d "cd /tmp           ${bs}"
-tmux new-window  -t $T:1 -n douga    "cd ~/douga        ${bs}"
-tmux new-window  -t $T:2 -n svt      "cd ~/douga/svt    ${bs}"
-tmux new-window  -t $T:3 -n twitch   "cd ~/douga/twitch ${bs}"
+sh="; zsh -i"
+tmux new-session -s $T   -n tmp   -d "cd /tmp           ${sh}"
+tmux new-window  -t $T:1 -n douga    "cd ~/douga        ${sh}"
+tmux new-window  -t $T:2 -n svt      "cd ~/douga/svt    ${sh}"
+tmux new-window  -t $T:3 -n twitch   "cd ~/douga/twitch ${sh}"
 
 tmux select-window -t $T:1
 tmux -2 attach-session -t $T
