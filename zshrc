@@ -10,6 +10,10 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="simple"
 # ZSH_THEME="terminalparty"
 
+# tmux config
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -21,7 +25,7 @@ ZSH_THEME="simple"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=2
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -43,7 +47,7 @@ ZSH_THEME="simple"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -54,27 +58,23 @@ zstyle ':completion:*' special-dirs true
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler common-aliases debian git rails ruby screen tmux vim)
+plugins=(bundler common-aliases debian git rails ruby screen tmux)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules"
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules"
