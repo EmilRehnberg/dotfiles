@@ -10,13 +10,19 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="simple"
 # ZSH_THEME="terminalparty"
 
+# Aliases
+alias c=clear
+alias gma='git commit -am'
+alias R='R --vanilla'
+alias screen='TERM=xterm-256color screen'
+alias tmux='tmux -2'
+alias yt='youtube-dl -t'
+alias yt_dl_mp3='youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 5'
+
 # tmux config
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=false
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -75,6 +81,20 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+# Variables
+# For mac colors in terminal
+DOTFILES="$HOME/dotfiles"
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# load shell function
+# source $DOTFILES/sh/functions.sh
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTIGNORE="ls:ll:cd:pwd"
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+# export TERM=screen-256color #vim
+export TERM="xterm-256color"
+
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules"

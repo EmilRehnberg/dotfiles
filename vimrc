@@ -47,6 +47,7 @@ set omnifunc=syntaxcomplete#Complete
 set smartcase  " upper-case sensitive search
 set t_Co=256
 syntax on
+set term=xterm-256color
 
 let g:SuperTabDefaultCompletionType = "context" "Adds file system path completion
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
@@ -73,6 +74,7 @@ let g:acp_enableAtStartup = 0
 
 " Setup for color-solarized
 " set background=dark
+let g:solarized_termtrans = 1
 let g:solarized_termcolors=256
 colorscheme solarized
 

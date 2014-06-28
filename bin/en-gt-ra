@@ -1,6 +1,0 @@
-#!/bin/bash 
-TO_GT=$1
-OUT=/tmp/${TO_GT}.mp3
-wget -q -U Mozilla -O ${OUT} "http://translate.google.com/translate_tts?ie=UTF-8&tl=en&q=${TO_GT}"
-# http://www.commandlinefu.com/commands/view/8044/google-text-to-speech-in-mp3-format
-

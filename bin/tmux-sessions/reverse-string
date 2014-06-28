@@ -1,5 +1,0 @@
-#!/bin/bash 
-S=revstr
-cd ~/pgms/multi-implementations/reverse-string/ 
-tmux-session new $S.run $S.code $S.test
-tmux new -t $S
