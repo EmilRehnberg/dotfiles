@@ -11,6 +11,7 @@ ZSH_THEME="simple"
 # ZSH_THEME="terminalparty"
 
 # Aliases
+alias agr='sudo $apt_pref upgrade'
 alias c=clear
 alias gma='git commit -am'
 alias R='R --vanilla'
@@ -68,6 +69,7 @@ ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 plugins=(bundler common-aliases debian git rails ruby screen tmux)
 
 source $ZSH/oh-my-zsh.sh
+unalias ag
 
 # User configuration
 # You may need to manually set your language environment
