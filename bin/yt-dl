@@ -1,16 +1,13 @@
 #!/usr/bin/env ruby
 class YouTubeDownloader
   EXECUTABLE = "youtube-dl"
+  DEFAULTS = %w(
+    https://www.youtube.com/watch?v=1fc3RdJKVB8
+    https://www.youtube.com/watch?v=YVzkL8GuqKs
+  )
 
   def initialize
-    if ARGV.empty?
-      @urls = %w(
-      https://www.youtube.com/watch?v=1fc3RdJKVB8
-      https://www.youtube.com/watch?v=YVzkL8GuqKs
-      )
-    else
-      @urls = ARGV
-    end
+    @urls = ARGV.empty? ? DEFAULTS : ARGV
   end
 
   def run

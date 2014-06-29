@@ -68,7 +68,10 @@ ZSH_TMUX_AUTOCONNECT=false
 plugins=(bundler common-aliases debian git rails ruby screen tmux)
 
 source $ZSH/oh-my-zsh.sh
+
+# post source of the global config aliasing
 unalias ag
+alias rm="rm -I"
 
 # User configuration
 # You may need to manually set your language environment
