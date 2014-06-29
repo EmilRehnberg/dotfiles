@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+class YouTubeDownloader
+  EXECUTABLE = "youtube-dl"
+
+  def initialize
+    if ARGV.empty?
+      @urls = %w(
+      https://www.youtube.com/watch?v=1fc3RdJKVB8
+      https://www.youtube.com/watch?v=YVzkL8GuqKs
+      )
+    else
+      @urls = ARGV
+    end
+  end
+
+  def run
+    pids = spawn
+    wait(pids)
+  end
+
+  private
+
+  def spawn
+    @urls.map { |url|
+      url_arg = "-t #{url}"
+      call = [ EXECUTABLE, url_arg].join(" ")
+      Process.spawn(call, out: STDOUT, err: STDOUT)
+    }
+  end
+
+  def wait(pids)
+    pids.each do |pid|
+      Process.wait(pid)
+    end
+  end
+end
+
+if __FILE__ == $0
+  YouTubeDownloader.new.run
+end
+
+
