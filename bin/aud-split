@@ -1,21 +1,64 @@
-#!/bin/bash
-# 作者：Emil Rehnberg
-# 日付：Sun Dec 22 10:46:05 CET 2013
-# 目的：音楽を刻む
-# 注釈：Readlineのみ
-# Full file name is required if there is a colon in the output file (http://b17s.wordpress.com/2013/12/14/ffmpeg-colon-in-outfile-output-filename/)
+#!/usr/bin/env ruby
 
-IN=$1 # e.g. ./Project_Pat_Freestyles_on_Sway_in_the_Morning-FrgDF7cXjPE.mp3
-SS=$2 # e.g. 80
- T=$3 # e.g. 40.600
-EXT=${4:-${IN##*.}}
-VOL_AMP=$5
+class AudioSplitter
+  EXECUTABLE = "avconv"
 
-NAME=${IN%.*}
-OUT=./${NAME}-${SS//:/}.${EXT}
+  def initialize
+    print_usage_and_exit unless ARGV.count.between?(3, 5)
+    parse_arguments
+  end
 
-if [ $# -lt 5 ]; then
-  avconv -i ${IN} -acodec copy -ss $SS -t $T ${OUT}
-else
-  avconv -i ${IN} ss $SS -t $T -vol $[256*$VOL_AMP] ${OUT}
-fi
+  def run
+    infile_arg = "-i #{@infile}"
+    start_arg = "-ss #{@startsection}"
+    duration_arg = "-t #{@duration}"
+    if @volume_amplification
+      vol_arg = "-vol #{volume_amplifier}"
+      args = [EXECUTABLE, infile_arg, start_arg, duration_arg, vol_arg, @outfile]
+    else
+      codec_arg = "-acodec copy"
+      args = [EXECUTABLE, infile_arg, codec_arg, start_arg, duration_arg, @outfile]
+    end
+
+    %x(#{args.join(" ")})
+    exit
+  end
+
+  private
+
+  def set_outfiles_name
+    @outfile = "#{File.basename(@infile, @infile_extention)}-#{@startsection.gsub(":", "")}.#{@outfile_extention}"
+  end
+
+  def parse_arguments
+    @infile = ARGV[0]
+    @infile_extention = File.extname(@infile)
+    @startsection = ARGV[1]
+    @duration = ARGV[2]
+    @outfile_extention = ARGV[4] || @infile_extention.gsub(".", "")
+    @volume_amplification = ARGV[5]
+    set_outfiles_name
+  end
+
+  def print_usage_and_exit
+    abort(
+      ["Please call #{File.basename($0)} with 3 to 5 arguments:",
+       "- name                   (e.g. '01.mp4')",
+       "- start time             (e.g. '105.670' or '00:01:45.670')",
+       "- duration               (e.g.   '4.500' or '00:00:04.500')",
+       "- output file extention  (e.g. 'mp3') *OPTIONAL*",
+       "- volume amplification   (e.g. '3')    *OPTIONAL*"
+    ].join("\n")
+    )
+  end
+
+  def volume_amplifier
+    256 * @volume_amplification
+  end
+
+end
+
+if __FILE__ == $0
+  AudioSplitter.new.run
+end
+

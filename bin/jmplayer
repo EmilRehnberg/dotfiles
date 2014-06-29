@@ -1,3 +1,18 @@
-#!/bin/bash
-#mplayer  -subcp shift-jis  $1
-mplayer -utf8 -font 'Kochi Mincho' $* # requires ttf-kochi-mincho package. Should be installed with the new-install script.
+#!/usr/bin/env ruby
+# Requires: mplayer, ttf-kochi-mincho package
+# The later should be installed with the new-install script.
+
+# script for running mplayer with japanese utf8 subs
+class Jmplayer
+  EXECUTABLE = "mplayer"
+  ENCODING = '-utf8'
+  FONT = "-font 'Kochi Mincho'"
+
+  def self.run
+    %x(#{EXECUTABLE} #{ENCODING} #{FONT} "#{ARGV[0]}")
+  end
+end
+
+if __FILE__ == $0
+  Jmplayer.run
+end
