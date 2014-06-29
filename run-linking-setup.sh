@@ -4,6 +4,8 @@
 dotfiles_dir=~/dotfiles
 old_dotfiles_dir=~/.dotfiles_old
 dotfiles="bin git inputrc mplayer tmux.conf vim vimrc zshrc"
+# link the custom tmux oh-my-zsh plugin (handles colors correctly)
+ln -s ${dotfiles_dir}/oh-my-zsh/custom/plugins/tmux ~/.oh-my-zsh/custom/plugins/tmux
 
 echo "Creating ${old_dotfiles_dir} for backup of any existing dotfiles in ~"
 mkdir -p ${old_dotfiles_dir}
