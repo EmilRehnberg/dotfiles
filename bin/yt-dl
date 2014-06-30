@@ -9,7 +9,7 @@ class YouTubeDownloader < DownloaderBase
   )
 
   def initialize
-    super(EXECUTABLE, DEFAULTS, ARGV)
+    super(ARGV)
   end
 
   private

@@ -1,8 +1,6 @@
 class DownloaderBase
-  def initialize(executable, defaults, argv)
-    @executable = executable
-    @defaults = defaults
-    @urls = argv.empty? ? @defaults : argv
+  def initialize(argv)
+    @urls = argv.empty? ? self.class::DEFAULTS : argv
   end
 
   def run
@@ -14,7 +12,7 @@ class DownloaderBase
 
   def spawn
     @urls.map { |url|
-      call = [ @executable, url_arg(url) ].join(" ")
+      call = [ self.class::EXECUTABLE, url_arg(url) ].join(" ")
       Process.spawn(call, out: STDOUT, err: STDOUT)
     }
   end
