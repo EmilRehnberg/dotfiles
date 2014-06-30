@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+class ParallelGet
+  EXECUTABLE = "curl -O"
+  DEFAULTS = %w(
+    http://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Parallel_postulate_en.svg/525px-Parallel_postulate_en.svg.png
+    http://www.gnu.org/software/parallel/logo-gray+black300.png
+  )
+
+  def initialize
+    @urls = ARGV.empty? ? DEFAULTS : ARGV
+  end
+
+  def run
+    pids = spawn
+    wait(pids)
+  end
+
+  private
+
+  def spawn
+    @urls.map{ |url|
+      call = [ EXECUTABLE, url].join(" ")
+      Process.spawn(call, out: STDOUT, err: STDOUT)
+    }
+  end
+
+  def wait(pids)
+    pids.each do |pid|
+      Process.wait(pid)
+    end
+  end
+end
+
+if __FILE__ == $0
+  ParallelGet.new.run
+end
+
