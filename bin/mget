@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
+require_relative("lib/downloader_base.rb")
 
-class ParallelGet
+class FromUrlDownloader < DownloaderBase
   EXECUTABLE = "curl -O"
   DEFAULTS = %w(
     http://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Parallel_postulate_en.svg/525px-Parallel_postulate_en.svg.png
@@ -8,31 +9,11 @@ class ParallelGet
   )
 
   def initialize
-    @urls = ARGV.empty? ? DEFAULTS : ARGV
-  end
-
-  def run
-    pids = spawn
-    wait(pids)
-  end
-
-  private
-
-  def spawn
-    @urls.map{ |url|
-      call = [ EXECUTABLE, url].join(" ")
-      Process.spawn(call, out: STDOUT, err: STDOUT)
-    }
-  end
-
-  def wait(pids)
-    pids.each do |pid|
-      Process.wait(pid)
-    end
+    super(EXECUTABLE, DEFAULTS, ARGV)
   end
 end
 
 if __FILE__ == $0
-  ParallelGet.new.run
+  FromUrlDownloader.new.run
 end
 

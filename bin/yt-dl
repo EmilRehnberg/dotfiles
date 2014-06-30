@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-class YouTubeDownloader
+require_relative("lib/downloader_base.rb")
+
+class YouTubeDownloader < DownloaderBase
   EXECUTABLE = "youtube-dl"
   DEFAULTS = %w(
     https://www.youtube.com/watch?v=1fc3RdJKVB8
@@ -7,33 +9,16 @@ class YouTubeDownloader
   )
 
   def initialize
-    @urls = ARGV.empty? ? DEFAULTS : ARGV
-  end
-
-  def run
-    pids = spawn
-    wait(pids)
+    super(EXECUTABLE, DEFAULTS, ARGV)
   end
 
   private
 
-  def spawn
-    @urls.map { |url|
-      url_arg = "-t #{url}"
-      call = [ EXECUTABLE, url_arg].join(" ")
-      Process.spawn(call, out: STDOUT, err: STDOUT)
-    }
-  end
-
-  def wait(pids)
-    pids.each do |pid|
-      Process.wait(pid)
-    end
+  def url_arg(url)
+    "-t #{url}"
   end
 end
 
 if __FILE__ == $0
   YouTubeDownloader.new.run
 end
-
-
