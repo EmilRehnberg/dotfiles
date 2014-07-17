@@ -8,7 +8,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 " Use :BundleClean to clean
-Bundle 'AutoTag'
+" Bundle 'AutoTag'
 Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
 Bundle 'altercation/vim-colors-solarized'
@@ -39,6 +39,7 @@ set cursorline
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 "set list!
 set listchars=tab:▸\ ,eol:¬
+
 set hlsearch   " highlight all search results
 "set incsearch  " increment search
 set ignorecase " case-insensitive search
@@ -73,7 +74,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:acp_enableAtStartup = 0
 
 " Setup for color-solarized
-" set background=dark
+set background=dark
 let g:solarized_termtrans = 1
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -108,4 +109,6 @@ set synmaxcol=128
 set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
+
+set encoding=utf-8
 

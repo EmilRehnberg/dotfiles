@@ -20,6 +20,12 @@ alias tmux='tmux -2'
 alias yt='youtube-dl -t'
 alias yt_dl_mp3='youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 5'
 
+# User configuration
+# You may need to manually set your language environment
+ENCODING=en_US.UTF-8
+export LANG=$ENCODING
+export LC_ALL=$ENCODING
+export LC_CTYPE=$ENCODING
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -71,11 +77,7 @@ source $ZSH/oh-my-zsh.sh
 
 # post source of the global config aliasing
 unalias ag
-alias rm="rm -I"
-
-# User configuration
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+alias rm="rm -f"
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
@@ -102,4 +104,21 @@ export HISTFILESIZE=20000
 # export TERM=screen-256color #vim
 export TERM="xterm-256color"
 
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/heroku/bin:/usr/local/bin:/home/emil/.bin:/home/emil/.bin/tmux-sessions:/home/emil/.bin/helpers:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules:/home/emil/.rvm/bin:/usr/local/lib/node:/usr/local/lib/node_modules"
+PATHDIRS=(
+  $PATH
+  $HOME/.bin
+  $HOME/.bin/helpers
+  $HOME/.rvm/bin
+  /bin
+  /sbin
+  /usr/bin
+  /usr/games
+  /usr/local/bin
+  /usr/local/games
+  /usr/local/heroku/bin
+  /usr/local/lib/node
+  /usr/local/lib/node_modules
+  /usr/sbin
+)
+export PATH=`echo $PATHDIRS|tr " " ":"`
+

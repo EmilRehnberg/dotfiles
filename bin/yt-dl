@@ -9,10 +9,15 @@ class YouTubeDownloader < DownloaderBase
   )
 
   def initialize
-    super(ARGV)
+    super(parse_args(ARGV))
   end
 
   private
+
+  # the video code is all that is needed and it is 11 chars long
+  def parse_args(argv)
+    argv.map{|arg| arg[/\w{11}/]}
+  end
 
   def url_arg(url)
     "-t #{url}"
