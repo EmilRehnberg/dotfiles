@@ -16,7 +16,7 @@ class YouTubeDownloader < DownloaderBase
 
   # the video code is all that is needed and it is 11 chars long
   def parse_args(argv)
-    argv.map{|arg| arg[/\w{11}/]}
+    argv.map{|arg| arg[/[\w-]{11}/]}
   end
 
   def url_arg(url)

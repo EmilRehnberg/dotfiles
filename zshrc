@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -104,21 +104,24 @@ export HISTFILESIZE=20000
 # export TERM=screen-256color #vim
 export TERM="xterm-256color"
 
+# for scheme, originally used for compiling vim with mzscheme
+# export PLTHOME=~/Applications/racketv6.1
+
 PATHDIRS=(
-  $PATH
   $HOME/.bin
   $HOME/.bin/helpers
   $HOME/.rvm/bin
   /bin
   /sbin
+  /usr/local/bin
   /usr/bin
   /usr/games
-  /usr/local/bin
   /usr/local/games
   /usr/local/heroku/bin
   /usr/local/lib/node
   /usr/local/lib/node_modules
   /usr/sbin
+  $PATH
 )
 export PATH=`echo $PATHDIRS|tr " " ":"`
 
