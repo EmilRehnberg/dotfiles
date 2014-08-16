@@ -12,6 +12,7 @@ ZSH_THEME="simple"
 
 # Aliases
 alias agr='sudo $apt_pref upgrade'
+alias be='bundle exec'
 alias c=clear
 alias gma='git commit -am'
 alias R='R --vanilla'

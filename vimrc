@@ -77,6 +77,7 @@ Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'JulesWang/css.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
 Bundle 'kikijump/tslime.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
@@ -101,7 +102,6 @@ Bundle 'tristen/vim-sparkup'
 Bundle 'yegappan/grep'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'wincent/Command-T'
 
 """
 """ 機能拡張
@@ -124,6 +124,12 @@ let g:calendar_google_task = 1
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
 
 " quickly write HTML, just like zencoding but simple engough
@@ -136,8 +142,6 @@ set completefunc=syntaxcomplete#Complete
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Leader>m :Ag<SPACE>
 
-" set Cmd-t to C-p
-nnoremap <C-p> :CommandT<CR>
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<Leader>a"
