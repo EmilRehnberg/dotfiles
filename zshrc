@@ -66,7 +66,9 @@ HIST_STAMPS="yyyy-mm-dd"
 zstyle ':completion:*' special-dirs true
 
 # tmux config
-ZSH_TMUX_AUTOSTART=true
+if [[ $TERM_PROGRAM == "iTerm.app" ]] ; then
+  ZSH_TMUX_AUTOSTART=true
+fi
 ZSH_TMUX_AUTOCONNECT=false
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
