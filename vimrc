@@ -69,7 +69,9 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'benmills/vimux'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'chrisbra/NrrwRgn'
+Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'elzr/vim-json'
+Bundle 'fatih/vim-go'
 Bundle 'honza/vim-snippets'
 Bundle 'itchyny/calendar.vim'
 Bundle 'jceb/vim-orgmode'
@@ -111,7 +113,7 @@ Bundle 'vim-ruby/vim-ruby'
 let g:acp_enableAtStartup = 0
 
 " Setup for color-solarized
-" set background=light
+set background=dark
 let g:solarized_termtrans  = 1
 let g:solarized_termcolors = 256
 colorscheme solarized
@@ -155,7 +157,7 @@ let g:UltiSnipsJumpBackwardTrigger="<Leader>s"
 autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd FileType c,*csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
-autocmd Filetype *.csv,markdown,org :set noautoindent
+autocmd FileType *.csv,markdown,org :set noautoindent
 autocmd FileType python :set ts=4 sw=4 sts=4 expandtab
 
 " Dictionaries
@@ -174,6 +176,7 @@ autocmd FileType org map <buffer> <Leader>w <S-CR>
 autocmd FileType org map <buffer> <Leader>W <C-S-CR>
 
 au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
+au BufRead,BufNewFile *.go        set filetype=go
 au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.org       set filetype=org
 

@@ -85,12 +85,6 @@ alias rm="rm -f"
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # Variables
 # For mac colors in terminal
 DOTFILES="$HOME/dotfiles"
@@ -104,11 +98,11 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export HISTIGNORE="ls:ll:cd:pwd"
 export HISTSIZE=10000
 export HISTFILESIZE=20000
-# export TERM=screen-256color #vim
 export TERM="xterm-256color"
 
-# for scheme, originally used for compiling vim with mzscheme
-# export PLTHOME=~/Applications/racketv6.1
+# GO variables
+export GOROOT=/usr/local/Cellar/go/1.3/libexec
+export GOPATH=${HOME}/.go
 
 PATHDIRS=(
   $HOME/.bin
@@ -124,6 +118,7 @@ PATHDIRS=(
   /usr/local/lib/node
   /usr/local/lib/node_modules
   /usr/sbin
+  $GOROOT/bin
   $PATH
 )
 export PATH=`echo $PATHDIRS|tr " " ":"`
