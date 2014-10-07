@@ -100,10 +100,6 @@ export HISTSIZE=10000
 export HISTFILESIZE=20000
 export TERM="xterm-256color"
 
-# GO variables
-export GOROOT=/usr/local/Cellar/go/1.3/libexec
-export GOPATH=${HOME}/.go
-
 PATHDIRS=(
   $HOME/.bin
   $HOME/.bin/helpers
@@ -118,7 +114,6 @@ PATHDIRS=(
   /usr/local/lib/node
   /usr/local/lib/node_modules
   /usr/sbin
-  $GOROOT/bin
   $PATH
 )
 export PATH=`echo $PATHDIRS|tr " " ":"`
