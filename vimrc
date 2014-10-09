@@ -89,6 +89,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'scrooloose/syntastic'
 Bundle 'SirVer/ultisnips'
 Bundle 'slim-template/vim-slim.git'
+Bundle 'tejr/vim-tmux'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-commentary'
@@ -179,6 +180,7 @@ au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.go        set filetype=go
 au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.org       set filetype=org
+au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 
 cmap fmd set filetype=markdown
 

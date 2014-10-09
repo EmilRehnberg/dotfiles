@@ -66,7 +66,7 @@ HIST_STAMPS="yyyy-mm-dd"
 zstyle ':completion:*' special-dirs true
 
 # tmux config
-if [[ $TERM_PROGRAM == "iTerm.app" ]] ; then
+if [[ $TERM_PROGRAM == "iTerm.app" || $DESKTOP_SESSION == "ubuntu" ]] ; then
   ZSH_TMUX_AUTOSTART=true
 fi
 ZSH_TMUX_AUTOCONNECT=false
