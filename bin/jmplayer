@@ -6,15 +6,18 @@
 class Jmplayer
   EXECUTABLE = "mplayer"
   ENCODING = '-utf8'
-  FONTARGUMENT = "-font '#{font_name}'"
 
   def self.run
-    %x(#{EXECUTABLE} #{ENCODING} #{FONTARGUMENT} "#{ARGV[0]}")
+    %x(#{EXECUTABLE} #{ENCODING} #{font_argument} "#{ARGV[0]}")
   end
 
   private
 
-  def font_name
+  def self.font_argument
+    "-font '#{font_name}'"
+  end
+
+  def self.font_name
     case ENV["_system_name"]
     when "Ubuntu"
       "Kochi Mincho"
