@@ -106,7 +106,6 @@ PATHDIRS=(
   $HOME/.rvm/bin
   /bin
   /sbin
-  /usr/local/bin
   /usr/bin
   /usr/games
   /usr/local/games
