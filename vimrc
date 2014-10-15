@@ -105,6 +105,7 @@ Bundle 'tristen/vim-sparkup'
 Bundle 'yegappan/grep'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'wting/rust.vim'
 
 """
 """ 機能拡張
@@ -158,6 +159,7 @@ let g:UltiSnipsJumpBackwardTrigger="<Leader>s"
 autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd FileType c,*csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
+autocmd FileType rust :set ts=4 sw=4 sts=4 expandtab
 autocmd FileType *.csv,markdown,org :set noautoindent
 autocmd FileType python :set ts=4 sw=4 sts=4 expandtab
 
@@ -180,6 +182,7 @@ au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.go        set filetype=go
 au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.org       set filetype=org
+au BufRead,BufNewFile *.rs        set filetype=rust
 au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 
 cmap fmd set filetype=markdown
