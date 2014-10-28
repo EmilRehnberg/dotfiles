@@ -81,7 +81,7 @@ Bundle 'JulesWang/css.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
-Bundle 'kikijump/tslime.vim'
+Bundle 'jgdavey/tslime.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
 Bundle 'pgr0ss/vimux-ruby-test'
@@ -91,6 +91,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'SirVer/ultisnips'
 Bundle 'slim-template/vim-slim.git'
 Bundle 'tejr/vim-tmux'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-commentary'
@@ -236,4 +237,12 @@ set statusline +=%1*%=%5l%*    "current line
 set statusline +=%2*/%L%*      "total lines
 set statusline +=%1*%4v\ %*    "virtual column number
 set statusline +=%2*0x%04B\ %* "character under cursor"
+
+" For integrating running of tmux rspec into tmux
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+" vim-rspec mappings
+map <Leader>rt :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
 
