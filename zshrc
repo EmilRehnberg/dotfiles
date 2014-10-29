@@ -14,7 +14,13 @@ ZSH_THEME="simple"
 alias agr='sudo $apt_pref upgrade'
 alias be='bundle exec'
 alias c=clear
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
 alias gma='git commit -am'
+alias go='git checkout '
+alias gs='git status '
 alias R='R --vanilla'
 alias screen='TERM=xterm-256color screen'
 alias tmux='tmux -2'
