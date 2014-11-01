@@ -73,6 +73,7 @@ Bundle 'chrisbra/NrrwRgn'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'elzr/vim-json'
 Bundle 'fatih/vim-go'
+Bundle 'godlygeek/tabular'
 Bundle 'honza/vim-snippets'
 Bundle 'itchyny/calendar.vim'
 Bundle 'jceb/vim-orgmode'
@@ -85,10 +86,10 @@ Bundle 'jgdavey/tslime.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
 Bundle 'pgr0ss/vimux-ruby-test'
+Bundle 'plasticboy/vim-markdown'
 Bundle 'roman/golden-ratio'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'scrooloose/syntastic'
-Bundle 'SirVer/ultisnips'
 Bundle 'slim-template/vim-slim.git'
 Bundle 'tejr/vim-tmux'
 Bundle 'thoughtbot/vim-rspec'
@@ -103,7 +104,6 @@ Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-speeddating'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tristen/vim-sparkup'
 Bundle 'yegappan/grep'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-ruby/vim-ruby'
@@ -144,7 +144,7 @@ let g:sparkupNextMapping= "<c-m>"
 " vim rails syntax complete, try ctrl+x ctrl+u
 set completefunc=syntaxcomplete#Complete
 
-" bind \ (backward slash) to grep shortcut
+" bind leader+m to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Leader>m :Ag<SPACE>
 
@@ -186,8 +186,6 @@ au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.org       set filetype=org
 au BufRead,BufNewFile *.rs        set filetype=rust
 au BufRead,BufNewFile *tmux.conf  set filetype=tmux
-
-cmap fmd set filetype=markdown
 
 """
 """ 雑多
