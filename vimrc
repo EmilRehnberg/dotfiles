@@ -116,6 +116,10 @@ Bundle 'yegappan/grep'
 """ 機能拡張
 """
 
+" adds default folder for vim-notes notes
+let g:notes_directories = ['~/Dropbox/bunsho/chuushaku-注釈/vim-notes']
+let g:notes_suffix = '.txt'
+
 " Do not use AutoComplPop on start-up. Use :AcpEnable / :AcpDisable to toggle
 let g:acp_enableAtStartup = 0
 
