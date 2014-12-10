@@ -10,23 +10,6 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="simple"
 # ZSH_THEME="terminalparty"
 
-# Aliases
-alias agr='sudo $apt_pref upgrade'
-alias be='bundle exec'
-alias c=clear
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias gma='git commit -am'
-alias go='git checkout '
-alias gs='git status '
-alias R='R --vanilla'
-alias screen='TERM=xterm-256color screen'
-alias tmux='tmux -2'
-alias yt='youtube-dl -t'
-alias yt_dl_mp3='youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 5'
-
 # User configuration
 # You may need to manually set your language environment
 ENCODING=en_US.UTF-8
@@ -84,9 +67,28 @@ plugins=(bundler common-aliases debian git rails ruby screen tmux)
 
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
 # post source of the global config aliasing
 unalias ag
+alias agr='sudo $apt_pref upgrade'
+alias be='bundle exec'
+alias c=clear
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit '
+alias gco='git checkout '
+alias gd='git diff '
+alias glp='git log -p '
+alias gma='git commit -am'
+alias go='git checkout '
+alias gri='git rebase --interactive '
+alias gs='git status '
+alias R='R --vanilla'
 alias rm="rm -f"
+alias screen='TERM=xterm-256color screen'
+alias tmux='tmux -2'
+alias yt='youtube-dl -t'
+alias yt_dl_mp3='youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 5'
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
@@ -110,15 +112,10 @@ PATHDIRS=(
   $HOME/.bin
   $HOME/.bin/helpers
   $HOME/.rvm/bin
-  /bin
-  /sbin
-  /usr/bin
-  /usr/games
   /usr/local/games
   /usr/local/heroku/bin
   /usr/local/lib/node
   /usr/local/lib/node_modules
-  /usr/sbin
   $PATH
 )
 export PATH=`echo $PATHDIRS|tr " " ":"`
