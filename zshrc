@@ -98,6 +98,9 @@ DOTFILES="$HOME/dotfiles"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+export GOPATH="$HOME/code/go"
+export GOBIN="${GOPATH}/bin"
+
 # load shell function
 # source $DOTFILES/sh/functions.sh
 
@@ -110,8 +113,10 @@ export TERM="xterm-256color"
 PATHDIRS=(
   $HOME/.bin
   $HOME/.bin/helpers
+  $GOBIN
   $HOME/.rvm/bin
   /usr/local/games
+  /usr/local/go/bin
   /usr/local/heroku/bin
   /usr/local/lib/node
   /usr/local/lib/node_modules
