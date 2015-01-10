@@ -194,6 +194,10 @@ au BufRead,BufNewFile *.org       set filetype=org
 au BufRead,BufNewFile *.rs        set filetype=rust
 au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 
+" close preview window on selection an insert mode exit after omni-completion
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 """
 """ 雑多
 """
