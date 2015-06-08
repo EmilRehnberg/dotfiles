@@ -146,9 +146,6 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" quickly write HTML, just like zencoding but simple engough
-let g:sparkupNextMapping= "<c-m>"
-
 " vim rails syntax complete, try ctrl+x ctrl+u
 set completefunc=syntaxcomplete#Complete
 
