@@ -23,9 +23,6 @@ set encoding=utf-8
 set ls=2 "adds the status bar
 set switchbuf+=usetab,newtab
 
-" 従来
-" set incsearch   " increment search
-
 " trimming all trailing whitespace on save!
 autocmd BufWritePre * :%s/\s\+$//e
 
