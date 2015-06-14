@@ -25,7 +25,6 @@ set switchbuf+=usetab,newtab
 
 " 従来
 " set incsearch   " increment search
-" set number      " adds row numbers
 " set list!       " shows tabs and eols as symbols
 
 " trimming all trailing whitespace on save!
