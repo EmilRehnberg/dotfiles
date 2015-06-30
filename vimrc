@@ -154,6 +154,8 @@ let g:UltiSnipsExpandTrigger="<Leader>a"
 let g:UltiSnipsJumpForwardTrigger="<Leader>a"
 let g:UltiSnipsJumpBackwardTrigger="<Leader>s"
 
+let g:syntastic_html_tidy_exec = 'tidy5'
+
 """
 """ language specific setting
 """
