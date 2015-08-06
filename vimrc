@@ -166,7 +166,7 @@ autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 autocmd FileType c,*csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
 autocmd FileType rust :set ts=4 sw=4 sts=4 expandtab
 autocmd FileType *.csv,markdown,org :set noautoindent
-autocmd FileType python,go :set ts=4 sw=4 sts=4 expandtab
+autocmd FileType python,go :set ts=4 sw=4 sts=4 noexpandtab
 
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
