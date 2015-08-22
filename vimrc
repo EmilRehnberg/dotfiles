@@ -198,6 +198,8 @@ au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+autocmd Filetype scss set synmaxcol=500
+
 """
 """ 雑多
 """
