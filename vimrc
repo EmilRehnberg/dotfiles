@@ -23,6 +23,9 @@ set encoding=utf-8
 set ls=2 "adds the status bar
 set switchbuf+=usetab,newtab
 
+" Automatic reloading of .vimrc
+autocmd! BufWritePost .vimrc source %
+
 " trimming all trailing whitespace on save!
 autocmd BufWritePre * :%s/\s\+$//e
 
