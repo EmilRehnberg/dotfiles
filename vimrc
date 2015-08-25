@@ -189,6 +189,7 @@ autocmd FileType org map <buffer> <Leader>W <C-S-CR>
 
 au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.go        set filetype=go
+au BufRead,BufNewFile *.json      set filetype=json
 au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.org       set filetype=org
 au BufRead,BufNewFile *.rs        set filetype=rust
