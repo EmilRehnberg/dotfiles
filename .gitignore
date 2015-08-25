@@ -11,6 +11,7 @@ vim/sessions
 
 .netrwhist
 bin/subl
+bin/youtube-dl
 tags
 
 *.swp
