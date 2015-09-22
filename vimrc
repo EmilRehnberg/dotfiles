@@ -259,3 +259,4 @@ map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
 
+command -range CommitMessages :<line1>,<line2>Glog --pretty=short
