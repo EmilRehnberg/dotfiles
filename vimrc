@@ -169,8 +169,8 @@ autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd FileType c,*csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
 autocmd FileType rust :set ts=4 sw=4 sts=4 expandtab
-autocmd FileType *.csv,markdown,org :set noautoindent
-autocmd FileType python,go :set ts=4 sw=4 sts=4 noexpandtab
+autocmd FileType *.csv,markdown,org,tsv :set noautoindent
+autocmd FileType go,python,tsv :set ts=4 sw=4 sts=4 noexpandtab
 
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
@@ -194,6 +194,7 @@ au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.org       set filetype=org
 au BufRead,BufNewFile *.rs        set filetype=rust
 au BufRead,BufNewFile *tmux.conf  set filetype=tmux
+au BufRead,BufNewFile *.tsv       set filetype=tsv
 
 " close preview window on selection an insert mode exit after omni-completion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
