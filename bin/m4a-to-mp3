@@ -1,0 +1,3 @@
+#!/bin/bash
+file=$1
+ffmpeg -i ${file} -y -vn ${file/.m4a/.mp3}
