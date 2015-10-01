@@ -150,7 +150,7 @@ endif
 set completefunc=syntaxcomplete#Complete
 
 " bind leader+m to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Leader>m :Ag<SPACE>
 
 
@@ -259,4 +259,4 @@ map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
 
-command -range CommitMessages :<line1>,<line2>Glog --pretty=short
+command! -range CommitMessages :<line1>,<line2>Glog --pretty=short
