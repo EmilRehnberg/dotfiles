@@ -76,6 +76,7 @@ PATHDIRS=(
   $HOME/.bin/helpers
   $GOBIN
   $HOME/.rvm/bin
+  /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
   /usr/local/games
   /usr/local/go/bin
   /usr/local/heroku/bin
