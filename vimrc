@@ -20,6 +20,7 @@ set ttyfast " u got a fast terminal
 set ttyscroll=3
 set lazyredraw " to avoid scrolling problems
 set encoding=utf-8
+set ambiwidth=double
 set ls=2 "adds the status bar
 set switchbuf+=usetab,newtab
 
