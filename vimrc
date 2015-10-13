@@ -87,7 +87,6 @@ Bundle 'klen/python-mode'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
-Bundle 'pgr0ss/vimux-ruby-test'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'roman/golden-ratio'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
