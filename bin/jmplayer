@@ -3,12 +3,13 @@
 # The later should be installed with the new-install script.
 
 # script for running mplayer with japanese utf8 subs
+require "pathname"
 class Jmplayer
   EXECUTABLE = "mplayer"
   ENCODING = '-utf8'
 
   def self.run
-    %x(#{EXECUTABLE} #{ENCODING} #{font_argument} "#{ARGV[0]}")
+    %x(#{EXECUTABLE} #{ENCODING} #{font_argument} #{sub_argument} "#{video_file_name}")
   end
 
   private
@@ -26,6 +27,22 @@ class Jmplayer
     else
       abort("Could not find environment variable and hence do not know what font to use")
     end
+  end
+
+  def self.sub_argument
+    "-sub #{sub_file}" if sub_file_exist?
+  end
+
+  def self.sub_file_exist?
+    sub_file.exist?
+  end
+
+  def self.sub_file
+    @sub_file ||= video_file_name.sub_ext(".ja.srt")
+  end
+
+  def self.video_file_name
+    @video_file_name ||= Pathname.new(ARGV[0])
   end
 end
 
