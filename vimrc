@@ -262,3 +262,9 @@ map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
 
 command! -range CommitMessages :<line1>,<line2>Glog --pretty=short
+
+let vimrplugin_vimpager = "no"
+let g:vimrplugin_screenplugin = 1
+let g:ScreenShellInitialFocus = 'shell'
+let vimrplugin_screenvsplit = 1
+let g:ScreenImpl = 'Tmux'
