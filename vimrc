@@ -167,10 +167,11 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 " sets default tab setting
 autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
-autocmd FileType c,*csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
+autocmd FileType c,csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
 autocmd FileType python,rust :set ts=4 sw=4 sts=4 expandtab
-autocmd FileType *.csv,markdown,org,tsv :set noautoindent
+autocmd FileType csv,markdown,org,tsv :set noautoindent
 autocmd FileType go,tsv :set ts=4 sw=4 sts=4 noexpandtab
+autocmd FileType csv,tsv :set nowrap
 
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
@@ -187,6 +188,7 @@ autocmd FileType xml            setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType org map <buffer> <Leader>w <S-CR>
 autocmd FileType org map <buffer> <Leader>W <C-S-CR>
 
+au BufRead,BufNewFile *.csv       set filetype=csv
 au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.go        set filetype=go
 au BufRead,BufNewFile *.json      set filetype=json
