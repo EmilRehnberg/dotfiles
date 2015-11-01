@@ -268,3 +268,4 @@ let g:vimrplugin_screenplugin = 1
 let g:ScreenShellInitialFocus = 'shell'
 let vimrplugin_screenvsplit = 1
 let g:ScreenImpl = 'Tmux'
+let vimrplugin_assign = 0
