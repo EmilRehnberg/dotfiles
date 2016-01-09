@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+# Requires: mpv
+
+require 'pathname'
+require 'shellwords'
+
+class Jmpv
+  EXECUTABLE = 'jmpv'
+
+  def self.run
+    system("#{EXECUTABLE} #{video_file_argument}")
+    # system("#{EXECUTABLE} #{sub_argument} #{video_file_argument}")
+  end
+
+  private
+
+  def self.sub_argument
+    "--sub-file #{Shellwords.escape(sub_file)}" if sub_file_exist?
+  end
+
+  def self.video_file_argument
+    Shellwords.escape(video_file_name)
+  end
+
+  def self.sub_file
+    @sub_file ||= video_file_name.sub_ext(".ja.srt")
+  end
+
+  def self.sub_file_exist?
+    sub_file.exist?
+  end
+
+  def self.video_file_name
+    @video_file_name ||= Pathname.new(ARGV[0])
+  end
+end
+
+if __FILE__ == $0
+  Jmpv.run
+end

@@ -3,7 +3,7 @@
 
 dotfiles_dir=~/dotfiles
 old_dotfiles_dir=~/.dotfiles_old
-dotfiles="bin git inputrc mplayer tmux.conf vim vimrc vlcrc zshrc shinshutsu.yml"
+dotfiles="bin git inputrc mpv tmux.conf vim vimrc vlcrc zshrc shinshutsu.yml"
 # link the custom tmux oh-my-zsh plugin (handles colors correctly)
 ln -s ${dotfiles_dir}/oh-my-zsh/custom/plugins/tmux ~/.oh-my-zsh/custom/plugins/tmux
 
