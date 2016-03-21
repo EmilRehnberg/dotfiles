@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require_relative 'lib/radio-downloader.rb'
+
+class DownloaderSetup
+  RADIO_CHANNEL = "p2"
+  RADIO_PROGRAM = "elektroniskt"
+  STATIC_ARGUMENTS = { time: 2000, duration: 119 }
+
+  def run
+    RadioDownloader
+      .new(RADIO_CHANNEL, RADIO_PROGRAM, STATIC_ARGUMENTS)
+      .run
+  end
+end
+
+if __FILE__ == $0
+  DownloaderSetup.new.run
+end

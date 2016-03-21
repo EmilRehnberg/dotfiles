@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require_relative 'lib/radio-downloader.rb'
+
+class DownloaderSetup
+  RADIO_CHANNEL = "p3"
+  RADIO_PROGRAM = "musikguiden_i_p3"
+
+  def run
+    RadioDownloader
+      .new(RADIO_CHANNEL, RADIO_PROGRAM)
+      .run
+  end
+end
+
+if __FILE__ == $0
+  DownloaderSetup.new.run
+end
