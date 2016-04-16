@@ -97,13 +97,11 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'tejr/vim-tmux'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-projectionist'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-salve'
@@ -151,9 +149,6 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-
-" vim rails syntax complete, try ctrl+x ctrl+u
-set completefunc=syntaxcomplete#Complete
 
 " bind leader+m to grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
