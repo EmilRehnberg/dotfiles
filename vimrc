@@ -72,7 +72,6 @@ Bundle 'cespare/vim-toml'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'elzr/vim-json'
-Bundle 'fatih/vim-go'
 Bundle 'godlygeek/tabular'
 Bundle 'guns/vim-sexp'
 Bundle 'hail2u/vim-css3-syntax'
@@ -178,7 +177,7 @@ autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 autocmd FileType c,csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
 autocmd FileType python,rust :set ts=4 sw=4 sts=4 expandtab
 autocmd FileType csv,markdown,tsv :set noautoindent
-autocmd FileType go,tsv :set ts=4 sw=4 sts=4 noexpandtab
+autocmd FileType tsv :set ts=4 sw=4 sts=4 noexpandtab
 autocmd FileType csv,tsv :set nowrap
 
 " Dictionaries
@@ -194,7 +193,6 @@ autocmd FileType xml            setlocal omnifunc=xmlcomplete#CompleteTags
 
 au BufRead,BufNewFile *.csv       set filetype=csv
 au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
-au BufRead,BufNewFile *.go        set filetype=go
 au BufRead,BufNewFile *.json      set filetype=json
 au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.rs        set filetype=rust
