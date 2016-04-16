@@ -80,8 +80,8 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'honza/vim-snippets'
 Bundle 'itchyny/calendar.vim'
+Bundle 'jalvesaq/Nvim-R'
 Bundle 'jceb/vim-orgmode'
-Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'JulesWang/css.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kchmck/vim-coffee-script'
@@ -274,9 +274,6 @@ map <Leader>ra :call RunAllSpecs()<CR>
 
 command! -range CommitMessages :<line1>,<line2>Glog --pretty=short
 
-let vimrplugin_vimpager = "no"
-let g:vimrplugin_screenplugin = 1
 let g:ScreenShellInitialFocus = 'shell'
-let vimrplugin_screenvsplit = 1
 let g:ScreenImpl = 'Tmux'
-let vimrplugin_assign = 0
+let R_assign = 0
