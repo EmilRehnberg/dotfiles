@@ -75,13 +75,10 @@ Bundle 'elzr/vim-json'
 Bundle 'fatih/vim-go'
 Bundle 'godlygeek/tabular'
 Bundle 'guns/vim-sexp'
-Bundle 'guns/vim-clojure-highlight'
-Bundle 'guns/vim-clojure-static'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'honza/vim-snippets'
 Bundle 'itchyny/calendar.vim'
 Bundle 'jalvesaq/Nvim-R'
-Bundle 'jceb/vim-orgmode'
 Bundle 'JulesWang/css.vim'
 Bundle 'gmarik/vundle'
 Bundle 'kchmck/vim-coffee-script'
@@ -180,7 +177,7 @@ autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd FileType c,csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
 autocmd FileType python,rust :set ts=4 sw=4 sts=4 expandtab
-autocmd FileType csv,markdown,org,tsv :set noautoindent
+autocmd FileType csv,markdown,tsv :set noautoindent
 autocmd FileType go,tsv :set ts=4 sw=4 sts=4 noexpandtab
 autocmd FileType csv,tsv :set nowrap
 
@@ -195,16 +192,11 @@ autocmd FileType python         setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType ruby           setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml            setlocal omnifunc=xmlcomplete#CompleteTags
 
-" org mode specific mappings for inserting new headers
-autocmd FileType org map <buffer> <Leader>w <S-CR>
-autocmd FileType org map <buffer> <Leader>W <C-S-CR>
-
 au BufRead,BufNewFile *.csv       set filetype=csv
 au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.go        set filetype=go
 au BufRead,BufNewFile *.json      set filetype=json
 au BufRead,BufNewFile *.md        set filetype=markdown
-au BufRead,BufNewFile *.org       set filetype=org
 au BufRead,BufNewFile *.rs        set filetype=rust
 au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 au BufRead,BufNewFile *.tsv       set filetype=tsv
