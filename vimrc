@@ -89,6 +89,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'roman/golden-ratio'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'scrooloose/syntastic'
+Bundle 'SirVer/ultisnips'
 Bundle 'slim-template/vim-slim.git'
 Bundle 'msanders/cocoa.vim'
 Bundle 'tejr/vim-tmux'
