@@ -81,7 +81,6 @@ Bundle 'JulesWang/css.vim'
 Bundle 'gmarik/vundle'
 Bundle 'Keithbsmiley/rspec.vim'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'klen/python-mode'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'macvim-dev/macvim'
@@ -157,7 +156,7 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd FileType c,csv,markdown,r,ruby,sh :set ts=2 sw=2 sts=2 expandtab
-autocmd FileType python,rust :set ts=4 sw=4 sts=4 expandtab
+autocmd FileType rust :set ts=4 sw=4 sts=4 expandtab
 autocmd FileType csv,markdown,tsv :set noautoindent
 autocmd FileType tsv :set ts=4 sw=4 sts=4 noexpandtab
 autocmd FileType csv,tsv :set nowrap
@@ -169,7 +168,6 @@ autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
 autocmd FileType css            setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown  setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript     setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python         setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType ruby           setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml            setlocal omnifunc=xmlcomplete#CompleteTags
 
