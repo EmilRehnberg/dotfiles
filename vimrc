@@ -76,7 +76,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'guns/vim-sexp'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'honza/vim-snippets'
-Bundle 'itchyny/calendar.vim'
 Bundle 'jalvesaq/Nvim-R'
 Bundle 'JulesWang/css.vim'
 Bundle 'gmarik/vundle'
@@ -133,10 +132,6 @@ set background=dark
 let g:solarized_termtrans  = 1
 let g:solarized_termcolors = 256
 colorscheme solarized
-
-" calendar.vim settings
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
 
 " The Silver Searcher
 if executable('ag')
