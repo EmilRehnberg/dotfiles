@@ -75,7 +75,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'guns/vim-sexp'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'honza/vim-snippets'
-Bundle 'jalvesaq/Nvim-R'
+Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'JulesWang/css.vim'
 Bundle 'gmarik/vundle'
 Bundle 'Keithbsmiley/rspec.vim'
@@ -229,6 +229,12 @@ set statusline +=%2*/%L%*      "total lines
 set statusline +=%1*%4v\ %*    "virtual column number
 set statusline +=%2*0x%04B\ %* "character under cursor"
 
+" for vim-R-plugin
+let vimrplugin_vimpager = "no"
+let g:vimrplugin_screenplugin = 1
+let vimrplugin_screenvsplit = 1
+let vimrplugin_assign = 0
+
 " For integrating running of tmux rspec into tmux
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 " vim-rspec mappings
@@ -241,4 +247,3 @@ command! -range CommitMessages :<line1>,<line2>Glog --pretty=short
 
 let g:ScreenShellInitialFocus = 'shell'
 let g:ScreenImpl = 'Tmux'
-let R_assign = 0
