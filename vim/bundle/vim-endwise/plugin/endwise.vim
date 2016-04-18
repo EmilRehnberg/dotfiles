@@ -18,14 +18,19 @@ augroup endwise " {{{1
         \ let b:endwise_syngroups = 'luaFunction,luaStatement,luaCond'
   autocmd FileType elixir
         \ let b:endwise_addition = 'end' |
-        \ let b:endwise_words = 'case,cond,bc,lc,inlist,inbits,if,unless,try,receive,function,fn' |
-        \ let b:endwise_pattern = '^\s*\zs\%(case\|cond\|bc\|lc\|inlist\|inbits\|if\|unless\|try\|receive\|function\|fn\)\>\%(.*[^:]\<end\>\)\@!' |
-        \ let b:endwise_syngroups = 'elixirKeyword'
+        \ let b:endwise_words = 'do,fn' |
+        \ let b:endwise_pattern = '.*[^.:@$]\zs\<\%(do\(:\)\@!\|fn\)\>\ze\%(.*[^.:@$]\<end\>\)\@!' |
+        \ let b:endwise_syngroups = 'elixirBlockDefinition'
   autocmd FileType ruby
         \ let b:endwise_addition = 'end' |
         \ let b:endwise_words = 'module,class,def,if,unless,case,while,until,begin,do' |
         \ let b:endwise_pattern = '^\(.*=\)\?\s*\%(private\s\+\|protected\s\+\|public\s\+\|module_function\s\+\)*\zs\%(module\|class\|def\|if\|unless\|case\|while\|until\|for\|\|begin\)\>\%(.*[^.:@$]\<end\>\)\@!\|\<do\ze\%(\s*|.*|\)\=\s*$' |
         \ let b:endwise_syngroups = 'rubyModule,rubyClass,rubyDefine,rubyControl,rubyConditional,rubyRepeat'
+  autocmd FileType crystal
+        \ let b:endwise_addition = 'end' |
+        \ let b:endwise_words = 'module,class,lib,macro,struct,union,enum,def,if,unless,ifdef,case,while,until,for,begin,do' |
+        \ let b:endwise_pattern = '^\(.*=\)\?\s*\%(private\s\+\|protected\s\+\|public\s\+\|abstract\s\+\)*\zs\%(module\|class\|lib\|macro\|struct\|union\|enum\|def\|if\|unless\|ifdef\|case\|while\|until\|for\|begin\)\>\%(.*[^.:@$]\<end\>\)\@!\|\<do\ze\%(\s*|.*|\)\=\s*$' |
+        \ let b:endwise_syngroups = 'crystalModule,crystalClass,crystalLib,crystalMacro,crystalStruct,crystalDefine,crystalConditional,crystalRepeat,crystalControl'
   autocmd FileType sh,zsh
         \ let b:endwise_addition = '\=submatch(0)=="then" ? "fi" : submatch(0)=="case" ? "esac" : "done"' |
         \ let b:endwise_words = 'then,case,do' |
@@ -37,10 +42,10 @@ augroup endwise " {{{1
         \ let b:endwise_pattern = '\%(\<End\>.*\)\@<!\<&\>' |
         \ let b:endwise_syngroups = 'vbStatement,vbnetStorage,vbnetProcedure,vbnet.*Words,AspVBSStatement'
   autocmd FileType vim
-        \ let b:endwise_addition = 'end&' |
-        \ let b:endwise_words = 'fu,fun,func,function,wh,while,if,for,try' |
-        \ let b:endwise_syngroups = 'vimFuncKey,vimNotFunc,vimCommand'
-  autocmd FileType c,cpp,xdefaults
+        \ let b:endwise_addition = '\=submatch(0)=="augroup" ? submatch(0) . " END" : "end" . submatch(0)' |
+        \ let b:endwise_words = 'fu,fun,func,function,wh,while,if,for,try,au,augroup' |
+        \ let b:endwise_syngroups = 'vimFuncKey,vimNotFunc,vimCommand,vimAugroupKey'
+  autocmd FileType c,cpp,xdefaults,haskell
         \ let b:endwise_addition = '#endif' |
         \ let b:endwise_words = 'if,ifdef,ifndef' |
         \ let b:endwise_pattern = '^\s*#\%(if\|ifdef\|ifndef\)\>' |
@@ -54,6 +59,14 @@ augroup endwise " {{{1
         \ let b:endwise_addition = 'end' |
         \ let b:endwise_words = 'function,if,for' |
         \ let b:endwise_syngroups = 'matlabStatement,matlabFunction,matlabConditional,matlabRepeat'
+  autocmd FileType htmldjango
+        \ let b:endwise_addition = '{% end& %}' |
+        \ let b:endwise_words = 'autoescape,block\(\s\+\S*\)\?,blocktrans,cache,comment,filter,for,if,ifchanged,ifequal,ifnotequal,language,spaceless,verbatim,with' |
+        \ let b:endwise_syngroups = 'djangoTagBlock,djangoStatement'
+  autocmd FileType snippets
+        \ let b:endwise_addition = 'endsnippet' |
+        \ let b:endwise_words = 'snippet' |
+        \ let b:endwise_syngroups = 'snipSnippet,snipSnippetHeader,snipSnippetHeaderKeyword'
   autocmd FileType * call s:abbrev()
 augroup END " }}}1
 
@@ -64,6 +77,23 @@ function! s:abbrev()
     endfor
   endif
 endfunction
+
+function! s:teardownMappings()
+  inoremap <buffer> <C-X><CR> <C-X><CR>
+  inoremap <buffer> <CR> <CR>
+endfunction
+
+" Functions {{{1
+
+function! EndwiseDiscretionary()
+  return <SID>crend(0)
+endfunction
+
+function! EndwiseAlways()
+  return <SID>crend(1)
+endfunction
+
+" }}}1
 
 " Maps {{{1
 
@@ -87,6 +117,7 @@ if !exists('g:endwise_no_mappings')
     imap <script> <C-X><CR> <CR><SID>AlwaysEnd
     imap <CR> <CR><Plug>DiscretionaryEnd
   endif
+  autocmd endwise CmdwinEnter * call s:teardownMappings()
 endif
 
 " }}}1
