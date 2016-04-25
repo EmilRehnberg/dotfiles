@@ -31,21 +31,12 @@ source $ZSH/oh-my-zsh.sh
 
 # post source of the global config aliasing
 unalias ag
-alias agr='sudo $apt_pref upgrade'
-alias be='bundle exec'
-alias c=clear
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit '
-alias gco='git checkout '
-alias gd='git diff '
-alias gdc='git diff --cached '
-alias glp='git log -p '
-alias gma='git commit -am'
-alias gri='git rebase --interactive '
-alias gs='git status '
+# alias ga='git add '
+# alias gc='git commit '
+# alias gd='git diff '
+# alias gdc='git diff --cached '
+# alias glp='git log -p '
 alias R='R --vanilla'
-alias rm="rm -f"
 alias screen='TERM=xterm-256color screen'
 alias tmux='tmux -2'
 alias yt='youtube-dl -t'
