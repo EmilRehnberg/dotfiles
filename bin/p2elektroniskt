@@ -5,7 +5,7 @@ require_relative 'lib/radio-downloader.rb'
 class DownloaderSetup
   RADIO_CHANNEL = "p2"
   RADIO_PROGRAM = "elektroniskt"
-  STATIC_ARGUMENTS = { time: 2000, duration: 119 }
+  STATIC_ARGUMENTS = { time: 2000, duration: 120 }
 
   def run
     RadioDownloader
