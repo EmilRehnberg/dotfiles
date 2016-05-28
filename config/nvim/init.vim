@@ -9,6 +9,7 @@ call dein#add('taglist.vim')
 call dein#add('utl.vim')
 call dein#add('sqlserver.vim')
 call dein#add('benmills/vimux')
+call dein#add('blindFS/vim-taskwarrior')
 call dein#add('cakebaker/scss-syntax.vim')
 call dein#add('cespare/vim-toml')
 call dein#add('ecomba/vim-ruby-refactoring')
@@ -152,6 +153,9 @@ command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Leader>m :Ag<SPACE>
 
 let g:syntastic_html_tidy_exec = 'tidy5'
+
+" for vim-taskwarrior
+let g:task_rc_override = 'rc.defaultwidth=0'
 
 """
 """ language specific setting
