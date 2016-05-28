@@ -1,14 +1,3 @@
-
-vim/backups
-vim/view
-vim/.netrwhist
-vim/tmp
-vim/spell
-vim/after/.vimrc.after
-vim/.vundles.local
-vim/bundle
-vim/sessions
-
 .netrwhist
 bin/subl
 bin/youtube-dl

@@ -31,11 +31,6 @@ source $ZSH/oh-my-zsh.sh
 
 # post source of the global config aliasing
 unalias ag
-# alias ga='git add '
-# alias gc='git commit '
-# alias gd='git diff '
-# alias gdc='git diff --cached '
-# alias glp='git log -p '
 alias R='R --vanilla'
 alias screen='TERM=xterm-256color screen'
 alias tmux='tmux -2'
@@ -43,7 +38,7 @@ alias yt='youtube-dl -t'
 alias yt_dl_mp3='youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 5'
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # For mac colors in terminal
 DOTFILES="$HOME/dotfiles"
