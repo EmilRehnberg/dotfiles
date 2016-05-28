@@ -1,8 +1,14 @@
+config/nvim/.dein/*
+config/nvim/repos/*
+config/nvim/rollbacks/*
+config/nvim/temp/*
+
 .netrwhist
 bin/subl
 bin/youtube-dl
 tags
 
+*~
 *.swp
 *.swo
 .DS_Store
