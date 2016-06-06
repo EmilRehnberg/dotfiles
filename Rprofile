@@ -3,6 +3,11 @@ if(interactive()){
   library(setwidth)
 }
 
+# sets default repo to beijing
+getOption("repos") %T>%
+  { .["CRAN"] <- "http://mirror.bjtu.edu.cn/cran/" } %>%
+  { options(repos = .) }
+
 # think ruby's `%w`
 wordArray <- function(string){ string %>% strsplit("[[:space:]]+") %>% unlist }
 
