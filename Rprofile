@@ -1,8 +1,6 @@
-require(magrittr)
+library(magrittr)
 if(interactive()){
-  library(colorout)
   library(setwidth)
-  library(vimcom)
 }
 
 # think ruby's `%w`
