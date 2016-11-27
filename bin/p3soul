@@ -3,9 +3,9 @@
 dates=($*)
 
 for date in ${dates[@]} ; do
-  file=SRP3_${date}_220500_6900_a192.m4a
-  url=http://lyssnaigen.sr.se/Autorec/ET2W/P3/Musikguiden_i_P3/${date:0:4}/${date:5:2}/${file}
-  wget ${url}
+  file=musikguiden_i_p3_${date}_2205_192.m4a
+  url=https://lyssna.sr.se/ljudit/p3/musikguiden_i_p3/${date:0:4}/${date:4:2}/${file}
+  wget --continue ${url}
   p3soul-split $file
 done
 
