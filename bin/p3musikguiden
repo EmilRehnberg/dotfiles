@@ -16,3 +16,11 @@ end
 if __FILE__ == $0
   DownloaderSetup.new.run
 end
+
+# New URL
+# http://lyssna.sr.se/ljudit/p3/musikguiden_i_p3/2016/06/musikguiden_i_p3_20160618_2307_96.m4a
+# P2 still uses old
+# http://lyssna.sr.se/autorec/et2w/p2/elektroniskt/2016/06/srp2_2016-06-19_200000_7200_a96.m4a
+#
+# Old URL
+# http://lyssna.sr.se/autorec/et2w/p3/musikguiden_i_p3/2016/06/srp3_2016-06-07_220300_3420_a192.m4a
