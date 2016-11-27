@@ -42,4 +42,6 @@ diagonalProportion <-
     divide_by(object %>% diag %>% sum,
               object %>% sum)}
 
-detach(package:magrittr) # I don't want to load dependancies in Rprofile; load it in the projects instead.
+if(!interactive()){
+  detach(package:magrittr) # I don't want to load dependancies in Rprofile; load it in the projects instead.
+}
