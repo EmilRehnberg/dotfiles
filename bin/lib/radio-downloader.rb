@@ -5,11 +5,12 @@ require 'chronic'
 
 class RadioDownloader
   EXECUTABLE = 'wget'
-  QUALITY = 'a192'
+  QUALITY = '192'
 
   def initialize(channel, program, options={})
     @radio_channel = channel
-    @base_url = "http://lyssna.sr.se/autorec/et2w/#{@radio_channel}/#{program}"
+    @program = program
+    @base_url = "http://lyssna.sr.se/ljudit/#{@radio_channel}/#{program}"
     @options = options
   end
 
@@ -37,11 +38,11 @@ class RadioDownloader
   end
 
   def filename
-    "sr#{@radio_channel}_#{@args.date}_#{@args.time_of_day}_#{@args.duration}_#{QUALITY}.m4a"
+    "#{@program}_#{@args.date}_#{@args.time_of_day}_#{QUALITY}.m4a"
   end
 
   def print_usage
-    puts "USAGE: #{radio_channel}#{program} YYYYMMDD [HHMM DURATION_MIN]"
+    puts "USAGE: #{@radio_channel}#{@program} YYYYMMDD [HHMM DURATION_MIN]"
   end
 
   def insert_options
@@ -67,7 +68,7 @@ class Arguments
   end
 
   def date
-    @datetime.strftime("%Y-%m-%d")
+    @datetime.strftime("%Y%m%d")
   end
 
   def year
@@ -79,7 +80,7 @@ class Arguments
   end
 
   def time_of_day
-    @datetime.strftime("%H%M00")
+    @datetime.strftime("%H%M")
   end
 
   def duration
