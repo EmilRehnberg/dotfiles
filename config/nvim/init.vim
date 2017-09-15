@@ -152,7 +152,11 @@ endif
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Leader>m :Ag<SPACE>
 
+" syntastic settings
 let g:syntastic_html_tidy_exec = 'tidy5'
+" r syntastic settings
+" let g:syntastic_enable_r_lintr_checker = 1
+" let g:syntastic_r_checkers = 1
 
 " for vim-taskwarrior
 let g:task_rc_override = 'rc.defaultwidth=0'
