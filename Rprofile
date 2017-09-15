@@ -1,7 +1,5 @@
 library(magrittr, quietly = TRUE, warn.conflicts = TRUE)
-if(interactive()){
-  library(setwidth)
-}
+if(interactive()) library(setwidth)
 
 # sets default repo to beijing
 getOption("repos") %T>%
@@ -23,6 +21,5 @@ getOption("repos") %T>%
     }
   }
 
-if(!interactive()){
-  detach(package:magrittr) # I don't want to load dependancies in Rprofile; load it in the projects instead.
-}
+# I don't want to load dependancies in Rprofile; load it in the projects instead.
+if(!interactive()) detach(package:magrittr)
