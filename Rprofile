@@ -6,6 +6,12 @@ getOption("repos") %T>%
   { .["CRAN"] <- "http://mirror.bjtu.edu.cn/cran/" } %>%
   { options(repos = .) }
 
+options( devtools.desc.author =
+          utils::person("Emil", "Rehnberg"
+                        ,email = "emil.rehnberg@gmail.com"
+                        ,role = c("aut", "cre"))
+        ,devtools.desc.license = "GPL-3 | file LICENCE")
+
 # saves r history
 # requires `export R_HISTFILE=~/.Rhistory` in shell loading
 # `.Last` function is invoked in `q`/`quit` if `runLast` is `TRUE`
