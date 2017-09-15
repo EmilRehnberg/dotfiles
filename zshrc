@@ -35,7 +35,7 @@ alias R='R --vanilla'
 alias screen='TERM=xterm-256color screen'
 alias tmux='tmux -2'
 alias yt='youtube-dl -t'
-alias yt_dl_mp3='youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 5'
+alias yt_dl_mp3='youtube-dl --extract-audio --audio-format mp3 --audio-quality 320K --add-metadata'
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
