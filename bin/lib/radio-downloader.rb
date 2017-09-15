@@ -10,7 +10,7 @@ class RadioDownloader
   def initialize(channel, program, options={})
     @radio_channel = channel
     @program = program
-    @base_url = "http://lyssna.sr.se/ljudit/#{@radio_channel}/#{program}"
+    @base_url = "http://lyssna-cdn.sr.se/ljudit/#{@radio_channel}/#{program}"
     @options = options
   end
 
@@ -19,7 +19,7 @@ class RadioDownloader
     begin
       @args = Arguments.new(ARGV)
       system("#{EXECUTABLE} #{url}")
-      system("m4a-to-mp3 #{filename}")
+      system("m4a-to-mp3 #{filename} #{QUALITY}")
       system("rm #{filename}")
     rescue => e
       puts e
@@ -63,7 +63,7 @@ class Arguments
   SECS_OF_DAY = '00'
 
   def initialize(arguments)
-    @datetime = Chronic.parse("#{arguments[0]} #{arguments[1]}")
+    @datetime = Chronic.parse("#{inject_dashes_to_compact_date_string(arguments[0])} #{arguments[1]}")
     @duration_min = arguments[2]
   end
 
@@ -85,5 +85,11 @@ class Arguments
 
   def duration
     "#{@duration_min.to_i * 60}"
+  end
+
+  private
+
+  def inject_dashes_to_compact_date_string(yyyymmdd)
+    "#{yyyymmdd[0..3]}-#{yyyymmdd[4..5]}-#{yyyymmdd[6..7]}"
   end
 end

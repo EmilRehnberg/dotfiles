@@ -1,3 +1,9 @@
 #!/bin/bash
 file=$1
-ffmpeg -i ${file} -y -vn ${file/.m4a/.mp3}
+if [ ! -z $2 ]
+then
+  QUALITY_ARG="-b:a ${2}k"
+else
+  QUALITY_ARG=""
+fi
+ffmpeg -i ${file} -y ${QUALITY_ARG} -vn ${file/.m4a/.mp3}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dates=($*)
+
+for date in ${dates[@]} ; do
+  file=musikguiden_i_p3_med_dj_hiphopsoulrnb_${date}_2203_192.m4a
+  url=https://lyssna-cdn.sr.se/ljudit/p3/musikguiden_i_p3_med_dj_hiphopsoulrnb/${date:0:4}/${date:4:2}/${file}
+  wget --continue ${url}
+  m4a-to-mp3 $file
+  rm -f $file
+done
+
+wait
+
