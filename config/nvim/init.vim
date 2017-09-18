@@ -65,6 +65,7 @@ filetype plugin indent on
 set incsearch
 set cindent
 set cursorline
+set cursorcolumn
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 set listchars=tab:▸\ ,eol:¬
 set ignorecase " case-insensitive search
