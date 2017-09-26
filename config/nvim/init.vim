@@ -53,6 +53,7 @@ call dein#add('tpope/vim-unimpaired')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-pandoc/vim-rmarkdown')
 call dein#add('vim-ruby/vim-ruby')
+call dein#add('vimwiki/vimwiki')
 call dein#add('wting/rust.vim')
 call dein#add('xolox/vim-misc')
 call dein#add('xolox/vim-notes')
@@ -139,6 +140,8 @@ noremap <Leader>c :nohlsearch<CR>
 " adds default folder for vim-notes notes
 let g:notes_directories = ['~/Dropbox/bunsho/chuushaku-注釈/vim-notes']
 let g:notes_suffix = '.txt'
+
+let g:vimwiki_list = [{'path': '~/Dropbox/bunsho/vimwiki/', 'path_html': '~/Dropbox/bunsho/vimwiki-html/'}]
 
 " Do not use AutoComplPop on start-up. Use :AcpEnable / :AcpDisable to toggle
 let g:acp_enableAtStartup = 0
