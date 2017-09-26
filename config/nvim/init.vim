@@ -162,9 +162,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_exec = 'tidy5'
-" r syntastic settings
-" let g:syntastic_enable_r_lintr_checker = 1
-" let g:syntastic_r_checkers = 1
+
+let g:syntastic_enable_r_lintr_checker = 1
+let g:syntastic_r_checkers = ['lintr']
+let g:syntastic_r_lintr_linters = "with_defaults(object_name_linter('lowerCamelCase'),line_length_linter(128))"
 
 " for vim-taskwarrior
 let g:task_rc_override = 'rc.defaultwidth=0'
