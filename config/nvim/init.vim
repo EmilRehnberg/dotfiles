@@ -216,7 +216,8 @@ colorscheme southernlights
 
 " Nvim-R settings
 let R_assign = 0
-let R_vsplit = 1
+let R_min_editor_width = 80
+let R_rconsole_width = 100
 let R_hi_fun = 1
 let R_objbr_opendf = 1    " Show data.frames elements
 let R_objbr_openlist = 1  " Show lists elements
