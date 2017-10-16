@@ -259,6 +259,9 @@ endif
 " let g:unite_source_grep_default_opts='--nocolor --line-numbers --nogroup -S -C4'
 " let g:unite_source_grep_recursive_opt=''
 
+let g:python2_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " Vimux
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
