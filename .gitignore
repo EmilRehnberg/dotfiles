@@ -2,6 +2,8 @@ config/nvim/.dein/*
 config/nvim/repos/*
 config/nvim/rollbacks/*
 config/nvim/temp/*
+config/nvim/.cache
+config/nvim/bundle
 
 .netrwhist
 bin/subl
