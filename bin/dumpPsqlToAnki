@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dumpFile=_db-dump.sql
+cd /tmp
+pg_dumpall > $dumpFile
+gzip $dumpFile.gz
+mv $dumpFile.gz ~/Documents/Anki/e/collection.media
+
