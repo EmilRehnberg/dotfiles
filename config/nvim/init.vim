@@ -202,6 +202,15 @@ au BufRead,BufNewFile *.rs        set filetype=rust
 au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 au BufRead,BufNewFile *.tsv       set filetype=tsv
 
+if did_filetype()
+  finish
+endif
+if getline(1) =~# '^#!.*/bin/env\s\+Rscript\>'
+  setfiletype r
+elseif getline(1) =~# '^#!.*/bin/env\s\+R\>'
+  setfiletype r
+endif
+
 " close preview window on selection an insert mode exit after omni-completion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
