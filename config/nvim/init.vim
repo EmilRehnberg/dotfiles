@@ -142,9 +142,10 @@ let g:notes_directories = ['~/Dropbox/bunsho/chuushaku-注釈/vim-notes']
 let g:notes_suffix = '.txt'
 
 let g:vimwiki_list = [{'path': '~/Dropbox/bunsho/vimwiki/',
-      \ 'template_path': '~/Dropbox/bunsho/vimwiki/templates/',
+      \ 'template_path': '~/Dropbox/bunsho/vimwiki-assets/templates/',
       \ 'template_default': 'default',
       \ 'template_ext': '.html',
+      \ 'css_name': '~/Dropbox/bunsho/vimwiki-assets/style.css',
       \ 'path_html': '~/Dropbox/bunsho/vimwiki-html/'}]
 let g:vimwiki_list_text_ignore_newline = 0
 let g:vimwiki_list_ignore_newline = 0
