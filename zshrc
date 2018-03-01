@@ -58,6 +58,8 @@ export HISTSIZE=10000
 export HISTFILESIZE=20000
 export TERM="xterm-256color"
 
+export RSTUDIO_PANDOC="/Applications/RStudio.app/Contents/MacOS/pandoc/"
+
 # r-history variable, combined with function in .Rprofile
 export R_HISTFILE=~/.Rhistory
 
