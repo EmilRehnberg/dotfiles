@@ -221,7 +221,7 @@ endif
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-autocmd Filetype scss set synmaxcol=500
+autocmd Filetype css,markdown,r,rmd,scss,vimwiki set synmaxcol=500
 
 """
 """ 雑多
