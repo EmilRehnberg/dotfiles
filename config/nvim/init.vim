@@ -48,6 +48,8 @@ call dein#add('tpope/vim-speeddating')
 call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-unimpaired')
 call dein#add('vim-airline/vim-airline')
+call dein#add('vim-pandoc/vim-pandoc')
+call dein#add('vim-pandoc/vim-pandoc-syntax')
 call dein#add('vim-pandoc/vim-rmarkdown')
 call dein#add('vim-ruby/vim-ruby')
 call dein#add('vim-scripts/SyntaxRange')
@@ -230,6 +232,9 @@ autocmd Filetype css,markdown,r,rmd,scss,vimwiki set synmaxcol=500
 """
 
 colorscheme southernlights
+
+let g:pandoc#spell#enabled = 0
+let g:pandoc#syntax#conceal#use = 0
 
 " Nvim-R settings
 let R_assign = 0
