@@ -207,7 +207,7 @@ au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.json      set filetype=json
 au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.rdmpd     set filetype=r
-au BufRead,BufNewFile *.rpres     set filetype=rmd
+au BufRead,BufNewFile *.rpres     set filetype=rmarkdown
 au BufRead,BufNewFile *.rs        set filetype=rust
 au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 au BufRead,BufNewFile *.tsv       set filetype=tsv
@@ -225,7 +225,7 @@ endif
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-autocmd Filetype css,markdown,r,rmd,scss,vimwiki set synmaxcol=500
+autocmd Filetype css,markdown,r,rmarkdown,scss,vimwiki set synmaxcol=500
 
 """
 """ 雑多
