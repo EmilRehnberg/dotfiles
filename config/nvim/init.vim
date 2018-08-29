@@ -152,6 +152,7 @@ let g:vimwiki_list = [{'path': '~/Dropbox/bunsho/vimwiki/',
       \ 'path_html': '~/Dropbox/bunsho/vimwiki-html/'}]
 let g:vimwiki_list_text_ignore_newline = 0
 let g:vimwiki_list_ignore_newline = 0
+let g:vimwiki_folding = 'expr'
 
 " Do not use AutoComplPop on start-up. Use :AcpEnable / :AcpDisable to toggle
 let g:acp_enableAtStartup = 0
