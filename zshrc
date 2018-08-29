@@ -64,6 +64,11 @@ export RSTUDIO_PANDOC="/Applications/RStudio.app/Contents/MacOS/pandoc/"
 # r-history variable, combined with function in .Rprofile
 export R_HISTFILE=~/.Rhistory
 
+export WTF_OWM_API_KEY="f8bda36b3acb21f0b808431d01b763be"
+export WTF_GOOGLE_CAL_CLIENT_ID="74769112368-5i704cv2m68r7hnk2f3m4o9a6q57vmcd.apps.googleusercontent.com"
+export WTF_GOOGLE_CAL_CLIENT_SECRET="m_C-8ZwlKHYgg_Qbw0UI_eQq"
+export WTF_JIRA_API_KEY="lyF6BafM9vQdEmxfctbgE7E3"
+
 PATHDIRS=(
   $HOME/.bin
   $HOME/.bin/helpers
