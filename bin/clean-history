@@ -2,5 +2,5 @@
 hist="${HOME}/.zsh_history"
 tmpOut="/tmp/hist.tmp"
 matches=(mv, rm, mplayer, vlc, unzip, unrar, 7unzip, cd, ls);
-egrep -v ':0;mv|:0;rm|:0;mplayer|:0;vlc|:0;unzip|:0;unrar|:0;7unzip|:0;7zip|:0;cd|:0;ls' ${hist} > ${tmpOut}
+egrep -v ':0;mv|:0;rm|:0;mplayer|:0;mpv|:0;vlc|:0;unzip|:0;unrar|:0;7unzip|:0;7zip|:0;cd|:0;ls' ${hist} > ${tmpOut}
 mv $tmpOut $hist
