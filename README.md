@@ -1,12 +1,29 @@
-# README。EmilRehnberg/dotfilesから
-作者：EmilRehnberg
+# dotfiles and setup for systems
 
-### セットアップ
-run-linking-setup.shを実行してください。[ソフトリンク](http://ja.wikipedia.org/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%83%AA%E3%83%B3%E3%82%AF)を作ります。
+## Set-up dotfiles in home directory
 
-vimに[vundle](https://github.com/gmarik/vundle)を使います。まずはvundleをインストル
+Run to sym-link home directory files to dotfiles repo files (assumes bash 3)
+
 ```
-$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+./run-linking-setup.sh
 ```
-後にvimにex-command :BundleInstallを実行してください。
+
+## Fix nvim
+
+`nvim`:s `config` directory has some files that are ignored. E.g. plugins.
+
+### Requirements
+
+from [dein](https://github.com/Shougo/dein.vim)
+
+`git` is needed in `$PATH`
+
+Run
+
+```
+cd /tmp
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.cache/dein
+nvim +'call dein#install()' +qall
+```
 
