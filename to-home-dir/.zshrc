@@ -52,6 +52,7 @@ export GOBIN="${GOPATH}/bin"
 
 # load shell function
 # source $DOTFILES/sh/functions.sh
+source $DOTFILES/sh/macos-sh-functions.sh
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 export HISTIGNORE="ls:ll:cd:pwd"

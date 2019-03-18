@@ -1,0 +1,1 @@
+trash() { mv "$@" ~/.Trash/ ;}
