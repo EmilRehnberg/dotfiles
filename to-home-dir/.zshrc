@@ -1,5 +1,4 @@
 
-export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
 export ZSH=$HOME/.oh-my-zsh
 
 # Look in ~/.oh-my-zsh/themes/
