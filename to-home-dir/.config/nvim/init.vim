@@ -15,6 +15,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ecomba/vim-ruby-refactoring')
   call dein#add('elzr/vim-json')
   call dein#add('godlygeek/tabular')
+  call dein#add('goerz/jupytext.vim')
   call dein#add('guns/vim-sexp')
   call dein#add('hail2u/vim-css3-syntax')
   call dein#add('jalvesaq/Nvim-R')
@@ -143,6 +144,10 @@ noremap <Leader>c :nohlsearch<CR>
 """
 """ 機能拡張
 """
+
+let g:jupytext_enable = 1
+let g:jupytext_command = '~/anaconda3/bin/jupytext'
+let g:jupytext_fmt = 'py'
 
 " adds default folder for vim-notes notes
 let g:notes_directories = ['~/Dropbox/bunsho/chuushaku-注釈/vim-notes']
