@@ -186,6 +186,7 @@ let g:syntastic_html_tidy_exec = 'tidy5'
 let g:syntastic_enable_r_lintr_checker = 1
 let g:syntastic_r_checkers = ['lintr']
 let g:syntastic_r_lintr_linters = "with_defaults(object_name_linter('lowerCamelCase'),line_length_linter(128))"
+let g:syntastic_python_checkers = ['pylint']
 
 " for vim-taskwarrior
 let g:task_rc_override = 'rc.defaultwidth=0'
