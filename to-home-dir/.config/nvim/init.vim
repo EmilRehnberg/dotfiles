@@ -294,7 +294,7 @@ endif
 " let g:unite_source_grep_recursive_opt=''
 
 let g:python2_host_prog = '/usr/local/Cellar/python/2.7.14/bin/python2.7'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/local/Cellar/python/3.7.1/bin/python3'
 
 " Vimux
 " Prompt for a command to run
