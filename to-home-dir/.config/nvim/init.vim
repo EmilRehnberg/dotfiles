@@ -197,7 +197,7 @@ let g:task_rc_override = 'rc.defaultwidth=0'
 " sets default tab setting
 autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
-autocmd FileType c,csv,markdown,r,ruby :set ts=2 sw=2 sts=2 expandtab
+autocmd FileType c,csv,markdown,r :set ts=2 sw=2 sts=2 expandtab
 autocmd FileType sh :set ts=2 sw=2 sts=2 noexpandtab
 autocmd FileType rust :set ts=4 sw=4 sts=4 expandtab
 autocmd FileType csv,markdown,tsv :set noautoindent
@@ -211,7 +211,6 @@ autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
 autocmd FileType css            setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown  setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript     setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType ruby           setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml            setlocal omnifunc=xmlcomplete#CompleteTags
 
 au BufRead,BufNewFile *.csv       set filetype=csv
@@ -311,17 +310,6 @@ map <Leader>vs :VimuxInterruptRunner<CR>
 vmap <Leader>vb "vy :call VimuxSlime()<CR>
 " Select current paragraph and send it to tmux
 nmap <Leader>vb vip<LocalLeader>vs<CR>
-
-" For integrating running of tmux rspec into tmux
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-function! s:rspec_settings()
-  " vim-rspec mappings
-  map <Leader>rt :call RunCurrentSpecFile()<CR>
-  map <Leader>rs :call RunNearestSpec()<CR>
-  map <Leader>rl :call RunLastSpec()<CR>
-  map <Leader>ra :call RunAllSpecs()<CR>
-endfunction
-autocmd FileType ruby,rspec call s:rspec_settings()
 
 command! -range CommitMessages :<line1>,<line2>Glog --pretty=short
 
