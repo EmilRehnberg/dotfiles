@@ -203,7 +203,6 @@ autocmd FileType rust :set ts=4 sw=4 sts=4 expandtab
 autocmd FileType csv,markdown,tsv :set noautoindent
 autocmd FileType tsv :set ts=4 sw=4 sts=4 noexpandtab
 autocmd FileType csv,tsv :set nowrap
-autocmd FileType python :set tabstop=4 shiftwidth=4 softtabstop=4 expandtab textwidth=79 autoindent fileformat=unix
 
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
