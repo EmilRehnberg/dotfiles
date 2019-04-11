@@ -307,11 +307,6 @@ map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vq :VimuxCloseRunner<CR>
 " Interrupt any command running in the runner pane
 map <Leader>vs :VimuxInterruptRunner<CR>
-" replace tslime
-function! VimuxSlime()
- call VimuxSendText(@v)
- call VimuxSendKeys("Enter")
-endfunction
 " If text is selected, save it in the v buffer and send that buffer it to tmux
 vmap <Leader>vb "vy :call VimuxSlime()<CR>
 " Select current paragraph and send it to tmux
