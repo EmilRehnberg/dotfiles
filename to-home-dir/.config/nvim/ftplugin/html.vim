@@ -1,3 +1,4 @@
+setlocal omnifunc=htmlcomplete#CompleteTags
 
   " Vim script file                                       vim600:fdm=marker:
   " FileType:   HTML
