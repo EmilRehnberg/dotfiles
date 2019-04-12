@@ -1,0 +1,1 @@
+set synmaxcol=500
