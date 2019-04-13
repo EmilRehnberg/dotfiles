@@ -200,10 +200,8 @@ setlocal ts=2 sw=2 sts=2 expandtab
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
 
-au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.md        set filetype=markdown
 au BufRead,BufNewFile *.rs        set filetype=rust
-au BufRead,BufNewFile *tmux.conf  set filetype=tmux
 
 if did_filetype()
   finish
