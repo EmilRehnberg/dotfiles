@@ -197,10 +197,6 @@ let g:task_rc_override = 'rc.defaultwidth=0'
 " sets default tab setting
 setlocal ts=2 sw=2 sts=2 expandtab
 
-" Dictionaries
-autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
-
-
 if did_filetype()
   finish
 endif
