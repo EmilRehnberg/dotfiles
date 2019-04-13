@@ -210,8 +210,6 @@ endif
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-autocmd Filetype css,markdown,r,rmarkdown,scss,vimwiki set synmaxcol=500
-
 """
 """ 雑多
 """
