@@ -1,3 +1,5 @@
+setlocal omnifunc=xmlcomplete#CompleteTags
+
 " Vim script file                                           vim600:fdm=marker:
 " FileType:     XML
 " Author:       Devin Weaver <suki (at) tritarget.com> 
