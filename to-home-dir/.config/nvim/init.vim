@@ -197,15 +197,6 @@ let g:task_rc_override = 'rc.defaultwidth=0'
 " sets default tab setting
 setlocal ts=2 sw=2 sts=2 expandtab
 
-if did_filetype()
-  finish
-endif
-if getline(1) =~# '^#!.*/bin/env\s\+Rscript\>'
-  setfiletype r
-elseif getline(1) =~# '^#!.*/bin/env\s\+R\>'
-  setfiletype r
-endif
-
 " close preview window on selection an insert mode exit after omni-completion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
