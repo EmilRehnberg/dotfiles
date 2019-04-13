@@ -34,7 +34,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neoyank.vim')
-  call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('Shougo/vimshell.vim')
   call dein#add('slim-template/vim-slim.git')
@@ -88,22 +87,6 @@ set ambiwidth=double
 set switchbuf+=usetab,newtab
 set laststatus=2 " status bar always on
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-" unite.vim settings/key bindings
-nnoremap <C-p> :Unite file_rec/async<cr>
-nnoremap <space>/ :Unite ag:.<cr>
-" yankring/yankstack
-let g:unite_source_history_yank_enable = 1
-nnoremap <space>p :Unite history/yank<cr>
-" LustyJuggler
-nnoremap <space>s :Unite -quick-match buffer<cr>
-" Custom mappings for the unite buffer
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-  " Enable navigation with control-j and control-k in insert mode
-  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-endfunction
 
 " deoplete settings
 let g:deoplete#enable_at_startup = 1
@@ -225,15 +208,6 @@ vnoremap <leader>P "+P
 if match($TERM, "screen")!=-1
   set term=xterm
 endif
-
-" " unite settings
-" let g:unite_data_directory=s:get_cache_dir('unite')
-" let g:unite_source_history_yank_enable=1
-" let g:unite_source_rec_max_cache_files=5000
-" " unite search settings
-" let g:unite_source_grep_command='ag'
-" let g:unite_source_grep_default_opts='--nocolor --line-numbers --nogroup -S -C4'
-" let g:unite_source_grep_recursive_opt=''
 
 let g:python2_host_prog = '/usr/local/Cellar/python/2.7.14/bin/python2.7'
 let g:python3_host_prog = '/usr/local/Cellar/python/3.7.1/bin/python3'
