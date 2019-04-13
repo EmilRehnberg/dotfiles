@@ -207,12 +207,6 @@ autocmd FileType csv,tsv :set nowrap
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
 
-" omni-completions
-autocmd FileType css            setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown  setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript     setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml            setlocal omnifunc=xmlcomplete#CompleteTags
-
 au BufRead,BufNewFile *.csv       set filetype=csv
 au BufRead,BufNewFile *.gitconfig set filetype=gitconfig
 au BufRead,BufNewFile *.json      set filetype=json
