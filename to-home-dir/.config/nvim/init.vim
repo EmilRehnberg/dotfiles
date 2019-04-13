@@ -195,7 +195,6 @@ let g:task_rc_override = 'rc.defaultwidth=0'
 """ language specific setting
 """
 " sets default tab setting
-autocmd FileType * setlocal ts=2 sw=2 sts=2 expandtab
 
 autocmd FileType c,csv,markdown,r :set ts=2 sw=2 sts=2 expandtab
 autocmd FileType sh :set ts=2 sw=2 sts=2 noexpandtab
@@ -203,6 +202,7 @@ autocmd FileType rust :set ts=4 sw=4 sts=4 expandtab
 autocmd FileType csv,markdown,tsv :set noautoindent
 autocmd FileType tsv :set ts=4 sw=4 sts=4 noexpandtab
 autocmd FileType csv,tsv :set nowrap
+setlocal ts=2 sw=2 sts=2 expandtab
 
 " Dictionaries
 autocmd Filetype txt,conf :set dictionary=/usr/share/dict/american-english
