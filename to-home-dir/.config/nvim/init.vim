@@ -109,6 +109,8 @@ highlight LineNr ctermfg=241
 let g:SuperTabDefaultCompletionType = "context" "Adds file system path completion
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+
 """
 """ MAPPINGS
 """
@@ -182,8 +184,6 @@ let g:task_rc_override = 'rc.defaultwidth=0'
 """
 """ language specific setting
 """
-" sets default tab setting
-setlocal ts=2 sw=2 sts=2 expandtab
 
 " close preview window on selection an insert mode exit after omni-completion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
