@@ -108,6 +108,9 @@ highlight LineNr ctermfg=241
 " Omnicompletion settings
 let g:SuperTabDefaultCompletionType = "context" "Adds file system path completion
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+" close preview window on selection an insert mode exit after omni-completion
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
@@ -180,14 +183,6 @@ let g:syntastic_python_checkers = ['pylint']
 
 " for vim-taskwarrior
 let g:task_rc_override = 'rc.defaultwidth=0'
-
-"""
-""" language specific setting
-"""
-
-" close preview window on selection an insert mode exit after omni-completion
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 """
 """ 雑多
