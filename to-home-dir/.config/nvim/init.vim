@@ -126,6 +126,8 @@ nnoremap Q <Nop>
 
 noremap <Leader>c :nohlsearch<CR>
 
+runtime neosnippet-keymaps.vim
+
 
 """
 """ 機能拡張
