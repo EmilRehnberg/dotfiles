@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+function relative-path {
+  dirname $0
+}

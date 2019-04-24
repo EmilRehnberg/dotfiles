@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+PATHDIRS=(
+  $HOME/bin
+  $HOME/bin/helpers
+  $GOBIN
+  /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+  /usr/local/games
+  /usr/local/go/bin
+  /usr/local/heroku/bin
+  /usr/local/lib/node
+  /usr/local/lib/node_modules
+  $PATH
+)
+export PATH=`echo $PATHDIRS|tr " " ":"`

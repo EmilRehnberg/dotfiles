@@ -1,0 +1,27 @@
+ENCODING=en_US.UTF-8
+export LANG=$ENCODING
+export LC_ALL=$ENCODING
+export LC_CTYPE=$ENCODING
+
+export EDITOR='nvim'
+export TERM="xterm-256color"
+
+export HISTIGNORE="ls:ll:cd:pwd"
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HIST_STAMPS="yyyy-mm-dd"
+
+zstyle ':completion:*' special-dirs true # for auto-completion of .. etc
+
+export ZSH=$HOME/.oh-my-zsh
+export UPDATE_ZSH_DAYS=2
+ZSH_THEME="simple" # other themes: ~/.oh-my-zsh/themes/
+plugins=(bundler common-aliases debian git rails ruby screen tmux) # more plugins: ~/.oh-my-zsh/plugins
+source $ZSH/oh-my-zsh.sh
+
+# post source of the global config aliasing
+unalias ag
+alias tmux='tmux -2'
+
+for f in $HOME/.zsh-tag-specific/*; do source $f; done # source dotfile tag-specific zsh code
+source ~/.zsh-host-specific # source host specific zshrc
