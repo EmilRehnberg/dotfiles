@@ -41,6 +41,8 @@ if dein#load_state(dein_base_path)
   call dein#save_state()
 endif
 
+set path+=**
+set wildmenu
 filetype plugin indent on
 set incsearch
 set cindent
