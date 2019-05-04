@@ -25,6 +25,8 @@ options( devtools.desc.author =
 
 options(useFancyQuotes = FALSE)
 
+utils::rc.settings(ipck = TRUE)
+
 dirSpecificRprofileDirPath <- "~/.Rprofile-dir-specifics"
 if(dir.exists(dirSpecificRprofileDirPath)) R.utils::sourceDirectory(dirSpecificRprofileDirPath)
 
