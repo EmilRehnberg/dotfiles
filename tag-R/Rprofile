@@ -23,6 +23,8 @@ options( devtools.desc.author =
     }
   }
 
+options(useFancyQuotes = FALSE)
+
 dirSpecificRprofileDirPath <- "~/.Rprofile-dir-specifics"
 if(dir.exists(dirSpecificRprofileDirPath)) R.utils::sourceDirectory(dirSpecificRprofileDirPath)
 
