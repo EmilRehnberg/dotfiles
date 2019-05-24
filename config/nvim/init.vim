@@ -53,7 +53,6 @@ set cursorcolumn
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 set listchars=tab:▸\ ,eol:¬
 set ignorecase " case-insensitive search
-set omnifunc=syntaxcomplete#Complete
 set smartcase  " upper-case sensitive search
 set t_Co=256
 set synmaxcol=128 " Syntax coloring lines that are too long just slows down the world
@@ -86,8 +85,11 @@ highlight SpecialKey ctermfg=239
 highlight LineNr ctermfg=241
 
 " Omnicompletion settings
-let g:SuperTabDefaultCompletionType = "context" "Adds file system path completion
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+set omnifunc=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType = 'context' "Adds file system path completion
+let g:SuperTabContextDefaultCompletionType = '<c-x><c-o>'
 " close preview window on selection an insert mode exit after omni-completion
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+augroup OmniClosePreviewWindow
+  autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+  autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+augroup end
