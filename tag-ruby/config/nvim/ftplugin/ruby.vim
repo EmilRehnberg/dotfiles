@@ -28,5 +28,5 @@ nmap <Leader>vb vip<LocalLeader>vs<CR>
 
 function VimuxSlime()
  call VimuxSendText(@v)
- call VimuxSendKeys("Enter")
+ call VimuxSendKeys('Enter')
 endfunction
