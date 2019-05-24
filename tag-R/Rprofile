@@ -1,34 +1,41 @@
 #!/usr/bin/env R
-library(magrittr, quietly = TRUE, warn.conflicts = TRUE)
-if (interactive()) library(setwidth)
+if (interactive()) {
+  library(magrittr)
+  library(devtools)
+  library(usethis)
+  library(setwidth)
 
-options( devtools.desc.author =
-          utils::person("Emil", "Rehnberg"
-                        ,email = "emil.rehnberg@gmail.com"
-                        ,role = c("aut", "cre"))
-        ,devtools.desc.license = "GPL-3 | file LICENCE")
-
-# saves r history
-# requires `export R_HISTFILE=~/.Rhistory` in shell loading
-# `.Last` function is invoked in `q`/`quit` if `runLast` is `TRUE`
-# from `?savehistory` and http://stackoverflow.com/questions/1189759/expert-r-users-whats-in-your-rprofile
-.Last <-
-  function() {
-    if (!any(commandArgs()=='--no-readline') && interactive()){
-      library(magrittr)
-      "R_HISTFILE" %>%
-        Sys.getenv %>%
-        utils::savehistory(.) %>%
-        try
-    }
+  # snippet for saving R history
+  # requires `export R_HISTFILE=~/.Rhistory` in shell loading
+  # `.Last` function is invoked in `q`/`quit` if `runLast` is `TRUE`
+  # from `?savehistory` and http://stackoverflow.com/questions/1189759/expert-r-users-whats-in-your-rprofile
+  if (!any(commandArgs() == "--no-readline")){
+    .rprofile_env <- new.env(parent = emptyenv())
+    .Last <- function() Sys.getenv("R_HISTFILE") %>% utils::savehistory() %>% try()
+    attach(.rprofile_env)
   }
 
-options(useFancyQuotes = FALSE)
+}
 
-utils::rc.settings(ipck = TRUE)
+options(
+  max.print = 100,
+  useFancyQuotes = FALSE, # fancy quotes are annoying
+  usethis.full_name = "Emil Rehnberg",
+  usethis.description = list(
+    `Authors@R` = 'person("Emil", "Rehnberg",
+    email = "emil.rehnberg@gmail.com",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "YOUR-ORCID-ID"))',
+    License = "MIT + file LICENSE",
+    Version = "0.0.0.9000"
+  ),
+  usethis.protocol  = "ssh",
+  warnPartialMatchAttr = TRUE, # Warn on `attr()` function partial matching.
+  warnPartialMatchDollar = TRUE,
+  warnPartialMatchArgs = TRUE
+)
+utils::rc.settings(ipck = TRUE) # enables autocompletions for `library()` etc
 
-dirSpecificRprofileDirPath <- "~/.Rprofile-dir-specifics"
-if(dir.exists(dirSpecificRprofileDirPath)) R.utils::sourceDirectory(dirSpecificRprofileDirPath)
-
-# I don't want to load dependancies in Rprofile; load it in the projects instead.
-if(!interactive()) detach(package:magrittr)
+dir_specific_rprofile_dir_path <- "~/.Rprofile-dir-specifics"
+if (dir.exists(dir_specific_rprofile_dir_path))
+  R.utils::sourceDirectory(dir_specific_rprofile_dir_path)
