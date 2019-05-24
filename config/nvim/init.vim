@@ -4,9 +4,9 @@ scriptencoding utf-8
 
 " Dein settings
 let g:dein_base_path='~/.cache/dein'
-let g:dein_vim_path=dein_base_path."/repos/github.com/Shougo/dein.vim"
+let g:dein_vim_path=dein_base_path.'/repos/github.com/Shougo/dein.vim'
 " :set doesn't eval variables
-execute "set runtimepath+=" . dein_vim_path
+execute 'set runtimepath+=' . dein_vim_path
 if dein#load_state(dein_base_path)
   call dein#begin(dein_base_path)
 
