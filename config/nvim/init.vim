@@ -75,9 +75,6 @@ let g:ScreenImpl = 'Tmux'
 " Automatic reloading of .vimrc
 autocmd! BufWritePost .config/nvim/init.vim source %
 
-" trimming all trailing whitespace on save!
-autocmd BufWritePre * :%s/\s\+$//e
-
 " darker gray decrease number / lighter gray increase
 highlight NonText ctermfg=239
 highlight SpecialKey ctermfg=239
