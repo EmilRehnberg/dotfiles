@@ -1,4 +1,3 @@
-set nocompatible
 
 " Dein settings
 let g:dein_base_path='~/.cache/dein'
