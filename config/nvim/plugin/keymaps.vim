@@ -1,5 +1,5 @@
-let mapleader="," " set the leader to comma, (default is backslash)
-let maplocalleader=";"
+let mapleader=',' " set the leader to comma, (default is backslash)
+let maplocalleader=';'
 
 " Unmap the arrow keys, use hjkl
 map <Left> <Nop>
