@@ -66,12 +66,11 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 colorscheme southernlights
 
+let g:deoplete#enable_at_startup = 1
+
 " unsure of the use of these options; perhaps for Nvim-R
 let g:ScreenShellInitialFocus = 'shell'
 let g:ScreenImpl = 'Tmux'
-
-" deoplete settings
-let g:deoplete#enable_at_startup = 1
 
 " Automatic reloading of .vimrc
 autocmd! BufWritePost .config/nvim/init.vim source %
