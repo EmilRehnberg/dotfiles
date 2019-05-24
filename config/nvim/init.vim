@@ -1,3 +1,6 @@
+set encoding=utf-8
+set fileencodings=utf-8
+scriptencoding utf-8
 
 " Dein settings
 let g:dein_base_path='~/.cache/dein'
