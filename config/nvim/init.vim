@@ -72,8 +72,9 @@ let g:deoplete#enable_at_startup = 1
 let g:ScreenShellInitialFocus = 'shell'
 let g:ScreenImpl = 'Tmux'
 
-" Automatic reloading of .vimrc
-autocmd! BufWritePost .config/nvim/init.vim source %
+augroup RcReloader 
+  autocmd! BufWritePost .config/nvim/init.vim source %
+augroup end
 
 " darker gray decrease number / lighter gray increase
 highlight NonText ctermfg=239
