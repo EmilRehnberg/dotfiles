@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # runs the beatdown stream if it is live!
 mplayer -loop 0 mms://radio.sherdog.com/beatdown3
