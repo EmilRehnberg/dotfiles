@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # 作者：Emil Rehnberg
 # 日付：2013年 12月 31日 火曜日 16:40:18 CET
 # 目的：Rip audio from mp4 file.
@@ -9,7 +9,6 @@ if [ $# -lt 1 ] ; then
   exit 1
 fi
 name=$1
-ffmpeg -i ${name}.mp4 -acodec copy -y -vn ${name}.mp3
+ffmpeg -i "${name}.mp4" -acodec copy -y -vn "${name}.mp3"
 echo ""
 echo "${name}.mp3を作成しました。"
-
