@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+sourceDirectory "$HOME/.zsh-tag-specific/zprofile"
+include "$HOME/.zsh-host-specific/zprofile"
