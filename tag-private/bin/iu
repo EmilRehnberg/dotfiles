@@ -1,5 +1,5 @@
 #!/bin/bash
 expr=$1
 outfile="/tmp/${expr}.ogg"
-say -o ${outfile} -v kyoko ${expr}
+say -o "$outfile" -v kyoko "$expr"
 echo "saved audio to ${outfile}"
