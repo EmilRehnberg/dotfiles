@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 file=$1
 tmpDir=/tmp/p3soul-splits
 
 mkdir $tmpDir
-cp $file $tmpDir
-cd $tmpDir
-aud-split $file 0 0:55:00
-m4a-to-mp3 ${file/./-0.}
-aud-split $file 1:00:00 0:55:00
-m4a-to-mp3 ${file/./-10000.}
-rm $file ${file/./-0.} ${file/./-10000.}
+cp "$file" $tmpDir
+cd "$tmpDir" || exit
+aud-split "$file" 0 0:55:00
+m4a-to-mp3 "${file/./-0.}"
+aud-split "$file" 1:00:00 0:55:00
+m4a-to-mp3 "${file/./-10000.}"
+rm "$file" "${file/./-0.}" "${file/./-10000.}"
