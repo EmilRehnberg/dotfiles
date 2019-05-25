@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 hist="${HOME}/.zsh_history"
 tmpOut="/tmp/hist.tmp"
-egrep -v ':0;mv|:0;rm|:0;mplayer|:0;mkdir|:0;rmdir|:0;mpv|:0;wget|:0;vlc|:0;unzip|:0;unrar|:0;7unzip|:0;7zip|:0;cd|:0;ls|:0;youtube-dl' ${hist} > ${tmpOut}
-mv $tmpOut $hist
+REGEX=':0;mv|:0;rm|:0;mplayer|:0;mkdir|:0;rmdir|:0;mpv|:0;wget|:0;vlc|:0;unzip|:0;unrar|:0;7unzip|:0;7zip|:0;cd|:0;ls|:0;youtube-dl' 
+grep --extended-regexp --invert-match "$REGEX" "$hist" > "$tmpOut"
+mv "$tmpOut" "$hist"
