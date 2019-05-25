@@ -1,14 +1,13 @@
 #!/bin/bash
 
-dates=($*)
+dates=("$*")
 
-for date in ${dates[@]} ; do
+for date in "${dates[@]}" ; do
   file=elektroniskt_${date}_2000_192.m4a
   url=https://lyssna-cdn.sr.se/ljudit/p2_musik/elektroniskt/${date:0:4}/${date:4:2}/${file}
-  wget --continue ${url}
-  m4a-to-mp3 $file
-  rm -f $file
+  wget --continue "${url}"
+  m4a-to-mp3 "$file"
+  rm -f "$file"
 done
 
 wait
-
