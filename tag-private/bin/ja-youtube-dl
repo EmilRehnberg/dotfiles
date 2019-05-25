@@ -1,1 +1,2 @@
-youtube-dl --write-sub --sub-lang ja -f mp4 $*
+#!/usr/bin/env bash
+youtube-dl --write-sub --sub-lang ja -f mp4 "$*"
