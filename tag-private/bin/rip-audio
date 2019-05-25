@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 作者：Emil Rehnberg
 # 日付：2012年 10月 1日 月曜日 09:12:46 JST +0900
@@ -16,11 +16,10 @@ IN_FILE_EXT=${IN_FILE##*.}
 OUT_FILE_EXT=mp3
 OUT_FILE=${IN_FILE_NAME}.${OUT_FILE_EXT}
 
-if [ $IN_FILE_EXT = flv ] ; then
+if [ "$IN_FILE_EXT" = flv ] ; then
   EXTRA_PARAMETERS='-acodec copy'
 fi
 
-ffmpeg -i $IN_FILE $EXTRA_PARAMETERS -y -vn $OUT_FILE
+ffmpeg -i "$IN_FILE" "$EXTRA_PARAMETERS" -y -vn "$OUT_FILE"
 echo ""
 echo "${OUT_FILE}を作成しました。"
-
