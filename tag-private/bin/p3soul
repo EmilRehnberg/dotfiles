@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-dates=("$*")
-
-for date in "${dates[@]}" ; do
-  file=p3_soul_${date}_2205_192.m4a
-  url=https://lyssna-cdn.sr.se/ljudit/p3/p3_soul/${date:0:4}/${date:4:2}/${file}
+for date in "$@" ; do
+  file="p3_soul_${date}_2205_192.m4a"
+  url="https://lyssna-cdn.sr.se/ljudit/p3/p3_soul/${date:0:4}/${date:4:2}/${file}"
   wget --continue "${url}"
   p3soul-split "$file"
 done
