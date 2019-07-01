@@ -2,14 +2,14 @@
 
 MacBook Pro early 2013 retina display [model](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.6-13-early-2013-retina-display-specs.html)
 
-# Files
+## Files
 
 - `rcrc`: `rcm` settings
 - `zsh-host-specific`: sets `PATH` environment variable
 
-# To install
+## To install
 
-## homebrew
+### homebrew
 
 list brew formulas with `brew list`
 
@@ -22,7 +22,7 @@ brew tap ValeLint/vale
 brew install vale
 ```
 
-## Node Package Manager - npm
+### Node Package Manager - npm
 
 `bash-language-server` is written in `npm` checkout out [github](https://github.com/mads-hartmann/bash-language-server)
 
@@ -32,7 +32,7 @@ npm install --global prettier
 npm install --global eslint
 ```
 
-## yarn package manager (node)
+### yarn package manager (node)
 
 installation
 
@@ -53,7 +53,7 @@ yarn add global sass-lint stylelint
 yarn add global tslint typescript swaglint
 ```
 
-## Python's pip
+### Python's pip
 
 check installed packages with `pip list`
 
@@ -62,7 +62,7 @@ pip install proselint
 pip install --upgrade autopep8 black flake8 isort mypy pyflakes pylama pylint futures yapf
 ```
 
-## Ruby gems
+### Ruby gems
 
 check installed gems with `gem list`
 
@@ -73,7 +73,7 @@ gem install scss_lint
 gem install sqlint
 ```
 
-## Golang
+### Golang
 
 ```sh
 go get github.com/jackc/sqlfmt/...
