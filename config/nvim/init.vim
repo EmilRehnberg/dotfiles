@@ -14,6 +14,7 @@ if dein#load_state(dein_base_path)
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
+  call dein#add('Shougo/neco-vim') " VimL completion using deoplete
 
   call dein#add('elzr/vim-json')
   call dein#add('godlygeek/tabular')
