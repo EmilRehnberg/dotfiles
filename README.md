@@ -10,11 +10,19 @@
 use `rcm` directories for certain contexts
 
 - china / sweden for country specific dotfiles
-- macos / ubuntu for OS specific dotfiles
+- `macOS` / `Ubuntu` / `WSL` for OS specific dotfiles
 
 tags mostly for language/utility scoping
 
 hosts for different hosts
+
+### RCRC setup
+
+- `DOTFILES_DIRS`: OS and region
+- `EXCLUDES`: all dirs/files that you don't want to symlink (tags and hosts are excluded by default)
+- `SYMLINK_DIRS`: dirs/files to symlink e.g. git submodules
+- `TAGS`: desired tags
+- `UNDOTTED`: files to symlink but w/o dot prefix e.g. `bin`
 
 ## Installation
 
@@ -44,6 +52,8 @@ git submodules # something something, unclear at this point
 
 ### Install nvim
 
+See OS specific `README`
+
 ### Install Shougo/dein.vim
 
 from [dein](https://github.com/Shougo/dein.vim)
@@ -54,7 +64,7 @@ sh /tmp/installer.sh $HOME/.cache/dein
 nvim +'call dein#install()' +qall
 ```
 
-## TODO
+## To do
 
 Think about installation instructions/scripts - where should they live?
 
@@ -65,4 +75,3 @@ Think about installation instructions/scripts - where should they live?
   - misc: spotify, browsers, tex, anaconda, jupyter, jupytext
 - setup contexts
   - tags: programming languages and utilities - set `TAGS` in specific directories
-
