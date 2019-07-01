@@ -1,4 +1,5 @@
 " Asynchronous Lint Engine
+" ale + deoplete
 call dein#begin(dein_base_path)
 call dein#add('w0rp/ale')
 call dein#end()
