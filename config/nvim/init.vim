@@ -3,6 +3,9 @@ set fileencodings=utf-8
 scriptencoding utf-8
 
 " Dein settings
+if &compatible
+  set nocompatible
+endif
 let g:dein_base_path='~/.cache/dein'
 let g:dein_vim_path=dein_base_path.'/repos/github.com/Shougo/dein.vim'
 " :set doesn't eval variables
