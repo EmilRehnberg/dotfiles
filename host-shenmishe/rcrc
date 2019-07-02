@@ -1,5 +1,5 @@
 DOTFILES_DIRS="$HOME/.dotfiles/sweden $HOME/.dotfiles $HOME/.dotfiles/macos"
-EXCLUDES="china macos README.md sweden ubuntu wtf-env.sh"
+EXCLUDES="china macos README.md sweden ubuntu wtf-env.sh wsl"
 HOSTNAME="shenmishe"
 SYMLINK_DIRS="bin oh-my-zsh rbenv zprezto"
 TAGS="css go html private python R ruby taskwarrior tea tex zsh"
