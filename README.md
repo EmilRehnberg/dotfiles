@@ -18,7 +18,7 @@ hosts for different hosts
 
 ### RCRC setup
 
-- `DOTFILES_DIRS`: OS and region
+- `DOTFILES_DIRS`: order-significant(!) OS and region
 - `EXCLUDES`: all dirs/files that you don't want to symlink (tags and hosts are excluded by default)
 - `SYMLINK_DIRS`: dirs/files to symlink e.g. git submodules
 - `TAGS`: desired tags
