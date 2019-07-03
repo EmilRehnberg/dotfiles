@@ -22,6 +22,8 @@ if dein#load_state(dein_base_path)
 
   " asynchronous completion framework
   call dein#add('Shougo/deoplete.nvim')
+  " tmux (deoplete) completion
+  call dein#add('wellle/tmux-complete.vim')
 
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
