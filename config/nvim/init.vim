@@ -18,12 +18,6 @@ if dein#load_state(dein_base_path)
   call dein#add('roxma/vim-hug-neovim-rpc')
   call dein#add('Shougo/neco-vim') " VimL completion using deoplete
 
-  call dein#add('elzr/vim-json')
-  call dein#add('godlygeek/tabular')
-  call dein#add('jalvesaq/southernlights')
-  call dein#add('kien/rainbow_parentheses.vim')
-  call dein#add('roman/golden-ratio')
-  call dein#add('rstacruz/sparkup', {'rtp': 'vim/'})
   call dein#add('Shougo/denite.nvim')
 
   " asynchronous completion framework
@@ -34,6 +28,12 @@ if dein#load_state(dein_base_path)
   call dein#add('Shougo/neoyank.vim')
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('Shougo/vimshell.vim')
+
+  call dein#add('godlygeek/tabular')
+  call dein#add('jalvesaq/southernlights')
+  call dein#add('kien/rainbow_parentheses.vim')
+  call dein#add('roman/golden-ratio')
+  call dein#add('rstacruz/sparkup', {'rtp': 'vim/'})
   call dein#add('slim-template/vim-slim.git')
   call dein#add('tmux-plugins/vim-tmux')
   call dein#add('tpope/vim-commentary')
@@ -44,6 +44,9 @@ if dein#load_state(dein_base_path)
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-scripts/SyntaxRange')
   call dein#add('vim-scripts/utl.vim')
+
+  " ft-specific
+  call dein#add('elzr/vim-json', {'on_ft': 'json'})
 
   runtime! rcplugin/*.vim
 
