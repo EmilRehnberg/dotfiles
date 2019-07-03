@@ -9,6 +9,8 @@ to-home-dir/config/nvim/bundle
 to-home-dir/bin/subl
 to-home-dir/bin/youtube-dl
 tags
+.yarn-integrity
+yarn.lock
 
 *~
 *.swp
