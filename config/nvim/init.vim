@@ -14,7 +14,6 @@ if dein#load_state(dein_base_path)
   call dein#begin(dein_base_path)
 
   call dein#add(dein_vim_path)
-  call dein#add('Shougo/deoplete.nvim')
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
   call dein#add('Shougo/neco-vim') " VimL completion using deoplete
@@ -26,6 +25,10 @@ if dein#load_state(dein_base_path)
   call dein#add('roman/golden-ratio')
   call dein#add('rstacruz/sparkup', {'rtp': 'vim/'})
   call dein#add('Shougo/denite.nvim')
+
+  " asynchronous completion framework
+  call dein#add('Shougo/deoplete.nvim')
+
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neoyank.vim')
