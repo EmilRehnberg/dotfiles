@@ -16,7 +16,6 @@ if dein#load_state(dein_base_path)
   call dein#add(dein_vim_path)
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
-  call dein#add('Shougo/neco-vim') " VimL completion using deoplete
 
   call dein#add('Shougo/denite.nvim')
 
@@ -47,6 +46,7 @@ if dein#load_state(dein_base_path)
 
   " ft-specific
   call dein#add('elzr/vim-json', {'on_ft': 'json'})
+  call dein#add('Shougo/neco-vim', {'on_ft': 'vim'}) " deoplete-completion
 
   runtime! rcplugin/*.vim
 
