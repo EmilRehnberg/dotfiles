@@ -17,6 +17,7 @@ if dein#load_state(dein_base_path)
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
 
+  " asynchronizes interfaces
   call dein#add('Shougo/denite.nvim')
 
   " asynchronous completion framework
