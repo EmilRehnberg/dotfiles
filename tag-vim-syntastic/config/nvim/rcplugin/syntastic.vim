@@ -1,7 +1,4 @@
-call dein#begin(dein_base_path)
 call dein#add('scrooloose/syntastic')
-call dein#end()
-call dein#save_state()
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1

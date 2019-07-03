@@ -1,6 +1,3 @@
-call dein#begin(dein_base_path)
 call dein#add('guns/vim-sexp')
 call dein#add('tpope/vim-repeat')
 call dein#add('tpope/vim-sexp-mappings-for-regular-people')
-call dein#end()
-call dein#save_state()
