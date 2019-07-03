@@ -1,7 +1,4 @@
-call dein#begin(dein_base_path)
 call dein#add('yegappan/grep')
-call dein#end()
-call dein#save_state()
 
 if executable('ag')
   " Use ag over grep

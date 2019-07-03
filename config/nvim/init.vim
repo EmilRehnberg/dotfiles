@@ -43,6 +43,8 @@ if dein#load_state(dein_base_path)
   call dein#add('vim-scripts/SyntaxRange')
   call dein#add('vim-scripts/utl.vim')
 
+  runtime! rcplugin/*.vim
+
   call dein#end()
   call dein#save_state()
 endif

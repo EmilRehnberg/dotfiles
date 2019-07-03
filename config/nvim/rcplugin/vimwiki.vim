@@ -1,7 +1,5 @@
-call dein#begin(dein_base_path)
 call dein#add('vimwiki/vimwiki')
-call dein#end()
-call dein#save_state()
+
 let g:vimwiki_list = [{'path': '~/Dropbox/bunsho/vimwiki/',
       \ 'template_path': '~/Dropbox/bunsho/vimwiki-assets/templates/',
       \ 'template_default': 'default',
