@@ -1,13 +1,4 @@
-to-home-dir/config/nvim/.dein/*
-to-home-dir/config/nvim/repos/*
-to-home-dir/config/nvim/rollbacks/*
-to-home-dir/config/nvim/temp/*
-to-home-dir/config/nvim/.cache
-to-home-dir/config/nvim/bundle
-
 .netrwhist
-to-home-dir/bin/subl
-to-home-dir/bin/youtube-dl
 tags
 .yarn-integrity
 yarn.lock
