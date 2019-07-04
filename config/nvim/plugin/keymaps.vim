@@ -12,5 +12,3 @@ map <Right> <Nop>
 nnoremap Q <Nop>
 
 noremap <Leader>c :nohlsearch<CR>
-
-runtime neosnippet-keymaps.vim

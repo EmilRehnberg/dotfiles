@@ -25,8 +25,6 @@ if dein#load_state(dein_base_path)
   " tmux (deoplete) completion
   call dein#add('wellle/tmux-complete.vim')
 
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
   call dein#add('Shougo/neoyank.vim')
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('Shougo/vimshell.vim')
