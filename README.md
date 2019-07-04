@@ -37,7 +37,7 @@ git clone --recursive https://github.com/emilrehnberg/dotfiles $HOME/.dotfiles
 ### 2. Run rcup
 
 ```
-RCRC=~/.dotfiles/host-shenmishe/rcrc rcup
+RCRC=~/.dotfiles/${HOSTNAME}/rcrc rcup
 ```
 
 `RCRC` variable is needed if no `.rcrc` is available in the home directory
@@ -48,30 +48,42 @@ RCRC=~/.dotfiles/host-shenmishe/rcrc rcup
 git submodules # something something, unclear at this point
 ```
 
-## Setup nvim
-
-### Install nvim
+## Installation
 
 See OS specific `README`
 
-### Install Shougo/dein.vim
+## vi linting & fixing
 
-from [dein](https://github.com/Shougo/dein.vim)
+### text
 
-```
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/installer.sh
-sh /tmp/installer.sh $HOME/.cache/dein
-nvim +'call dein#install()' +qall
-```
+Under contruction/investigation.
+
+### js
+
+ATM `standardjs` is setup.
+I like the
+  style - Seattle style (no semicolons),
+  has fixing also,
+  less config.
+benri ha benri da.
+
+`jshint` seems more popular, using semicolons etc.
+`jshint` will require `.jshintrc` with setups etc.
+So maybe I'll use that if I have to.
+Doesn't provide fixing, just linting.
+
+### python
+
+Under investigation.
+
+### R
+
+use `lintr` and `styler`.
 
 ## To do
 
 Think about installation instructions/scripts - where should they live?
 
-- explain other installations for a new installation?
-  - installation manager: e.g. `brew`, `apt-get`
-  - utilities: `git`, Dropbox, Google Drive
-  - languages: `R`, `python`, `ruby`, `golang`, `rust`
-  - misc: spotify, browsers, tex, anaconda, jupyter, jupytext
-- setup contexts
-  - tags: programming languages and utilities - set `TAGS` in specific directories
+- explain other installations for a new installation
+  - utilities: Dropbox, Google Drive
+  - misc: spotify, browsers, tex
