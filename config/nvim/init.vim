@@ -25,14 +25,10 @@ if dein#load_state(dein_base_path)
   " tmux (deoplete) completion
   call dein#add('wellle/tmux-complete.vim')
 
-  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-  call dein#add('Shougo/vimshell.vim')
-
   call dein#add('godlygeek/tabular')
   call dein#add('jalvesaq/southernlights')
   call dein#add('kien/rainbow_parentheses.vim')
   call dein#add('roman/golden-ratio')
-  call dein#add('slim-template/vim-slim.git')
   call dein#add('tmux-plugins/vim-tmux')
   call dein#add('Shougo/neoyank.vim')
   call dein#add('tpope/vim-commentary')
