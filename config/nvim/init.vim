@@ -79,7 +79,7 @@ let g:deoplete#enable_at_startup = 1
 let g:ScreenShellInitialFocus = 'shell'
 let g:ScreenImpl = 'Tmux'
 
-augroup RcReloader 
+augroup RcReloader
   autocmd! BufWritePost .config/nvim/init.vim source %
 augroup end
 
