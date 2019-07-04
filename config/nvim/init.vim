@@ -41,7 +41,6 @@ if dein#load_state(dein_base_path)
 
   " ft-specific
   call dein#add('tmux-plugins/vim-tmux', {'on_ft': 'tmux'})
-  call dein#add('elzr/vim-json', {'on_ft': 'json'})
 
   runtime! rcplugin/*.vim
 
