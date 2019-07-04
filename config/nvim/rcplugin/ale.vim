@@ -1,5 +1,4 @@
-" Asynchronous Lint Engine
-" ale + deoplete
+" Asynchronous Lint Engine with deoplete
 call dein#add('w0rp/ale')
 
 let g:ale_fixers = ['remove_trailing_lines', 'trim_whitespace']
