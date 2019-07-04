@@ -2,6 +2,14 @@
 
 ## installations
 
+### java
+
+```sh
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt-get update
+sudo apt-get install default-jdk software-properties-common oracle-java12-installer
+```
+
 ### neovim / nvim
 
 ```sh
@@ -17,7 +25,7 @@ pip3 install pynvim
 
 ### ruby environment
 
-use `rbenv` 
+use `rbenv`
 to install e.g. `2.6.3`
 
 ```sh
@@ -31,6 +39,7 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 rbenv install 2.6.3
 git clone git://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset # gems
 rbenv global 2.6.3
+
 gem install neovim
 ```
 
@@ -46,3 +55,57 @@ yarn global add neovim
 
 sudo apt-get install libssl1.0-dev nodejs-dev node-gyp npm
 ```
+
+### golang
+
+visit their [dl](https://golang.org/dl/) page
+
+```sh
+cd /tmp && wget https://dl.google.com/go/go1.12.6.linux-amd64.tar.gz
+sudo tar -xvf go1.12.6.linux-amd64.tar.gz
+sudo mv go /usr/local    # for $GOBIN
+mkdir -p $"HOME"/code/go # for $GOPATH
+```
+
+### linting tools
+
+the below are working with `ale` + `deoplete`
+
+```sh
+sudo apt-get install shellcheck yamllint pylint jq tidy
+cd $(mktemp -d); go mod init tmp; go get mvdan.cc/sh/cmd/shfmt
+go get github.com/errata-ai/vale
+
+yarn global add alex prettier babel-cli babel-preset-flow prettier-eslint-cli prettier-standard
+sudo npm install --global bash-language-server swaglint sass-lint stylelint markdownlint remark-lint remark remark-preset-lint-markdown-style-guide textlint textlint-rule-no-todo fixjson jsonlint eslint fecs jshint standard typescript xo htmlhint
+gem install sqlint scss_lint mdl
+PKGS="futures jedi yapf python-language-server[all] vim-vint bandit black isort prospector pyflakes autopep8 pycodestyle pylama reorder-python-imports vulture proselint gitlint"
+PY3_ONLY_PKGS="mypy pyre-check"
+pip install --upgrade $"PKGS"
+pip3 install --upgrade $"PKGS" $"PY3_ONLY_PKGS"
+
+# pgFormatter
+# visit https://github.com/darold/pgFormatter/releases
+cd /tmp
+wget tarball
+tar xzf pgFormatter-4.0.tar.gz
+cd pgFormatter-4.0/
+perl Makefile.PL
+make && sudo make install
+
+# RedPen
+# visit release page: https://github.com/redpen-cc/redpen/releases/
+cd /tmp
+wget tarball
+tar xvf redpen-1.10.2.tar.gz
+cd redpen-redpen-1.10.2/redpen-cli
+
+
+# R Packages
+remotes::install_github("r-lib/styler")
+remotes::install_github("jimhester/lintr")
+```
+
+desktop installers, visit
+
+- [languagetools](https://languagetool.org/)
