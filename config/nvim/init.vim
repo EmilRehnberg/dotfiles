@@ -25,7 +25,6 @@ if dein#load_state(dein_base_path)
   " tmux (deoplete) completion
   call dein#add('wellle/tmux-complete.vim')
 
-  call dein#add('Shougo/neoyank.vim')
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('Shougo/vimshell.vim')
 
@@ -35,6 +34,7 @@ if dein#load_state(dein_base_path)
   call dein#add('roman/golden-ratio')
   call dein#add('slim-template/vim-slim.git')
   call dein#add('tmux-plugins/vim-tmux')
+  call dein#add('Shougo/neoyank.vim')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-dispatch')
   call dein#add('tpope/vim-speeddating')
