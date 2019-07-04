@@ -1,4 +1,5 @@
-let mapleader=',' " set the leader to comma, (default is backslash)
+" set the leader to comma, (default is backslash)
+let mapleader=','
 let maplocalleader=';'
 
 " Unmap the arrow keys, use hjkl
@@ -7,7 +8,8 @@ map <Down> <Nop>
 map <Up> <Nop>
 map <Right> <Nop>
 
-nnoremap Q <Nop> " do not remember what Q does
+" do not remember what Q does
+nnoremap Q <Nop>
 
 noremap <Leader>c :nohlsearch<CR>
 
