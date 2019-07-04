@@ -29,7 +29,6 @@ if dein#load_state(dein_base_path)
   call dein#add('jalvesaq/southernlights')
   call dein#add('kien/rainbow_parentheses.vim')
   call dein#add('roman/golden-ratio')
-  call dein#add('tmux-plugins/vim-tmux')
   call dein#add('Shougo/neoyank.vim')
   call dein#add('tpope/vim-commentary')
   call dein#add('tpope/vim-dispatch')
@@ -41,6 +40,7 @@ if dein#load_state(dein_base_path)
   call dein#add('vim-scripts/utl.vim')
 
   " ft-specific
+  call dein#add('tmux-plugins/vim-tmux', {'on_ft': 'tmux'})
   call dein#add('elzr/vim-json', {'on_ft': 'json'})
   call dein#add('Shougo/neco-vim', {'on_ft': 'vim'}) " deoplete-completion
 
