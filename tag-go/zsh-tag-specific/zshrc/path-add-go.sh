@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-export PATH="$GOBIN:$PATH:/usr/local/go/bin"
+export PATH="$GOBIN:$PATH:$GOROOT/bin"
