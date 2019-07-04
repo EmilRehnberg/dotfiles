@@ -39,9 +39,6 @@ if dein#load_state(dein_base_path)
   call dein#add('vim-scripts/SyntaxRange')
   call dein#add('vim-scripts/utl.vim')
 
-  " ft-specific
-  call dein#add('tmux-plugins/vim-tmux', {'on_ft': 'tmux'})
-
   runtime! rcplugin/*.vim
 
   call dein#end()
