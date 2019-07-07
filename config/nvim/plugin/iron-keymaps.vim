@@ -1,5 +1,5 @@
 " NOTE: use <C-\><C-N> ~ \NO
 " re ~ REPL Execute
-nmap <localleader>re :IronRepl<CR><Esc>
-nmap <localleader>l <Plug>(iron-send-motion)<Esc>
-vmap <localleader>l <Plug>(iron-send-motion)<Esc>
+nnoremap <localleader>re :IronRepl<CR><Esc>
+nnoremap <localleader>l <Plug>(iron-send-motion)<Esc>
+vnoremap <localleader>l <Plug>(iron-send-motion)<Esc>
