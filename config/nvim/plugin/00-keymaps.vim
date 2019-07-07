@@ -1,4 +1,4 @@
-" set the leader to comma, (default is backslash)
+" remap leader (default: \)
 let mapleader=','
 let maplocalleader=';'
 
