@@ -1,0 +1,78 @@
+
+snippet title
+abbr    page-title
+alias   tit
+options head
+  %title ${1}
+
+snippet dl
+abbr    detailed-list
+alias   def
+options head
+  ${1:term}:: ${2:definition}
+
+# formulas
+
+snippet inline-formula
+abbr    formula-inline
+alias   short-formulae
+options word
+  $ ${1:#:formula} $
+
+snippet formula
+abbr    formula-block
+alias   long-formulae
+options head
+  {{$
+    ${1:#:formula}
+  $}}
+
+# code blocks
+
+snippet javascript
+abbr    js-code-block
+alias   js
+options head
+  {{{class="brush: javascript"
+    ${1:#:code}
+  }}}
+
+snippet python
+abbr    python-code-block
+alias   py
+options head
+  {{{class="brush: python"
+    ${1:#:code}
+  }}}
+
+snippet Rcode
+abbr    R-code-block
+alias   Rlang
+options head
+  {{{class="brush: R"
+    ${1:#:code}
+  }}}
+
+snippet Ruby
+abbr    ruby-code-block
+alias   rb
+options head
+  {{{class="brush: rb"
+    ${1:#:code}
+  }}}
+
+snippet shell
+abbr    shell-code-block
+alias   sh
+options head
+  {{{class="brush: sh"
+    ${1:#:code}
+  }}}
+
+snippet vim
+abbr    vim-code-block
+alias   vimL
+options head
+  {{{class="brush: vim"
+    ${1:#:code}
+  }}}
