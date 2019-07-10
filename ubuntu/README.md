@@ -23,6 +23,20 @@ pip install pynvim
 pip3 install pynvim
 ```
 
+### python
+
+install anaconda from [dl-page](https://www.anaconda.com/distribution/#download-section)
+
+```sh
+sudo apt-get install cmake qt5-default python-pyside pyqt5-dev-tools qtcreator python-qtconsole
+PACKAGES="pandas pyqt5 pyside2 pyqt jupyter"
+python3 -m pip install ${PACKAGES}
+python -m pip install pyside
+
+conda install numpy pandas scipy matplotlib seaborn scikit-learn
+conda install -c conda-forge jupytext
+```
+
 ### ruby environment
 
 use `rbenv`
