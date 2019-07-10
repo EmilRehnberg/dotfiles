@@ -6,7 +6,7 @@ set softtabstop=2
 set expandtab
 set synmaxcol=500
 
-let g:neosnippet#scope_aliases['r'] = 'r,r-dplyr'
+let g:neosnippet#scope_aliases['r'] = 'r,r-dplyr,r-ggplot'
 
 let b:ale_fix_on_save = 1
 let b:ale_fixers = ['trim_whitespace', 'remove_trailing_lines', 'styler']

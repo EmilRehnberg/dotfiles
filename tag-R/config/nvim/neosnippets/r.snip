@@ -5,7 +5,71 @@ alias     shebang
 options   head
   #!/usr/bin/env Rscript
 
-snippet   lib
+snippet   function
+abbr      function()
+alias     fun
+options   word
+  function (${1:#:args}) ${0}
+
+snippet   function
+abbr      assign-function()
+alias     fun
+options   head
+  ${1:name} <- function (${2:#:args}) {
+    ${0}
+  }
+
+# data structures
+
+snippet     c
+abbr        atomic-vector
+options     word
+  c($1:contents)
+
+snippet     list
+abbr        list-structure
+options     word
+  list($1:contents)
+
+snippet matrix
+abbr    matrix-structure
+alias   mat
+options  word
+  matrix(${1:data}, nrow = ${2:nrows}, ncol = ${0:ncols})
+
+# inclussion
+
+snippet   library
 abbr      library()
+alias     lib
 options   head
   library(${0:magrittr})
+
+snippet source
+abbr    source()
+alias   src
+options   head
+  source('${0:filepath}')
+
+# conditionals
+
+snippet if
+abbr    if-statement
+options word
+  if (${1:condition}) {
+    ${0}
+  }
+
+snippet el
+abbr    else-statement
+options word
+  else {
+    ${0}
+  }
+
+snippet ei
+abbr    else-if-statement
+options word
+  else if (${1:condition}) {
+    ${0}
+  }
