@@ -1,5 +1,3 @@
-call dein#add('vimwiki/vimwiki')
-
 let g:vimwiki_list = [{'path': '~/win-home/OneDrive\ -\ Ericsson\ AB/vimwiki/',
       \ 'template_path': '~/win-home/OneDrive\ -\ Ericsson\ AB/vimwiki-assets/templates/',
       \ 'template_default': 'default',
