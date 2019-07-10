@@ -1,0 +1,14 @@
+
+# dein snips
+
+snippet add
+abbr    dein#add
+alias   install deinAdd callDeinAdd
+options head
+  call dein#add('${1:#:Shougo/dein.vim}')
+
+snippet add-ft
+abbr    dein#add(repo, on_ft)
+alias   installFt deinAddFt callDeinAddFt
+options head
+  call dein#add('${1:#:vim-jupyter/vim-jupyter}', {'on_ft': '${2:python}'})
