@@ -1,8 +1,8 @@
 #!/usr/bin/env R
 if (interactive()) {
   library(magrittr)
-  library(devtools)
   library(usethis)
+  library(devtools)
   library(setwidth)
 
   # snippet for saving R history
