@@ -25,6 +25,12 @@ alias   name-chunk
 options head
   # ---- ${1:#:chunk-name} ----
 
+snippet data
+abbr    load-data
+alias   load-data
+options head
+  data("${1:#:DataName}", package = "${2:#:PackageName}")
+
 # data structures
 
 snippet     c
