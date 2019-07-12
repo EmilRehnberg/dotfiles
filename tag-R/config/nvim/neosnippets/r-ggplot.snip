@@ -4,3 +4,31 @@ abbr    grammar-of-graphics-plot
 alias   ggplot2
 options word
   ggplot2::ggplot(${1:data}, ggplot2::aes(${0:aesthetics})) +
+
+snippet qplot
+abbr    ggplot2::qplot
+options word
+  ggplot2::qplot(${1:#:xVar}, ${2:#:yVar}) +
+    ggplot2::ggtitle("${3:title}") +
+    ggplot2::xlab("${4:xlab}") + ggplot2::ylab("${5:ylab}")
+
+snippet autoplot
+abbr    ggplot2::autoplot
+alias   ggautoplot
+options word
+  ggplot2::autoplot(${1}) +
+    ggplot2::ggtitle("${2:title}") + ggplot2::xlab("${3:xlab}") + ggplot2::ylab("${4:ylab}")
+
+snippet seasonplot
+abbr    forecast::ggseasonplot
+alias   ggseasonplot
+options word
+  forecast::ggseasonplot(year.labels = TRUE, year.labels.left = TRUE) +
+    ggplot2::ggtitle("${1:title}") + ggplot2::ylab("${2:ylab}")
+
+snippet subseriesplot
+abbr    forecast::ggsubseriesplot
+alias   ggsubseriesplot
+options word
+  forecast::ggsubseriesplot() +
+    ggplot2::ggtitle("${1:title}") + ggplot2::ylab("${2:ylab}")
