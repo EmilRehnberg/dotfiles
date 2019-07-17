@@ -2,4 +2,28 @@ snippet   filter
 abbr      dplyr::filter()
 alias     dplyr_filter
 options   word
-  dplyr::filter(${0})
+  dplyr::filter(${0}) %>%
+
+snippet   mutate
+abbr      dplyr::mutate()
+alias     dplyr_mutate
+options   word
+  dplyr::mutate(${1:#:new_field} = ${2:#:calculation}) %>%
+
+snippet   select
+abbr      dplyr::select()
+alias     dplyr_select
+options   word
+  dplyr::select(${1:#:fields}) %>%
+
+snippet   group
+abbr      dplyr::group_by()
+alias     dplyr_group
+options   word
+  dplyr::group_by(${1:#:fields}) %>%
+
+snippet   summarize
+abbr      dplyr::summarize()
+alias     dplyr_summarize
+options   word
+  dplyr::summarize(${1:#:new_field} = ${2:#:calculation})
