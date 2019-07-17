@@ -18,6 +18,7 @@ tidyverse
 
 ```r
 remotes::install_github("tidyverse/tidyverse")
+remotes::install_github("r-lib/svglite")
 ```
 
 forecast-package, [book](https://otexts.com/fpp2/)
