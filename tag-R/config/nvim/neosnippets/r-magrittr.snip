@@ -1,0 +1,48 @@
+
+snippet add
+abbr    magrittr::add
+alias   magrittr_add
+options word
+  magrittr::add(${1:1})
+
+snippet subtract
+abbr    magrittr::subtract
+alias   magrittr_sub
+options word
+  magrittr::subtract(${1:1})
+
+snippet multiply_by
+abbr    magrittr::multiply_by
+alias   magrittr_mult
+options word
+  magrittr::multiply_by(${1:2})
+
+snippet divide_by
+abbr    magrittr::divide_by
+alias   magrittr_div
+options word
+  magrittr::divide_by(${1:2})
+
+snippet is_greater_than
+abbr    magrittr::is_greater_than
+alias   magrittr_gt,is_strictly_greater_than
+options word
+  magrittr::is_greater_than(${1:0})
+
+snippet is_weakly_greater_than
+abbr    magrittr::is_weakly_greater_than
+alias   magrittr_gte,is_greater_than_or_equal_to
+options word
+  magrittr::is_weakly_greater_than(${1:0})
+
+snippet is_less_than
+abbr    magrittr::is_less_than
+alias   magrittr_lt,is_strictly_less_than
+options word
+  magrittr::is_less_than(${1:0})
+
+snippet is_weakly_less_than
+abbr    magrittr::is_weakly_less_than
+alias   magrittr_lte,is_less_than_or_equal_to
+options word
+  magrittr::is_weakly_less_than(${1:0})
