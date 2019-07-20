@@ -52,6 +52,17 @@ git submodules # something something, unclear at this point
 
 See OS specific `README`
 
+## SSH
+
+```sh
+mkdir -p $HOME/.ssh
+chmod 700 $HOME/.ssh
+ssh-keygen -t rsa
+```
+
+- `$HOME/.ssh/id_rsa` – contains your private key.
+- `$HOME/.ssh/id_rsa.pub` – contain your public key.
+
 ## vi linting & fixing
 
 ### text
