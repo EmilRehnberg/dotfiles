@@ -4,6 +4,18 @@ alias     dplyr_filter
 options   head
   dplyr::filter(${0}) %>%
 
+snippet   group
+abbr      dplyr::group_by()
+alias     dplyr_group
+options   head
+  dplyr::group_by(${1:#:fields}) %>%
+
+snippet   left_join
+abbr      dplyr::left_join()
+alias     dplyr_left_join
+options   head
+  dplyr::left_join(${1:#:other_table}, by = c("${2:colx" = "coly}"))
+
 snippet   mutate
 abbr      dplyr::mutate()
 alias     dplyr_mutate
@@ -16,20 +28,8 @@ alias     dplyr_select
 options   head
   dplyr::select(${1:#:fields}) %>%
 
-snippet   group
-abbr      dplyr::group_by()
-alias     dplyr_group
-options   head
-  dplyr::group_by(${1:#:fields}) %>%
-
 snippet   summarize
 abbr      dplyr::summarize()
 alias     dplyr_summarize
 options   head
   dplyr::summarize(${1:#:new_field} = ${2:#:calculation})
-
-snippet   left_join
-abbr      dplyr::left_join()
-alias     dplyr_left_join
-options   head
-  dplyr::left_join(${1:#:other_table}, by = c("${2:colx" = "coly}"))

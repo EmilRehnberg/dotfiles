@@ -1,3 +1,4 @@
+include r/*.snip
 
 snippet   #!
 abbr      #!/usr/bin/env Rscript
@@ -20,7 +21,7 @@ options   head
   }
 
 snippet chunk
-abbr    chunk-name
+abbr    knitr::chunk-name
 alias   name-chunk
 options head
   # ---- ${1:#:chunk-name} ----

@@ -1,0 +1,17 @@
+
+snippet ggAcf
+abbr    forecast::ggAcf
+alias   forecast_acf acf_plot
+options word
+  forecast::ggAcf(${1:residuals}) + ggplot2::ggtitle("${2:title}")
+snippet naive
+abbr    forecast::naive
+alias   forecast_naive
+options word
+  forecast::naive(${1:#:dta})
+
+snippet rwf
+abbr    forecast::rwf
+alias   forecast_rwf random_walk
+options word
+  forecast::rwf(${1:eggs}, drift = ${2:FALSE})

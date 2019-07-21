@@ -1,9 +1,40 @@
 
+snippet autolayer
+abbr    ggplot::autolayer
+alias   ggplot_autolayer
+options head
+  ggplot::autolayer(${1:#:dta}, series = "${2:dta series}")
+
+snippet autoplot
+abbr    ggplot::autoplot
+alias   ggautoplot
+options word
+  ggplot2::autoplot(${1}) +
+    ggplot2::ggtitle("${2:title}") + ggplot2::xlab("${3:xlab}") + ggplot2::ylab("${4:ylab}")
+
 snippet ggplot
 abbr    grammar-of-graphics-plot
 alias   ggplot2
 options word
   ggplot2::ggplot(${1:data}, ggplot2::aes(${0:aesthetics})) +
+
+snippet ggsave
+abbr    ggplot::ggsave
+alias   ggplot_save save_plot
+options head
+  ggplot2::ggsave("${1:/tmp/plot}.svg")
+
+snippet ggtitle
+abbr    ggplot::ggtitle
+alias   ggplot_ggtitle
+options word
+  ggplot2::ggtitle("${1:title}")
+
+snippet guides
+abbr    ggplot::guides
+alias   ggplot_guides
+options head
+  ggplot2::guides(colour = ggplot2::guide_legend(title = "${1:Series}"))
 
 snippet qplot
 abbr    ggplot2::qplot
@@ -11,13 +42,6 @@ options word
   ggplot2::qplot(${1:#:xVar}, ${2:#:yVar}) +
     ggplot2::ggtitle("${3:title}") +
     ggplot2::xlab("${4:xlab}") + ggplot2::ylab("${5:ylab}")
-
-snippet autoplot
-abbr    ggplot2::autoplot
-alias   ggautoplot
-options word
-  ggplot2::autoplot(${1}) +
-    ggplot2::ggtitle("${2:title}") + ggplot2::xlab("${3:xlab}") + ggplot2::ylab("${4:ylab}")
 
 snippet seasonplot
 abbr    forecast::ggseasonplot

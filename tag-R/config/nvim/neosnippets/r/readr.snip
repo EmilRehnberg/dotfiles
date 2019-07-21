@@ -1,10 +1,4 @@
 
-snippet readtsv
-abbr    readr::read_tsv
-alias   read_tsv
-options word
-  readr::read_tsv("${1:#:path}") %>%
-
 snippet readcsv
 abbr    readr::read_csv
 alias   read_csv
@@ -16,3 +10,9 @@ abbr    readr::read_delim
 alias   read_delim
 options word
   readr::read_delim("${1:#:path}", delim = "${2:,}") %>%
+
+snippet readtsv
+abbr    readr::read_tsv
+alias   read_tsv
+options word
+  readr::read_tsv("${1:#:path}") %>%
