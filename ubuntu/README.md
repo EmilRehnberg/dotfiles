@@ -4,6 +4,17 @@ Remember that the default shell `gnome-terminal` is not a login shell (by defaul
 
 ## installations
 
+### base tools
+
+```sh
+sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install tmux vim rcm curl zsh
+chsh --shell ${which zsh} $USER
+```
+
+Restart after `chsh` for it to take effect!
 
 ### neovim / nvim
 
