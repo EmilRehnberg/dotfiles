@@ -25,8 +25,22 @@ sudo apt-get install neovim
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 sudo apt-get install exuberant-ctags
 
-pip install pynvim
-pip3 install pynvim
+python -m pip install pynvim
+python3 -m pip install pynvim
+```
+
+install dein
+
+```sh
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/installer.sh
+sh /tmp/installer.sh ~/.cache/dein
+```
+
+install plugins
+
+```vim
+call dein#install()
+```
 
 ### java
 
