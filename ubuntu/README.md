@@ -1,5 +1,7 @@
 # Ubuntu setup
 
+Remember that the default shell `gnome-terminal` is not a login shell (by default), hence e.g. zlogin is not run under zsh.
+
 ## installations
 
 ### java
