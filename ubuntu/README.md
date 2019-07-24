@@ -4,13 +4,6 @@ Remember that the default shell `gnome-terminal` is not a login shell (by defaul
 
 ## installations
 
-### java
-
-```sh
-sudo add-apt-repository ppa:linuxuprising/java
-sudo apt-get update
-sudo apt-get install default-jdk software-properties-common oracle-java12-installer
-```
 
 ### neovim / nvim
 
@@ -23,6 +16,13 @@ sudo apt-get install exuberant-ctags
 
 pip install pynvim
 pip3 install pynvim
+
+### java
+
+```sh
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt-get update
+sudo apt-get install default-jdk software-properties-common oracle-java12-installer
 ```
 
 ### python
