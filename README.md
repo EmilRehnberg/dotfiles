@@ -45,7 +45,8 @@ RCRC=~/.dotfiles/${HOSTNAME}/rcrc rcup
 ### 3. Download git submodules
 
 ```sh
-git submodules # something something, unclear at this point
+git submodules init
+git submodules update
 ```
 
 ## Installation
@@ -90,6 +91,10 @@ Under investigation.
 ### R
 
 use `lintr` and `styler`.
+
+### Anki
+
+visit their [download](https://apps.ankiweb.net/) page.
 
 ## To do
 
