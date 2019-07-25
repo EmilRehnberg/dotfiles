@@ -59,10 +59,12 @@ See OS specific `README`
 mkdir -p $HOME/.ssh
 chmod 700 $HOME/.ssh
 ssh-keygen -t rsa
+ssh-add ~/.ssh/id_rsa
 ```
 
 - `$HOME/.ssh/id_rsa` – contains your private key.
 - `$HOME/.ssh/id_rsa.pub` – contain your public key.
+- to push with SSH, make sure the remote set (`.git/config`) is using the SSH link (e.g. `git@github.com:EmilRehnberg/dotfiles.git`)
 
 ## vi linting & fixing
 
