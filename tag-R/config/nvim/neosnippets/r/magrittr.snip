@@ -1,7 +1,7 @@
 
 snippet add
 abbr    magrittr::add
-alias   magrittr_add
+alias   magrittr_add plus
 options word
   magrittr::add(${1:1})
 
@@ -13,36 +13,48 @@ options word
 
 snippet is_greater_than
 abbr    magrittr::is_greater_than
-alias   magrittr_gt,is_strictly_greater_than
+alias   magrittr_gt is_strictly_greater_than gt
 options word
   magrittr::is_greater_than(${1:0})
 
+snippet is_in
+abbr    magrittr::is_in
+alias   magrittr_is_in in
+options word
+  magrittr::is_in(${1:c("")})
+
 snippet is_less_than
 abbr    magrittr::is_less_than
-alias   magrittr_lt,is_strictly_less_than
+alias   magrittr_lt is_strictly_less_than lt
 options word
   magrittr::is_less_than(${1:0})
 
 snippet is_weakly_greater_than
 abbr    magrittr::is_weakly_greater_than
-alias   magrittr_gte,is_greater_than_or_equal_to
+alias   magrittr_gte is_greater_than_or_equal_to gte
 options word
   magrittr::is_weakly_greater_than(${1:0})
 
 snippet is_weakly_less_than
 abbr    magrittr::is_weakly_less_than
-alias   magrittr_lte,is_less_than_or_equal_to
+alias   magrittr_lte is_less_than_or_equal_to lte
 options word
   magrittr::is_weakly_less_than(${1:0})
 
 snippet multiply_by
 abbr    magrittr::multiply_by
-alias   magrittr_mult
+alias   magrittr_mult times
 options word
   magrittr::multiply_by(${1:2})
 
 snippet subtract
 abbr    magrittr::subtract
-alias   magrittr_sub
+alias   magrittr_sub minus
 options word
   magrittr::subtract(${1:1})
+
+snippet use_series
+abbr    magrittr::use_series
+alias   magrittr_use_series series
+options word
+  magrittr::use_series("${1:#:timestamp}")
