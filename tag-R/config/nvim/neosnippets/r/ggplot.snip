@@ -12,6 +12,18 @@ options word
   ggplot2::autoplot(${1}) +
     ggplot2::ggtitle("${2:title}") + ggplot2::xlab("${3:xlab}") + ggplot2::ylab("${4:ylab}")
 
+snippet geom_line
+abbr    ggplot2::geom_line
+alias   ggline ggplot2_geom_line
+options word
+  ggplot2::geom_line(ggplot2::aes(${1:color} = ${2:#:column}))
+
+snippet geom_point
+abbr    ggplot2::geom_point
+alias   ggpoints ggplot2_geom_point
+options word
+  ggplot2::geom_point()
+
 snippet ggplot
 abbr    grammar-of-graphics-plot
 alias   ggplot2
