@@ -1,7 +1,7 @@
 
 snippet fct_drop
 abbr    forcats::fct_drop
-alias   drop_factors
+alias   drop_unused_factors
 options word
   forcats::fct_drop(${1:#:column})
 
@@ -10,3 +10,21 @@ abbr    forcats::fct_explicit_na
 alias   forcats_na2missing
 options word
   forcats::fct_explicit_na()
+
+snippet fct_other
+abbr    forcats::fct_other
+alias   fct_drop_or_keep_factors
+options word
+  forcats::fct_other(${1:#:drop_or_keep} = c("${2:#:factors_to_drop_or_keep}"))
+
+snippet fct_other_drop
+abbr    forcats::fct_other_drop
+alias   fct_drop_specific_factors drop_specific_factors
+options word
+  forcats::fct_other(drop = c("${1:#:factors}"))
+
+snippet fct_other_keep
+abbr    forcats::fct_other_keep
+alias   fct_keep keep_factors
+options word
+  forcats::fct_other(keep = c("${1:#:factors}"))
