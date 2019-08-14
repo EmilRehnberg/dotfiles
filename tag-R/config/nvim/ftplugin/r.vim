@@ -1,5 +1,6 @@
 runtime ftplugin/nvim-r.vim
 nnoremap <silent> <LocalLeader>T :call g:SendCmdToR("devtools::test()")<CR>
+nnoremap <silent> <LocalLeader>D :call g:SendCmdToR("devtools::document()")<CR>
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
