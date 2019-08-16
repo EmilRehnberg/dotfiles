@@ -34,6 +34,12 @@ alias     dplyr_pull
 options   head
   dplyr::pull(${1:#:field}) %>%
 
+snippet quo
+abbr    dplyr::quo
+alias   dplyr_quo
+options word
+  dplyr::quo(${1:columnname})
+
 snippet   rename
 abbr      dplyr::rename()
 alias     dplyr_rename
@@ -58,8 +64,20 @@ alias     dplyr_summarize
 options   head
   dplyr::summarize(${1:#:new_field} = ${2:#:calculation})
 
+snippet   summarize_at
+abbr      dplyr::summarize_at()
+alias     dplyr_summarize_at
+options   head
+  dplyr::summarize_at(${1:#:new_field} = ${2:#:calculation})
+
 snippet union_all
 abbr    dplyr::union_all
 alias   dplyr_union_all
 options head
   dplyr::union_all(${1:#:other_table}) %>%
+
+snippet vars
+abbr    dplyr::vars
+alias   dplyr_vars
+options head
+  dplyr::vars(${1:#:var_range_default_grouped_vars}) %>%
