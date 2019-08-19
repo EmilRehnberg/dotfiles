@@ -28,6 +28,12 @@ alias     dplyr_mutate
 options   head
   dplyr::mutate(${1:#:new_field} = ${2:#:calculation})
 
+snippet   mutate_at
+abbr      dplyr::mutate_at()
+alias     dplyr_mutate_at
+options   head
+  dplyr::mutate_at(${1:dplyr::vars(columns)}, ${2:as.factor})
+
 snippet   pull
 abbr      dplyr::pull()
 alias     dplyr_pull
@@ -52,6 +58,12 @@ alias   dplyr_rename_all lowercase_columns
 options head
   dplyr::rename_all(${1:tolower})
 
+snippet rename_at
+abbr    dplyr::rename_at
+alias   dplyr_rename_at
+options head
+  dplyr::rename_at(${1:dplyr::vars()}, ~ ${2:toupper(.)})
+
 snippet   select
 abbr      dplyr::select()
 alias     dplyr_select
@@ -69,6 +81,12 @@ abbr      dplyr::summarize_at()
 alias     dplyr_summarize_at
 options   head
   dplyr::summarize_at(${1:dplyr::vars(field)}, ${2:sum, na.rm = TRUE})
+
+snippet ungroup
+abbr    dplyr::ungroup
+alias   dplyr_ungroup
+options head
+  dplyr::ungroup()
 
 snippet union_all
 abbr    dplyr::union_all
