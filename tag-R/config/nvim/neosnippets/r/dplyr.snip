@@ -8,13 +8,13 @@ snippet   filter
 abbr      dplyr::filter()
 alias     dplyr_filter
 options   head
-  dplyr::filter(${0}) %>%
+  dplyr::filter(${0})
 
 snippet   group
 abbr      dplyr::group_by()
 alias     dplyr_group
 options   head
-  dplyr::group_by(${1:#:fields}) %>%
+  dplyr::group_by(${1:#:fields})
 
 snippet   left_join
 abbr      dplyr::left_join()
@@ -26,13 +26,13 @@ snippet   mutate
 abbr      dplyr::mutate()
 alias     dplyr_mutate
 options   head
-  dplyr::mutate(${1:#:new_field} = ${2:#:calculation}) %>%
+  dplyr::mutate(${1:#:new_field} = ${2:#:calculation})
 
 snippet   pull
 abbr      dplyr::pull()
 alias     dplyr_pull
 options   head
-  dplyr::pull(${1:#:field}) %>%
+  dplyr::pull(${1:#:field})
 
 snippet quo
 abbr    dplyr::quo
@@ -44,19 +44,19 @@ snippet   rename
 abbr      dplyr::rename()
 alias     dplyr_rename
 options   head
-  dplyr::rename(${2:#:new_name} = ${1:#:old_name}) %>%
+  dplyr::rename(${2:#:new_name} = ${1:#:old_name})
 
 snippet rename_all
 abbr    dplyr::rename_all
 alias   dplyr_rename_all lowercase_columns
 options head
-  dplyr::rename_all(${1:tolower}) %>%
+  dplyr::rename_all(${1:tolower})
 
 snippet   select
 abbr      dplyr::select()
 alias     dplyr_select
 options   head
-  dplyr::select(${1:#:fields}) %>%
+  dplyr::select(${1:#:fields})
 
 snippet   summarize
 abbr      dplyr::summarize()
@@ -68,16 +68,16 @@ snippet   summarize_at
 abbr      dplyr::summarize_at()
 alias     dplyr_summarize_at
 options   head
-  dplyr::summarize_at(${1:#:new_field} = ${2:#:calculation})
+  dplyr::summarize_at(${1:dplyr::vars(field)}, ${2:sum, na.rm = TRUE})
 
 snippet union_all
 abbr    dplyr::union_all
 alias   dplyr_union_all
 options head
-  dplyr::union_all(${1:#:other_table}) %>%
+  dplyr::union_all(${1:#:other_table})
 
 snippet vars
 abbr    dplyr::vars
 alias   dplyr_vars
 options head
-  dplyr::vars(${1:#:var_range_default_grouped_vars}) %>%
+  dplyr::vars(${1:#:var_range_default_grouped_vars})
