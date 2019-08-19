@@ -40,7 +40,7 @@ snippet ggtitle
 abbr    ggplot::ggtitle
 alias   ggplot_ggtitle
 options word
-  ggplot2::ggtitle("${1:title}")
+  ggplot2::ggtitle("${1:title}") + ggplot2::xlab("${2:xlab}") + ggplot2::ylab("${3:ylab}")
 
 snippet guides
 abbr    ggplot::guides
