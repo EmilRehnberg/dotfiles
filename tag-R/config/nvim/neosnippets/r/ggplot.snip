@@ -1,4 +1,10 @@
 
+snippet abline
+abbr    ggplot2::geom_abline
+alias   ggplot_abline ggplot_geom_abline geom_abline x_eq_y
+options head
+  ggplot2::geom_abline(slope = ${1:1}, intercept = ${2:0}, color = "${3:grey}")
+
 snippet autolayer
 abbr    ggplot::autolayer
 alias   ggplot_autolayer
@@ -48,6 +54,12 @@ alias   ggplot_guides
 options head
   ggplot2::guides(colour = ggplot2::guide_legend(title = "${1:Series}"))
 
+snippet limits
+abbr    ggplot2::xlim_ylim
+alias   ggplot_limits
+options head
+  ggplot2::xlim(${1:0}, ${2:#:xlim_max}) + ggplot2::ylim(${3:0}, ${4:#:ylim_max})
+
 snippet qplot
 abbr    ggplot2::qplot
 options word
@@ -68,3 +80,15 @@ alias   ggsubseriesplot
 options word
   forecast::ggsubseriesplot() +
     ggplot2::ggtitle("${1:title}") + ggplot2::ylab("${2:ylab}")
+
+snippet xlim
+abbr    ggplot2::xlim
+alias   ggplot_xlim
+options head
+  ggplot2::xlim(${1:0}, ${2:#:xlim_max}) + ggplot2::ylim(${3:0}, ${4:#:ylim_max})
+
+snippet ylim
+abbr    ggplot2::ylim
+alias   ggplot_ylim
+options head
+  ggplot2::ylim(${1:0}, ${2:#:ylim_max}) + ggplot2::xlim(${3:0}, ${4:#:xlim_max})
