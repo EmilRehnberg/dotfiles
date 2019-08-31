@@ -1,0 +1,65 @@
+snippet build_readme
+abbr    devtools::build_readme_from_Rmd
+alias   devtools_build_readme
+options head
+  devtools::build_readme()
+
+snippet build_vignettes
+abbr    devtools::build_vignettes
+alias   devtools_build_vignettes
+options head
+  devtools::build_vignettes()
+
+snippet check
+abbr    devtools::checking_package
+alias   devtools_check
+options head
+  devtools::build_check()
+
+snippet install_git
+abbr    devtools::install_git
+alias   devtools_install_git
+options head
+  devtools::install_git("${1:..}")
+
+snippet install_github
+abbr    devtools::install_github
+alias   devtools_install_github
+options head
+  devtools::install_github("${2:cran}/${1:#:package}")
+
+snippet install_gitlab
+abbr    devtools::install_gitlab
+alias   devtools_install_gitlab
+options head
+  devtools::install_gitlab("${2:cran}/${1:#:package}")
+
+snippet loaded_packages
+abbr    devtools::loaded_packages
+alias   devtools_loaded_packages
+options head
+  devtools::loaded_packages()
+
+snippet run_examples
+abbr    devtools::run_examples
+alias   devtools_run_examples
+options head
+  devtools::run_examples()
+
+snippet spell_check
+abbr    devtools::spell_check
+alias   devtools_spell_check
+options head
+  devtools::spell_check()
+
+snippet test_coverage
+abbr    devtools::test_coverage
+alias   devtools_test_coverage
+options head
+  devtools::test_coverage()
+
+snippet update_packages
+abbr    devtools::update_packages
+alias   devtools_update_packages
+options head
+  devtools::update_packages()
