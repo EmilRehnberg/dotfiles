@@ -18,6 +18,7 @@ if (interactive()) {
 }
 
 options(
+  noaakey = "kbyeWbbWABLOUfXXvuShDSUcyMeuyCrW",
   max.print = 100,
   useFancyQuotes = FALSE, # fancy quotes are annoying
   usethis.full_name = "Emil Rehnberg",
