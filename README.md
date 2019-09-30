@@ -66,6 +66,12 @@ ssh-add ~/.ssh/id_rsa
 - `$HOME/.ssh/id_rsa.pub` – contain your public key.
 - to push with SSH, make sure the remote set (`.git/config`) is using the SSH link (e.g. `git@github.com:EmilRehnberg/dotfiles.git`)
 
+## vim sessions
+
+Stored under `sessions`.
+
+Saved vim sessions for different situations, configs, projects or whatever.
+
 ## vi linting & fixing
 
 ### text
