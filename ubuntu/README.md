@@ -190,3 +190,11 @@ cd ~/.local/share/Anki2/
 git clone https://github.com/EmilRehnberg/anki-css css
 git clone https://github.com/EmilRehnberg/js-for-anki js
 ```
+
+### copyq - clipboard manager
+
+```sh
+sudo add-apt-repository ppa:hluk/copyq
+sudo apt update
+sudo apt install copyq
+```
