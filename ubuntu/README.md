@@ -89,6 +89,7 @@ to install e.g. `2.6.3`
 sudo apt-get install libssl-dev
 sudo apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev
 
+# for rbenv
 cd ~/.rbenv && src/configure && make -C src
 rbenv init
 mkdir -p "$(rbenv root)"/plugins
@@ -97,7 +98,9 @@ rbenv install 2.6.3
 git clone git://github.com/jf/rbenv-gemset.git $HOME/.rbenv/plugins/rbenv-gemset # gems
 rbenv global 2.6.3
 
-gem install neovim
+sudo snap install ruby --classic
+
+gem install neovim mdl reek scss_lint sqlint
 ```
 
 ### node environment
