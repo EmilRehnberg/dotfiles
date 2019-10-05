@@ -180,3 +180,13 @@ Rscript --vanilla -e 'devtools::install_github(c("jimhester/lintr", "r-lib/style
 desktop installers, visit
 
 - [languagetools](https://languagetool.org/)
+
+## setups
+
+### Anki
+
+```sh
+cd ~/.local/share/Anki2/
+git clone https://github.com/EmilRehnberg/anki-css css
+git clone https://github.com/EmilRehnberg/js-for-anki js
+```
