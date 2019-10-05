@@ -108,12 +108,22 @@ gem install neovim mdl reek scss_lint sqlint
 node / npm / [yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 
 ```sh
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+sudo apt-get update && sudo apt-get install -y yarn nodejs
 yarn global add neovim
 
-sudo apt-get install libssl1.0-dev nodejs-dev node-gyp npm
+sudo apt-get install libssl1.0-dev nodejs-dev node-gyp npm yamllint xmlstarlet
+
+sudo npm install --global bash-language-server prettier eslint
+
+yarn add --dev prettier-eslint-cli prettier-standard jshint fecs babel-cli babel-preset-flow
+yarn add --dev fixjson jsonlint
+yarn add global alex
+yarn add global markdownlint remark-lint textlint textlint-rule-no-todo write-good
+yarn add global sass-lint stylelint
+yarn add global tslint typescript swaglint
 ```
 
 ### golang
