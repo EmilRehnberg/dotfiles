@@ -170,8 +170,8 @@ make && sudo make install
 cd /tmp
 wget tarball
 tar xvf redpen-1.10.2.tar.gz
-cd redpen-redpen-1.10.2/redpen-cli
-
+cd redpen-redpen-1.10.2/
+./mvnw clean install
 
 # R Packages
 remotes::install_github("r-lib/styler")
