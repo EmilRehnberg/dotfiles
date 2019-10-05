@@ -7,6 +7,7 @@ Remember that the default shell `gnome-terminal` is not a login shell (by defaul
 ### base tools
 
 ```sh
+sudo apt install apt-transport-https software-properties-common
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
 sudo apt-get update
 sudo apt-get upgrade
