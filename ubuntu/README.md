@@ -151,7 +151,7 @@ go get github.com/errata-ai/vale
 yarn global add alex prettier babel-cli babel-preset-flow prettier-eslint-cli prettier-standard
 sudo npm install --global bash-language-server swaglint sass-lint stylelint markdownlint remark-lint remark remark-preset-lint-markdown-style-guide textlint textlint-rule-no-todo fixjson jsonlint eslint fecs jshint standard typescript xo htmlhint
 gem install sqlint scss_lint mdl
-PKGS="futures jedi yapf python-language-server[all] vim-vint bandit black isort prospector pyflakes autopep8 pycodestyle pylama reorder-python-imports vulture proselint gitlint"
+PKGS="futures jedi yapf python-language-server[all] vim-vint bandit black isort prospector pyflakes autopep8 pycodestyle pylama reorder-python-imports vulture proselint gitlint flake8"
 PY3_ONLY_PKGS="mypy pyre-check"
 pip install --upgrade $"PKGS"
 pip3 install --upgrade $"PKGS" $"PY3_ONLY_PKGS"
