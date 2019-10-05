@@ -174,8 +174,7 @@ cd redpen-redpen-1.10.2/
 ./mvnw clean install
 
 # R Packages
-remotes::install_github("r-lib/styler")
-remotes::install_github("jimhester/lintr")
+Rscript --vanilla -e 'devtools::install_github(c("jimhester/lintr", "r-lib/styler"))'
 ```
 
 desktop installers, visit
