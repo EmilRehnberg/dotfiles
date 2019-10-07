@@ -1,3 +1,6 @@
+" read iron setting (lua code)
+luafile $HOME/.config/nvim/plugin/iron-repl-settings.lua
+
 " NOTE: use <C-\><C-N> ~ \NO
 " re ~ REPL Execute
 nnoremap <localleader>re :IronRepl<CR><Esc>
