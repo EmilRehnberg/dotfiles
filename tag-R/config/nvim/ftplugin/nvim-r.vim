@@ -6,6 +6,7 @@ let R_objbr_opendf = 1    " Show data.frames elements
 let R_objbr_openlist = 1  " Show lists elements
 let R_objbr_allnames = 1  " Show .GlobalEnv hidden objects
 let R_objbr_labelerr = 1  " Warn if label is not a valid text
+let R_nvim_wd = 1         " set R wd to vim's wd
 
 if has('gui_running')
   inoremap <C-Space> <C-x><C-o>
