@@ -28,3 +28,9 @@ abbr    forcats::fct_other_keep
 alias   fct_keep keep_factors
 options word
   forcats::fct_other(keep = c("${1:#:factors}"))
+
+snippet fct_relevel
+abbr    forcats::fct_relevel
+alias   fct_relevel_reference fct_set_reference fct_reference_set
+options word
+  forcats::fct_relevel("${1:#reference_level}") ${2:%>%}
