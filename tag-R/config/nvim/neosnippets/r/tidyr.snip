@@ -1,0 +1,12 @@
+
+snippet pivot_longer
+abbr    tidyr::pivot_longer
+alias   tidyr_pivot_longer tidyr_gather
+options head
+  tidyr::pivot_longer(cols = ${1:#:cols_to_pivot}, names_to = ${2:#:key_col_name}) ${3:%>%}
+
+snippet pivot_wider
+abbr    tidyr::pivot_wider
+alias   tidyr_pivot_wider tidyr_spread
+options head
+  tidyr::pivot_wider(names_from = ${1:#:names}, values_from = ${2:#:value}) ${3:%>%}
