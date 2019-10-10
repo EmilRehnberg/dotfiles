@@ -24,7 +24,6 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim
 sudo apt-get install python-dev python-pip python3-dev python3-pip
-sudo apt-get install exuberant-ctags
 
 python -m pip install pynvim
 python3 -m pip install pynvim
@@ -41,6 +40,14 @@ install plugins
 
 ```vim
 call dein#install()
+```
+
+install ctags
+
+```sh
+# snap find ctags
+# snap info universal-ctags
+sudo snap install universal-ctags
 ```
 
 ### java
