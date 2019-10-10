@@ -1,6 +1,6 @@
 DOTFILES_DIRS="$HOME/.dotfiles/sweden $HOME/.dotfiles/ubuntu $HOME/.dotfiles "
 EXCLUDES="china macos README.md sweden ubuntu wtf-env.sh wsl"
 HOSTNAME="daheituxu"
-TAGS="css ctags go html privat python R ruby tea tex zsh"
+TAGS="css go html privat python R ruby tags tea tex zsh"
 SYMLINK_DIRS="bin oh-my-zsh rbenv zprezto"
 UNDOTTED="bin"
