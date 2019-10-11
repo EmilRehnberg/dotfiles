@@ -9,9 +9,10 @@ Remember that the default shell `gnome-terminal` is not a login shell (by defaul
 ```sh
 sudo apt install apt-transport-https software-properties-common
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install tmux vim rcm curl zsh
+sudo apt update
+sudo apt upgrade
+sudo apt install gcc make pkg-config autoconf automake python3-docutils libseccomp-dev libjansson-dev libyaml-dev libxml2-dev
+sudo apt install tmux vim rcm curl zsh
 chsh --shell ${which zsh} $USER
 ```
 
