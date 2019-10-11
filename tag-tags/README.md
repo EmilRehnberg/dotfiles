@@ -4,7 +4,7 @@ tools comparison [@github](https://github.com/oracle/opengrok/wiki/Comparison-wi
 
 ## ctags
 
-Currently using `universal-ctags` [hp](https://ctags.io/) since it seems well-maintained.
+Currently using `universal-ctags` [hp](https://ctags.io/) since it seems well-maintained. NOTE: `snap` installs have been buggy, you might have to build from source, see [docs](https://github.com/universal-ctags/ctags/blob/master/docs/autotools.rst).
 
 - [article](https://andrew.stwrt.ca/posts/vim-ctags/)
 
