@@ -1,0 +1,107 @@
+snippet append
+abbr    purrr::append
+alias   purrr_append
+options head
+  purrr::append(${1:#:list2})${2:#: %>%}
+
+snippet cross2
+abbr    purrr::cross2
+alias   purrr_cross2 purrr_expand_list
+options head
+  purrr::cross2(${1:#:list2})${2:#: %>%}
+
+snippet discard
+abbr    purrr::discard
+alias   purrr_discard
+options head
+  purrr::discard(${1:~ is.na}) ${2:%>%}
+
+snippet imap
+abbr    purrr::imap
+alias   purrr_imap
+options head
+  purrr::imap(function(${1:.x}, .name)) ${2:%>%}
+
+snippet imap_dfc
+abbr    purrr::imap_dfc
+alias   purrr_imap_dfc
+options head
+  purrr::imap_dfc(function(${1:.x}, .name)) ${2:%>%}
+
+snippet imap_dfr
+abbr    purrr::imap_dfr
+alias   purrr_imap_dfr
+options head
+  purrr::imap_dfr(function(${1:.x}, .name, ${2:#:.id = "iteration"})) ${3:%>%}
+
+snippet iwalk
+abbr    purrr::iwalk
+alias   purrr_iwalk
+options head
+  purrr::iwalk(function(${1:.x}, .name)) ${2:%>%}
+
+snippet keep
+abbr    purrr::keep
+alias   purrr_keep
+options head
+  purrr::keep(${1:~ !is.na}) ${2:%>%}
+
+snippet list_modify
+abbr    purrr::list_modify
+alias   purrr_list_modify
+options head
+  purrr::list_modify(${1:#:a = 1}) ${2:%>%}
+
+snippet map
+abbr    purrr::map
+alias   purrr_map
+options head
+  purrr::map(${1:~ .x %>%}) ${2:%>%}
+
+snippet map_at
+abbr    purrr::map_at
+alias   purrr_map_at
+options head
+  purrr::map_at(${1:#:.at = is.logical}, ${2:~ .x %>%}) ${3:%>%}
+
+snippet map_dfc
+abbr    purrr::map_dfc
+alias   purrr_map_dfc
+options head
+  purrr::map_dfc(${1:~ .x %>%}) ${2:%>%}
+
+snippet map_dfr
+abbr    purrr::map_dfr
+alias   purrr_map_dfr
+options head
+  purrr::map_dfr(function(${1:.x}, ${2:#:.id = "iteration"})) ${3:%>%}
+
+snippet map_if
+abbr    purrr::map_if
+alias   purrr_map_if
+options head
+  purrr::map_if(${1:#:.p = is.logical}, ${2:~ .x %>%}) ${3:%>%}
+
+snippet pmap
+abbr    purrr::pmap
+alias   purrr_pmap purrr_rows
+options head
+  purrr::pmap(function(${1:col1, col2})) ${2:%>%}
+
+snippet prepend
+abbr    purrr::prepend
+alias   purrr_prepend
+options head
+  purrr::prepend(${1:#:list2})${2:#: %>%}
+
+snippet safely
+abbr    purrr::safely
+alias   purrr_safely
+options head
+  purrr::safely()
+
+snippet walk
+abbr    purrr::walk
+alias   purrr_walk
+options head
+  purrr::walk(${1:~ .x %>%}) ${2:%>%}
