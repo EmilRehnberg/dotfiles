@@ -82,6 +82,12 @@ alias     dplyr_summarize_at
 options   head
   dplyr::summarize_at(${1:dplyr::vars(field)}, ${2:sum, na.rm = TRUE})
 
+snippet top_n
+abbr    dplyr::top_n
+alias   dplyr_top_n head_dplyr head_df
+options head
+  dplyr::top_n(${1:5}, ${2:#:arrange_col}) ${3:%>%}
+
 snippet ungroup
 abbr    dplyr::ungroup
 alias   dplyr_ungroup
