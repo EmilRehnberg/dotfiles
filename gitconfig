@@ -3,3 +3,5 @@
 	email = emil.rehnberg@gmail.com
 [push]
 	default = matching
+[credential]
+	helper = cache
