@@ -4,6 +4,10 @@ Remember that the default shell `gnome-terminal` is not a login shell (by defaul
 
 ## installations
 
+### remap CAPS to ctrl
+
+install `tweaks` from Ubuntu software
+
 ### base tools
 
 ```sh
