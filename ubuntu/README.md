@@ -156,7 +156,8 @@ go get github.com/jackc/sqlfmt/...
 the below are working with `ale` + `deoplete`
 
 ```sh
-sudo apt-get install shellcheck yamllint pylint jq tidy
+snap install shellcheck jq tidy
+sudo apt-get install yamllint pylint
 cd $(mktemp -d); go mod init tmp; go get mvdan.cc/sh/cmd/shfmt
 go get github.com/errata-ai/vale
 
