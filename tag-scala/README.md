@@ -2,6 +2,10 @@
 
 Depends on java and jdk
 
+## installations
+
+follow article e.g. [codebind](http://www.codebind.com/linux-tutorials/install-scala-sbt-java-ubuntu-18-04-lts-linux/)
+
 ## Setup Guides
 
 - article [@seenaburns](http://seenaburns.com/vim-setup-for-scala/)
