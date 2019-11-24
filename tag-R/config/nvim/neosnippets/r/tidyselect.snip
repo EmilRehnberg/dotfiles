@@ -1,0 +1,41 @@
+snippet contains
+abbr    tidyselect::contains
+alias   contains_tidyselect containing_column_tidyselect tidyselect_contains
+options word
+  tidyselect::contains("${1:#:var_name_matching_string}")
+
+snippet ends_with
+abbr    tidyselect::ends_with
+alias   ends_with_tidyselect tidyselect_ends_with
+options word
+  tidyselect::ends_with("${1:#:suffix_regex}")
+
+snippet everything
+abbr    tidyselect::everything
+alias   everything_tidyselect all_cols_tidyselect all_vars_tidyselect tidyselect_everything
+options word
+  tidyselect::everything()
+
+snippet last_col
+abbr    tidyselect::last_col
+alias   last_col_tidyselect last_var_tidyselect tidyselect_last_col
+options word
+  tidyselect::last_col()
+
+snippet matches
+abbr    tidyselect::matches
+alias   matches_tidyselect tidyselect_matches
+options word
+  tidyselect::matches("${1:#:regex}")
+
+snippet one_of
+abbr    tidyselect::one_of
+alias   one_of_tidyselect tidyselect_one_of
+options word
+  tidyselect::one_of(${1:#:char_vector})
+
+snippet starts_with
+abbr    tidyselect::starts_with
+alias   starts_with_tidyselect tidyselect_starts_with
+options word
+  tidyselect::starts_with("${1:#:prefix_regex}")
