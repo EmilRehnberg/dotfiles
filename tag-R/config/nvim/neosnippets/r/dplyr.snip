@@ -1,3 +1,9 @@
+snippet arrange
+abbr    dplyr::arrange
+alias   arrange_dplyr order_by_dplyr sort_dplyr dplyr_arrange
+options word
+  dplyr::arrange("${1:#:sorting_column}")${2: %>%}
+
 snippet contains
 abbr    dplyr::contains
 alias   dplyr_contains dplyr_varname_containing
