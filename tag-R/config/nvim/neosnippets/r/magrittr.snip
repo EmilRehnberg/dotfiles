@@ -11,6 +11,12 @@ alias   magrittr_div
 options word
   magrittr::divide_by(${1:2})
 
+snippet equals
+abbr    magrittr::equals
+alias   magrittr_eq equals_magrittr
+options word
+  magrittr::equals(${1:0})${2: %>%}
+
 snippet is_greater_than
 abbr    magrittr::is_greater_than
 alias   magrittr_gt is_strictly_greater_than gt
