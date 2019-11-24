@@ -4,104 +4,110 @@ alias   arrange_dplyr order_by_dplyr sort_dplyr dplyr_arrange
 options head
   dplyr::arrange("${1:#:sorting_column}")${2: %>%}
 
-snippet   filter
-abbr      dplyr::filter()
-alias     dplyr_filter
-options   head
-  dplyr::filter(${0})
+snippet filter_dplyr
+abbr    dplyr::filter
+alias   on_dplyr where_dplyr dplyr_filter
+options head
+  dplyr::filter(${0:#:predicaste})${1: %>%}
 
-snippet   group
-abbr      dplyr::group_by()
-alias     dplyr_group
-options   head
-  dplyr::group_by(${1:#:fields})
+snippet group_by
+abbr    dplyr::group_by
+alias   dplyr_group
+options head
+  dplyr::group_by(${1:#:columns})${2: %>%}
 
-snippet   left_join
-abbr      dplyr::left_join()
-alias     dplyr_left_join
-options   head
-  dplyr::left_join(${1:#:other_table}, by = c("${2:colx" = "coly}"))
+snippet left_join
+abbr    dplyr::left_join
+alias   dplyr_left_join
+options head
+  dplyr::left_join(${1:#:other_table}, by = c("${2:colx" = "coly}"))${3: %>%}
 
-snippet   mutate
-abbr      dplyr::mutate()
-alias     dplyr_mutate
-options   head
-  dplyr::mutate(${1:#:new_field} = ${2:#:calculation})
-
-snippet   mutate_at
-abbr      dplyr::mutate_at()
-alias     dplyr_mutate_at
-options   head
-  dplyr::mutate_at(${1:dplyr::vars(columns)}, ${2:as.factor})
-
-snippet   pull
-abbr      dplyr::pull()
-alias     dplyr_pull
-options   head
-  dplyr::pull(${1:#:field})
-
-snippet quo
-abbr    dplyr::quo
-alias   dplyr_quo
+snippet mutate
+abbr    dplyr::mutate
+alias   dplyr_mutate
 options word
-  dplyr::quo(${1:columnname})
+  dplyr::mutate(${1:#:new_field} = ${2:#:calculation})${3: %>%}
 
-snippet   rename
-abbr      dplyr::rename()
-alias     dplyr_rename
-options   head
-  dplyr::rename(${2:#:new_name} = ${1:#:old_name})
+snippet mutate_at
+abbr    dplyr::mutate_at
+alias   dplyr_mutate_at
+options word
+  dplyr::mutate_at(${1:dplyr::vars(columns)}, ${2:as.factor})${3: %>%}
+
+snippet mutate_if
+abbr    dplyr::mutate_if
+alias   dplyr_mutate_if
+options word
+  dplyr::mutate_if(${1:#:predicate}, ${2:as.factor})${3: %>%}
+
+snippet pull_out_a_single_column
+abbr    dplyr::pull
+alias   pull_dplyr dplyr_pull
+options word
+  dplyr::pull(${1:#:field})${2: %>%}
+
+snippet rename
+abbr    dplyr::rename
+alias   dplyr_rename
+options word
+  dplyr::rename(${2:#:new_name} = ${1:#:old_name})${3: %>%}
 
 snippet rename_all
 abbr    dplyr::rename_all
 alias   dplyr_rename_all lowercase_columns
 options head
-  dplyr::rename_all(${1:tolower})
+  dplyr::rename_all(${1:tolower})${2: %>%}
 
 snippet rename_at
 abbr    dplyr::rename_at
 alias   dplyr_rename_at
+options word
+  dplyr::rename_at(${1:dplyr::vars()}, ~ ${2:toupper(.)})${3: %>%}
+
+snippet select
+abbr    dplyr::select
+alias   dplyr_select
+options word
+  dplyr::select(${1:#:fields})${2: %>%}
+
+snippet select_at
+abbr    dplyr::select_at
+alias   dplyr_select_at
 options head
-  dplyr::rename_at(${1:dplyr::vars()}, ~ ${2:toupper(.)})
+  dplyr::select_at(${1:dplyr::vars()})${2: %>%}
 
-snippet   select
-abbr      dplyr::select()
-alias     dplyr_select
-options   head
-  dplyr::select(${1:#:fields})
+snippet summarize
+abbr    dplyr::summarize
+alias   dplyr_summarize
+options head
+  dplyr::summarize(${1:#:new_field} = ${2:#:calculation})${3: %>%}
 
-snippet   summarize
-abbr      dplyr::summarize()
-alias     dplyr_summarize
-options   head
-  dplyr::summarize(${1:#:new_field} = ${2:#:calculation})
-
-snippet   summarize_at
-abbr      dplyr::summarize_at()
-alias     dplyr_summarize_at
-options   head
-  dplyr::summarize_at(${1:dplyr::vars(field)}, ${2:sum, na.rm = TRUE})
+snippet summarize_at
+abbr    dplyr::summarize_at
+alias   dplyr_summarize_at
+options head
+  dplyr::summarize_at(${1:dplyr::vars(field)}, ${2:sum, na.rm = TRUE})${3: %>%}
 
 snippet top_n
 abbr    dplyr::top_n
 alias   dplyr_top_n head_dplyr head_df
-options head
-  dplyr::top_n(${1:5}, ${2:#:arrange_col}) ${3:%>%}
+options word
+  dplyr::top_n(${1:5}, ${2:#:arrange_col})${3: %>%}
 
 snippet ungroup
 abbr    dplyr::ungroup
 alias   dplyr_ungroup
 options head
-  dplyr::ungroup()
+  dplyr::ungroup()${1: %>%}
 
 snippet union_all
 abbr    dplyr::union_all
 alias   dplyr_union_all
 options head
-  dplyr::union_all(${1:#:other_table})
+  dplyr::union_all(${1:#:other_table})${2: %>%}
 
 snippet vars
 abbr    dplyr::vars
-alias   dplyr_vars
-options head
+alias   vars_dplyr dplyr_vars
+options word
   dplyr::vars(${1:#:var_range_default_grouped_vars})
