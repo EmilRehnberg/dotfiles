@@ -4,12 +4,6 @@ alias   arrange_dplyr order_by_dplyr sort_dplyr dplyr_arrange
 options head
   dplyr::arrange("${1:#:sorting_column}")${2: %>%}
 
-snippet contains
-abbr    dplyr::contains
-alias   dplyr_contains dplyr_varname_containing
-options word
-  dplyr::contains("${1:#:var_name_matching_string}")
-
 snippet   filter
 abbr      dplyr::filter()
 alias     dplyr_filter
