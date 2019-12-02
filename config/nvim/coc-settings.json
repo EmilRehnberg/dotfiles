@@ -1,0 +1,29 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "bash",
+    "bib",
+    "conf",
+    "css",
+    "gitconfig",
+    "go",
+    "javascript",
+    "json",
+    "neosnippet",
+    "pandoc",
+    "python",
+    "r",
+    "rhelp",
+    "rmd",
+    "scala",
+    "scss",
+    "sh",
+    "tmux",
+    "typescript",
+    "vim",
+    "vimwiki",
+    "zsh"
+  ],
+  "jest.detectLeaks": true,
+  "jest.terminalPosition": true,
+  "jest.watchman": true
+}

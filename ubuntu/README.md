@@ -123,6 +123,11 @@ node / npm / [yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 sudo apt-get install libssl1.0-dev nodejs-dev node-gyp npm yamllint xmlstarlet cmdtest
 
 sudo npm install --global bash-language-server prettier eslint
+npm install --global typescript
+npm install --global coc-word coc-snippets coc-prettier coc-git coc-neosnippet
+npm install --global coc-json coc-yaml coc-html coc-css coc-vimlsp coc-sh coc-markdownlint
+npm install --global coc-tsserver coc-tslint
+npm install --global coc-vimtex coc-r-lsp coc-python coc-scala
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -

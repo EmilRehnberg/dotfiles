@@ -20,11 +20,6 @@ if dein#load_state(dein_base_path)
   " asynchronizes interfaces
   call dein#add('Shougo/denite.nvim')
 
-  " asynchronous completion framework
-  call dein#add('Shougo/deoplete.nvim')
-  " tmux (deoplete) completion
-  call dein#add('wellle/tmux-complete.vim')
-
   call dein#add('godlygeek/tabular')
   call dein#add('jalvesaq/southernlights')
   call dein#add('kien/rainbow_parentheses.vim')
