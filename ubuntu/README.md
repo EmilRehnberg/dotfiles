@@ -31,7 +31,7 @@ sudo apt-get install neovim
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 
 python -m pip install pynvim
-python3 -m pip install pynvim
+python3 -m pip install pynvim neovim-remote
 ```
 
 install dein
