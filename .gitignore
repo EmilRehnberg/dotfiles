@@ -2,6 +2,7 @@
 config/configstore
 .DS_Store
 .netrwhist
+node_modules
 *.swp
 *.swo
 tags
