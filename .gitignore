@@ -1,10 +1,9 @@
+*~
 config/configstore
+.DS_Store
 .netrwhist
+*.swp
+*.swo
 tags
 .yarn-integrity
 yarn.lock
-
-*~
-*.swp
-*.swo
-.DS_Store
