@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 sourceDirectory "$HOME/.zsh-tag-specific/zshrc"
 include "$HOME/.zsh-host-specific/zshrc"

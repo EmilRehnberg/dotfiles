@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 source "$HOME/.zsh-tag-specific/zshenv/source-directory-function.sh"
 
 sourceDirectory "$HOME/.zsh-tag-specific/zshenv"
