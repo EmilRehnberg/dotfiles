@@ -1,3 +1,3 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
