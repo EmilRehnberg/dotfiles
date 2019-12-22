@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 export HISTIGNORE="ls:ll:cd:pwd"
 export HISTSIZE=10000
 export HISTFILESIZE=20000
