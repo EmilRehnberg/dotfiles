@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 sourceDirectory () {
-	for f in "$1"/*; do source "$f"; done
+	for f in "$1"/*; do . "$f"; done
 }

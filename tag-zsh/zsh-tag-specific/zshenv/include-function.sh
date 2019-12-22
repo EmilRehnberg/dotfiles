@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 include () {
-  [[ -f "$1" ]] && source "$1"
+  [ -f "$1" ] && . "$1"
 }
