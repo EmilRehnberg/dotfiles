@@ -37,6 +37,6 @@ options(
 )
 utils::rc.settings(ipck = TRUE) # enables autocompletions for `library()` etc
 
-dir_specific_rprofile_dir_path <- "~/.Rprofile-dir-specifics"
+dir_specific_rprofile_dir_path <- "~/.config/R"
 if (dir.exists(dir_specific_rprofile_dir_path))
   R.utils::sourceDirectory(dir_specific_rprofile_dir_path)
