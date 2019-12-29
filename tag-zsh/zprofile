@@ -1,3 +1,2 @@
 #!/usr/bin/env sh
-sourceDirectory "$HOME/.zsh-tag-specific/zprofile"
-include "$HOME/.zsh-host-specific/zprofile"
+# login shell env with less precedence. Not used ATM.

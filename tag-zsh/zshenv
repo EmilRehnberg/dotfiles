@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-source "$HOME/.zsh-tag-specific/zshenv/source-directory-function.sh"
+. "$HOME/.config/sh/script/source-directory-function.sh"
 
-sourceDirectory "$HOME/.zsh-tag-specific/zshenv"
-include "$HOME/.zsh-host-specific/zshenv" # source host specific zshrc
+sourceDirectory "$HOME/.config/sh/script"
+include "$HOME/.config/sh/host/zshenv" # HOST zshenv
