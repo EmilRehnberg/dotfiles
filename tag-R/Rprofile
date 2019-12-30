@@ -5,8 +5,8 @@ if (interactive()) {
   library(devtools)
   library(setwidth)
 
-  # snippet for saving R history
-  # requires `export R_HISTFILE=~/.Rhistory` in shell loading
+  # saves R history
+  # requires `R_HISTFILE` env variable
   # `.Last` function is invoked in `q`/`quit` if `runLast` is `TRUE`
   # from `?savehistory` and http://stackoverflow.com/questions/1189759/expert-r-users-whats-in-your-rprofile
   if (!any(commandArgs() == "--no-readline")){
