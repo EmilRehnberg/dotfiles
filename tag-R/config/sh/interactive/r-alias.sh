@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-alias R='R --vanilla'
+alias R='R --no-save --no-restore'
