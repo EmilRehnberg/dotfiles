@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-export MPV_HOME="$HOME/.config/mpv"
+export MPV_HOME="$XDG_CONFIG_HOME/mpv"

@@ -1,2 +1,2 @@
 #!/usr/bin/env sh 
-export PYTHONHISTORY="$HOME/.cache/python/history"
+export PYTHONHISTORY="$XDG_CACHE_DIR/python/history"

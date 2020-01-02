@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
-. "$HOME/.config/sh/script/source-directory-function.sh"
+CONFIG_DIR="$HOME/.config"
+. "$CONFIG_DIR/sh/script/source-directory-function.sh"
 
-sourceDirectory "$HOME/.config/sh/script"
-include "$HOME/.config/sh/host/zshenv" # HOST zshenv
+sourceDirectory "$CONFIG_DIR/sh/script"
+include "$XDG_CONFIG_HOME/sh/host/zshenv" # HOST zshenv
