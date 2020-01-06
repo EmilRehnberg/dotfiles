@@ -1,3 +1,5 @@
+let g:coc_extension_root = $XDG_DATA_HOME.'/coc/extensions'
+
 set hidden          " otherwise TextEdit might fail
 set updatetime=300  " default gives poor diagnostic messages experience
 set shortmess+=c    " silence ins-completion-menu messages
