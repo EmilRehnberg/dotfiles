@@ -25,5 +25,8 @@
   ],
   "jest.detectLeaks": true,
   "jest.terminalPosition": true,
-  "jest.watchman": true
+  "jest.watchman": true,
+  "python.jediEnabled": false,
+  "python.formatting.provider": "black",
+  "python.condaPath": "conda"
 }
