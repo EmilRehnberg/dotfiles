@@ -1,5 +1,7 @@
 set fileformat=unix
 
+let test#python#runner = 'pytest'
+
 autocmd BufWritePre :Format
 autocmd BufWritePre :OrganizeImport
 

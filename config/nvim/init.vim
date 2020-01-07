@@ -22,6 +22,7 @@ if dein#load_state(dein_base_path)
 
   call dein#add('godlygeek/tabular')
   call dein#add('jalvesaq/southernlights')
+  call dein#add('janko/vim-test')
   call dein#add('kien/rainbow_parentheses.vim')
   call dein#add('mhinz/neovim-remote')
   call dein#add('roman/golden-ratio')
