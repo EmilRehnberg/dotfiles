@@ -1,6 +1,3 @@
---max-columns=150 # Don't let ripgrep vomit really long lines to my terminal, and show a preview.
---max-columns-preview
-
 --type-add
 web:*.{html,css,js}*
 
