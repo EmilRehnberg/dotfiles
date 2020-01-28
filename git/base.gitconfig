@@ -5,6 +5,3 @@
 [push]
   default = current
 [alias]
-; [include]
-;   path = ~/dotfiles/git/gitconfig
-
