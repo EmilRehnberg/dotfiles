@@ -1,6 +1,8 @@
 [user]
 	name = Emil Rehnberg
 	email = emil.rehnberg@gmail.com
+[commit]
+  template = ~/.gitmessage
 [push]
 	default = matching
 [credential]
