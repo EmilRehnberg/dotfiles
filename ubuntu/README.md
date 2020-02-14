@@ -13,10 +13,11 @@ install `tweaks` from Ubuntu software
 ```sh
 sudo apt install apt-transport-https software-properties-common
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
+sudo apt-add-repository ppa:git-core/ppa
 sudo apt update
 sudo apt upgrade
 sudo apt install gcc make pkg-config autoconf automake python3-docutils libseccomp-dev libjansson-dev libyaml-dev libxml2-dev
-sudo apt install tmux vim rcm curl zsh
+sudo apt install tmux vim rcm curl zsh git
 chsh --shell ${which zsh} $USER
 ```
 
