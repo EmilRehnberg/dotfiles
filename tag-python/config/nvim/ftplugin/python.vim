@@ -1,6 +1,9 @@
 set fileformat=unix
 
 let test#python#runner = 'pytest'
+let test#python#pytest#options = {
+  \ 'file':   '-vv',
+\}
 
 autocmd BufWritePre :Format
 autocmd BufWritePre :OrganizeImport
