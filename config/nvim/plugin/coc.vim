@@ -1,4 +1,4 @@
-let g:coc_extension_root = $XDG_DATA_HOME.'/coc/extensions'
+let g:coc_data_home = $XDG_DATA_HOME.'/coc'
 
 set hidden          " otherwise TextEdit might fail
 set updatetime=300  " default gives poor diagnostic messages experience
