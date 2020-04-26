@@ -1,6 +1,7 @@
-let g:vimwiki_list = [{'path': '~/OneDrive/vimwiki/',
-      \ 'template_path': '~/OneDrive/vimwiki-assets/templates/',
+let g:vimwiki_list = [{'path': '~/repos/notes',
+      \ 'template_path': '~/repos/notes/assets/templates/',
       \ 'template_default': 'default',
       \ 'template_ext': '.html',
-      \ 'css_name': '~/OneDrive/vimwiki-assets/style.css',
-      \ 'path_html': '~/OneDrive/vimwiki-html/'}]
+      \ 'syntax': 'markdown', 'ext': '.md',
+      \ 'css_name': '~/repos/notes/assets/style.css',
+      \ 'path_html': '~/repos/notes/html'}]
