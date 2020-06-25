@@ -5,3 +5,6 @@ set expandtab
 set noautoindent
 set synmaxcol=500
 setlocal omnifunc=htmlcomplete#CompleteTags
+
+command! -nargs=0 Format :CocCommand markdownlint.fixAll
+" autocmd BufWritePre * :Format
