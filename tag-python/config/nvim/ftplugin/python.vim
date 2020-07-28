@@ -5,8 +5,9 @@ let test#python#pytest#options = {
   \ 'file':   '-vv',
 \}
 
-autocmd BufWritePre :Format
-autocmd BufWritePre :OrganizeImport
+augroup PythonOnSave
+  autocmd BufWritePre * :Format " :OrganizeImport
+augroup end
 
 command! -nargs=0 StartREPL  :CocCommand python.startREPL
 command! -nargs=0 StopREPL   :bdelete! term:*
