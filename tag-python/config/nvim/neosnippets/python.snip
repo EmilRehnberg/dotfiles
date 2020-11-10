@@ -1,0 +1,31 @@
+
+snippet docstring
+abbr    doc
+alias   doc
+options head
+  """${1:#:Capitalized}."""
+
+snippet docstringfull
+abbr    doc-full
+alias   docfull
+options head
+  """
+  ${1:#:CapitalizedSummary}.
+
+  Parameters
+  ----------
+  ${2:#:parameter1}: ${3:#:type}
+      ${4:#:description}
+
+  Returns
+  -------
+  ${5:#:returntype}:
+      ${6:#:description}
+  """
+
+snippet publicmethod
+abbr    public method
+alias   pmethod
+options head
+  def ${1:#:methodname}(self${4:, p1: str}) -> ${2:#:returntype}:
+      return ${3:#:methodbody}
