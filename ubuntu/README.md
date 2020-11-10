@@ -113,7 +113,7 @@ rbenv global 2.6.3
 
 sudo snap install ruby --classic
 
-gem install neovim mdl reek scss_lint sqlint
+gem install neovim mdl reek scss_lint sqlint sass
 ```
 
 ### node environment
