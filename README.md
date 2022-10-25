@@ -1,5 +1,13 @@
 # emil4dinner's dotfiles
 
+## set-up history cache dir
+
+NOTE: with this history can't be save >.<
+
+```sh
+mkdir -p $HOME/.cache/sh/
+```
+
 ## Dependencies
 
 - git
