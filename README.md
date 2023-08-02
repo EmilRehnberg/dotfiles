@@ -112,6 +112,13 @@ use `lintr` and `styler`.
 
 visit their [download](https://apps.ankiweb.net/) page.
 
+## vimwiki
+
+used for notes.
+
+1. clone the notes repo (use `wiki` in the url).
+2. set-up a host-specific vimwiki config with settings.
+
 ## To do
 
 Think about installation instructions/scripts - where should they live?
