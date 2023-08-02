@@ -23,7 +23,8 @@
   "jest.detectLeaks": true,
   "jest.terminalPosition": "right",
   "jest.watchman": true,
-  "python.jediEnabled": false,
   "python.formatting.provider": "black",
-  "python.condaPath": "conda"
+  "python.linting.flake8Enabled": true,
+  "pyright.organizeimports.provider": "isort",
+  "pyright.testing.provider": "pytest"
 }
