@@ -58,7 +58,8 @@ python3 -m pip install pynvim neovim-remote black notebook jupyterlab
 Tools:
 
 ```sh
-brew install neovim tmux cmake universal-ctags gnutls youtube-dl mpv R wget pandoc
+brew install neovim tmux cmake universal-ctags gnutls youtube-dl yt-dlp mpv R
+brew install wget pandoc shellcheck
 ```
 
 #### neovim / nvim
@@ -85,6 +86,9 @@ sudo snap install universal-ctags
 ```
 
 ##### linting
+
+```sh
+```
 
 #### node
 
