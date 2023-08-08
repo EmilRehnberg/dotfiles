@@ -82,6 +82,12 @@ Saved vim sessions for different situations, configs, projects or whatever.
 
 ## vi linting & fixing
 
+used for `nvim`
+
+```sh
+pip install pynvim
+```
+
 ### text
 
 Under contruction/investigation.
