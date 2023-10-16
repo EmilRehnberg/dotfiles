@@ -6,6 +6,12 @@ See ubuntu README for other instructions.
 
 some cutting edge stuff won't work on here e.g. dein and probably other Shougo stuff doesn't work properly. Otherwise it should be rather similar to real Ubuntu Linux
 
+## Remap Caps to Ctrl
+
+Download PowerToys (available through "company portal").
+
+Launch PowerToys (as administrator), select "Remap keys".
+
 ## Special WSL setup
 
 for graphical setup
