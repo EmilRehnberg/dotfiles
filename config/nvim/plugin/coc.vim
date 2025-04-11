@@ -23,6 +23,7 @@ let g:coc_global_extensions = [
   \ 'coc-scala',
   \ 'coc-sh',
   \ 'coc-snippets',
+  \ 'coc-sql',
   \ 'coc-tabnine',
   \ 'coc-texlab',
   \ 'coc-tsserver',

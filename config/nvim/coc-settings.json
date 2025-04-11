@@ -15,6 +15,7 @@
     "scala",
     "scss",
     "sh",
+    "sql",
     "tmux",
     "typescript",
     "vim",
@@ -26,5 +27,11 @@
   "python.formatting.provider": "black",
   "python.linting.flake8Enabled": true,
   "pyright.organizeimports.provider": "isort",
-  "pyright.testing.provider": "pytest"
+  "pyright.testing.provider": "pytest",
+  "sql.formatOptions": {
+    "language": "snowflake",
+    "keywordCase": "upper",
+    "dataTypeCase": "upper",
+    "expressionWidth": 128
+  }
 }
