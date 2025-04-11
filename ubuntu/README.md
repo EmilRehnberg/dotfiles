@@ -12,7 +12,10 @@ install `tweaks` from Ubuntu software
 
 ```sh
 sudo apt install apt-transport-https software-properties-common
-sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
+
+sudo wget -q https://apt.thoughtbot.com/thoughtbot.gpg.key -O /etc/apt/trusted.gpg.d/thoughtbot.gpg
+echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
+
 sudo apt-add-repository ppa:git-core/ppa
 sudo apt update
 sudo apt upgrade
