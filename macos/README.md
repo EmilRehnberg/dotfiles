@@ -6,7 +6,9 @@ alter `DOTFILES_DIRS` to include this folder if you want these macos specific do
 
 ## settings
 
-check keyboard modifier keys to remap caps lock
+check keyboard modifier keys to remap caps lock.
+
+Keyboard > Keyboard Shortcuts > Modifier Keys > (chose keyboard)
 
 ### set Meta key
 
