@@ -74,56 +74,11 @@ ssh-add ~/.ssh/id_rsa
 - `$HOME/.ssh/id_rsa.pub` – contain your public key.
 - to push with SSH, make sure the remote set (`.git/config`) is using the SSH link (e.g. `git@github.com:EmilRehnberg/dotfiles.git`)
 
-## vim sessions
+## vi configuration
 
-Stored under `sessions`.
+`neovim` is the preferred vi-like editor that I'm using.
 
-Saved vim sessions for different situations, configs, projects or whatever.
-
-## vi linting & fixing
-
-used for `nvim`
-
-```sh
-pip install pynvim
-```
-
-### text
-
-Under contruction/investigation.
-
-### js
-
-ATM `standardjs` is setup.
-I like the
-  style - Seattle style (no semicolons),
-  has fixing also,
-  less config.
-benri ha benri da.
-
-`jshint` seems more popular, using semicolons etc.
-`jshint` will require `.jshintrc` with setups etc.
-So maybe I'll use that if I have to.
-Doesn't provide fixing, just linting.
-
-### python
-
-Under investigation.
-
-### R
-
-use `lintr` and `styler`.
-
-### Anki
-
-visit their [download](https://apps.ankiweb.net/) page.
-
-## vimwiki
-
-used for notes.
-
-1. clone the notes repo (use `wiki` in the url).
-2. set-up a host-specific vimwiki config with settings.
+see `config/nvim/README.md` for details.
 
 ## To do
 
